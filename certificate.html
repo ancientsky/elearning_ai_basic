@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結業證書 | 疾管署 AI 應用基礎班</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <div class="logo-icon">AI</div>
+                    <div>
+                        <h1>AI 應用基礎班</h1>
+                        <span class="logo-subtitle">疾病管制署 第一年基礎班</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="recipes/prompt-recipes.html">Prompt 食譜</a></li>
+                        <li><a href="resources/links.html">學習資源</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="content-section" style="margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 8px;">結業證書</h2>
+                    <p style="color: var(--text-muted);">完成所有模組且結業測驗成績達 80% 以上，即可取得結業證書。</p>
+                </div>
+
+                <!-- Not Eligible Section -->
+                <div id="cert-not-eligible" class="content-section" style="display: none;">
+                    <h3>資格需求</h3>
+                    <p>您尚未滿足領取證書的條件，請完成以下所有需求：</p>
+                    <ul class="cert-checklist" id="cert-requirements-list"></ul>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <a href="index.html" class="btn btn-primary">返回首頁繼續學習</a>
+                    </div>
+                </div>
+
+                <!-- Eligible Section -->
+                <div id="cert-eligible" class="content-section" style="display: none;">
+                    <div class="alert alert-success" id="cert-score-display"></div>
+                    <h3 style="margin-top: 20px;">輸入您的姓名</h3>
+                    <p>姓名將顯示在證書上，請確認正確。</p>
+                    <div style="display: flex; gap: 12px; align-items: flex-start; flex-wrap: wrap;">
+                        <div>
+                            <input type="text" id="cert-name-input" class="cert-input" placeholder="請輸入您的姓名">
+                            <p class="cert-error-text" id="cert-name-error">請輸入姓名</p>
+                        </div>
+                        <button class="btn btn-primary btn-lg" onclick="generateCertificate()">產生證書</button>
+                    </div>
+                </div>
+
+                <!-- Preview Section -->
+                <div id="cert-preview-section" class="content-section" style="display: none;">
+                    <h3>證書預覽</h3>
+                    <div class="cert-preview-wrapper">
+                        <canvas id="cert-canvas" width="1200" height="850"></canvas>
+                    </div>
+                    <div class="cert-actions">
+                        <button class="btn btn-primary btn-lg" onclick="downloadCertificate()">下載 PNG</button>
+                        <button class="btn btn-success btn-lg" onclick="printCertificate()">列印 / 儲存 PDF</button>
+                        <button class="cert-btn-linkedin" onclick="addToLinkedIn()">新增至 LinkedIn</button>
+                    </div>
+                    <div class="alert alert-info">
+                        <span class="alert-icon">💡</span>
+                        <div>
+                            <strong>操作提示</strong>
+                            <p style="margin: 5px 0 0;">「列印 / 儲存 PDF」會開啟瀏覽器列印對話框，您可選擇「另存為 PDF」來儲存 PDF 檔案。建議選擇橫向 (Landscape) 列印。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Print Area (hidden on screen) -->
+                <div id="cert-print-area" class="cert-print-only">
+                    <div class="cert-print-border">
+                        <div class="cert-print-org" id="print-org">衛生福利部疾病管制署</div>
+                        <div class="cert-print-title">結 業 證 書</div>
+                        <div class="cert-print-divider"></div>
+                        <p>茲證明</p>
+                        <div class="cert-print-name" id="print-name"></div>
+                        <p>已完成</p>
+                        <div class="cert-print-course">「AI 應用基礎班」線上自學課程</div>
+                        <div class="cert-print-detail" id="print-detail"></div>
+                        <div class="cert-print-detail" id="print-date"></div>
+                        <div class="cert-print-id" id="print-cert-id"></div>
+                        <div class="cert-print-footer">衛生福利部疾病管制署 AI 應用基礎班線上自學平台</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>衛生福利部疾病管制署 AI 應用基礎班線上自學平台</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        var certName = '';
+        var certDate = '';
+        var certId = '';
+        var certScore = null;
+
+        // Check eligibility on load
+        (function() {
+            var result = CDC_Learning.isCertificateEligible();
+            var details = result.details;
+
+            if (result.eligible) {
+                document.getElementById('cert-eligible').style.display = 'block';
+                var scoreDisplay = document.getElementById('cert-score-display');
+                scoreDisplay.innerHTML =
+                    '<span class="alert-icon">&#127891;</span>' +
+                    '<div><strong>恭喜！您已符合領取證書的資格</strong>' +
+                    '<p style="margin: 5px 0 0;">所有模組已完成，結業測驗成績：' +
+                    details.examScore.correct + '/' + details.examScore.total +
+                    '（' + details.examScore.percentage + '%）</p></div>';
+            } else {
+                document.getElementById('cert-not-eligible').style.display = 'block';
+                var listEl = document.getElementById('cert-requirements-list');
+                var html = '';
+
+                var moduleNames = ['模組 0：學前準備', '模組 1：認識生成式 AI', '模組 2：Prompt 四要素', '模組 3：文書處理應用', '模組 4：資料整理應用', '模組 5：進階技巧'];
+                details.modules.forEach(function(m, i) {
+                    var cls = m.completed ? 'cert-req-done' : 'cert-req-pending';
+                    var badge = m.completed
+                        ? '<span class="badge badge-success">已完成</span>'
+                        : '<span class="badge badge-warning">未完成</span>';
+                    html += '<li class="' + cls + '"><span>' + moduleNames[i] + '</span>' + badge + '</li>';
+                });
+
+                var examCls = details.examPassed ? 'cert-req-done' : 'cert-req-pending';
+                var examBadge = details.examPassed
+                    ? '<span class="badge badge-success">' + details.examScore.correct + '/10（' + details.examScore.percentage + '%）</span>'
+                    : '<span class="badge badge-warning">' + details.examScore.correct + '/10（需 ≥ 80%）</span>';
+                html += '<li class="' + examCls + '"><span>結業測驗成績 ≥ 80%</span>' + examBadge + '</li>';
+
+                listEl.innerHTML = html;
+            }
+        })();
+
+        function generateCertificate() {
+            var nameInput = document.getElementById('cert-name-input');
+            var errorEl = document.getElementById('cert-name-error');
+            var name = nameInput.value.trim();
+
+            if (!name) {
+                errorEl.style.display = 'block';
+                nameInput.focus();
+                return;
+            }
+            errorEl.style.display = 'none';
+
+            certName = name;
+            var now = new Date();
+            certDate = now.getFullYear() + '/' + String(now.getMonth() + 1).padStart(2, '0') + '/' + String(now.getDate()).padStart(2, '0');
+            certScore = CDC_Learning.getFinalExamScore();
+            var dateForId = now.getFullYear() + String(now.getMonth() + 1).padStart(2, '0') + String(now.getDate()).padStart(2, '0');
+            certId = CDC_Learning.generateCertificateId(name, dateForId, certScore.percentage);
+
+            drawCertificateCanvas();
+            buildPrintCertificate();
+
+            var previewSection = document.getElementById('cert-preview-section');
+            previewSection.style.display = 'block';
+            setTimeout(function() {
+                previewSection.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+
+        function drawCertificateCanvas() {
+            var canvas = document.getElementById('cert-canvas');
+            var ctx = canvas.getContext('2d');
+            var w = 1200, h = 850;
+
+            // Background
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, w, h);
+
+            // Outer border
+            ctx.strokeStyle = '#1a5f7a';
+            ctx.lineWidth = 4;
+            ctx.strokeRect(20, 20, w - 40, h - 40);
+
+            // Inner border
+            ctx.strokeStyle = '#1a5f7a';
+            ctx.lineWidth = 1.5;
+            ctx.strokeRect(32, 32, w - 64, h - 64);
+
+            // Corner decorations (L-shaped)
+            var cornerLen = 40;
+            ctx.strokeStyle = '#159895';
+            ctx.lineWidth = 3;
+            // Top-left
+            ctx.beginPath(); ctx.moveTo(20, 20 + cornerLen); ctx.lineTo(20, 20); ctx.lineTo(20 + cornerLen, 20); ctx.stroke();
+            // Top-right
+            ctx.beginPath(); ctx.moveTo(w - 20 - cornerLen, 20); ctx.lineTo(w - 20, 20); ctx.lineTo(w - 20, 20 + cornerLen); ctx.stroke();
+            // Bottom-left
+            ctx.beginPath(); ctx.moveTo(20, h - 20 - cornerLen); ctx.lineTo(20, h - 20); ctx.lineTo(20 + cornerLen, h - 20); ctx.stroke();
+            // Bottom-right
+            ctx.beginPath(); ctx.moveTo(w - 20 - cornerLen, h - 20); ctx.lineTo(w - 20, h - 20); ctx.lineTo(w - 20, h - 20 - cornerLen); ctx.stroke();
+
+            // Top decorative line
+            var lineY = 70;
+            ctx.strokeStyle = '#1a5f7a';
+            ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.moveTo(100, lineY); ctx.lineTo(w - 100, lineY); ctx.stroke();
+            ctx.strokeStyle = '#57c5b6';
+            ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(100, lineY + 5); ctx.lineTo(w - 100, lineY + 5); ctx.stroke();
+
+            // Organization name
+            ctx.fillStyle = '#888888';
+            ctx.font = '18px "Microsoft JhengHei", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('衛生福利部疾病管制署', w / 2, 115);
+
+            // Title
+            ctx.fillStyle = '#1a5f7a';
+            ctx.font = 'bold 52px "Microsoft JhengHei", sans-serif';
+            ctx.fillText('結 業 證 書', w / 2, 185);
+
+            // Divider under title
+            ctx.strokeStyle = '#57c5b6';
+            ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.moveTo(w / 2 - 120, 205); ctx.lineTo(w / 2 + 120, 205); ctx.stroke();
+
+            // "茲證明"
+            ctx.fillStyle = '#333333';
+            ctx.font = '22px "Microsoft JhengHei", sans-serif';
+            ctx.fillText('茲證明', w / 2, 260);
+
+            // Student name
+            ctx.fillStyle = '#1a5f7a';
+            ctx.font = 'bold 42px "Microsoft JhengHei", sans-serif';
+            var nameWidth = ctx.measureText(certName).width;
+            ctx.fillText(certName, w / 2, 320);
+
+            // Name underline
+            ctx.strokeStyle = '#159895';
+            ctx.lineWidth = 2;
+            var underlineHalf = Math.max(nameWidth / 2 + 20, 80);
+            ctx.beginPath(); ctx.moveTo(w / 2 - underlineHalf, 330); ctx.lineTo(w / 2 + underlineHalf, 330); ctx.stroke();
+
+            // "已完成"
+            ctx.fillStyle = '#333333';
+            ctx.font = '22px "Microsoft JhengHei", sans-serif';
+            ctx.fillText('已完成', w / 2, 380);
+
+            // Course name
+            ctx.fillStyle = '#333333';
+            ctx.font = 'bold 30px "Microsoft JhengHei", sans-serif';
+            ctx.fillText('「AI 應用基礎班」線上自學課程', w / 2, 430);
+
+            // Module count + exam score
+            ctx.fillStyle = '#555555';
+            ctx.font = '20px "Microsoft JhengHei", sans-serif';
+            ctx.fillText('完成 6 個學習模組，結業測驗成績：' + certScore.correct + '/' + certScore.total + '（' + certScore.percentage + '%）', w / 2, 480);
+
+            // Completion date
+            ctx.fillText('完成日期：' + certDate, w / 2, 520);
+
+            // Certificate ID
+            ctx.fillStyle = '#999999';
+            ctx.font = '16px "Consolas", "Courier New", monospace';
+            ctx.fillText('Certificate ID: ' + certId, w / 2, 570);
+
+            // Bottom decorative line
+            var botY = 750;
+            ctx.strokeStyle = '#1a5f7a';
+            ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.moveTo(100, botY); ctx.lineTo(w - 100, botY); ctx.stroke();
+            ctx.strokeStyle = '#57c5b6';
+            ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(100, botY - 5); ctx.lineTo(w - 100, botY - 5); ctx.stroke();
+
+            // Platform footer text
+            ctx.fillStyle = '#aaaaaa';
+            ctx.font = '14px "Microsoft JhengHei", sans-serif';
+            ctx.fillText('衛生福利部疾病管制署 AI 應用基礎班線上自學平台', w / 2, 790);
+        }
+
+        function buildPrintCertificate() {
+            document.getElementById('print-name').textContent = certName;
+            document.getElementById('print-detail').textContent = '完成 6 個學習模組，結業測驗成績：' + certScore.correct + '/' + certScore.total + '（' + certScore.percentage + '%）';
+            document.getElementById('print-date').textContent = '完成日期：' + certDate;
+            document.getElementById('print-cert-id').textContent = 'Certificate ID: ' + certId;
+        }
+
+        function downloadCertificate() {
+            var canvas = document.getElementById('cert-canvas');
+            var link = document.createElement('a');
+            link.download = 'AI應用基礎班結業證書_' + certName + '.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function printCertificate() {
+            window.print();
+        }
+
+        function addToLinkedIn() {
+            var now = new Date();
+            var params = new URLSearchParams({
+                startTask: 'CERTIFICATION_NAME',
+                name: 'AI 應用基礎班結業證書',
+                organizationName: '衛生福利部疾病管制署',
+                issueYear: String(now.getFullYear()),
+                issueMonth: String(now.getMonth() + 1),
+                certId: certId
+            });
+            window.open('https://www.linkedin.com/profile/add?' + params.toString(), '_blank', 'noopener');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模組 3：文書處理應用 | 疾管署 AI 應用基礎班</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <div class="logo-icon">AI</div>
+                    <div>
+                        <h1>AI 應用基礎班</h1>
+                        <span class="logo-subtitle">疾病管制署 第一年基礎班</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">首頁</a></li>
+                        <li><a href="../recipes/prompt-recipes.html">Prompt 食譜</a></li>
+                        <li><a href="../resources/links.html">學習資源</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- Module Header -->
+                <div class="content-section" style="margin-bottom: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                        <div>
+                            <span class="badge badge-primary">模組 3</span>
+                            <h2 style="margin: 10px 0 5px; font-size: 1.8rem;">文書處理應用</h2>
+                            <p style="color: var(--text-muted); margin: 0;">公文撰寫、會議紀錄、Email — 提升日常文書效率</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="color: var(--text-muted);">預計時間：約 25 分鐘</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-layout" data-module="module3">
+                    <!-- Sidebar Navigation -->
+                    <aside class="module-sidebar">
+                        <nav class="module-nav">
+                            <h4>單元導覽</h4>
+                            <ul class="module-nav-list">
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link active" data-unit="0">
+                                        <span class="nav-step-number">1</span>
+                                        公文撰寫技巧
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="1">
+                                        <span class="nav-step-number">2</span>
+                                        會議紀錄整理
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="2">
+                                        <span class="nav-step-number">3</span>
+                                        Email 撰寫
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="3">
+                                        <span class="nav-step-number">4</span>
+                                        文書類 Prompt 食譜
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="4">
+                                        <span class="nav-step-number">5</span>
+                                        單元測驗
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="module-content">
+                        <!-- Unit 3.1: 公文撰寫 -->
+                        <div class="unit-container active" data-unit-index="0">
+                            <div class="content-section">
+                                <h3>單元 3.1：公文撰寫 Prompt 技巧</h3>
+
+                                <p>公文是政府機關最常見的文書類型。善用 AI 可以幫助您快速產出公文初稿，但請記得一定要審核內容。</p>
+
+                                <h4>公文 Prompt 的關鍵要素</h4>
+                                <ul>
+                                    <li><strong>角色</strong>：政府公文撰寫專家</li>
+                                    <li><strong>發文對象</strong>：明確說明發文給誰</li>
+                                    <li><strong>事由/主旨</strong>：這份公文要處理什麼事</li>
+                                    <li><strong>格式</strong>：主旨、說明、辦法（或依據）</li>
+                                    <li><strong>語氣</strong>：正式公文用語</li>
+                                </ul>
+
+                                <h4>範例：疫情通報公文</h4>
+                                <div class="scenario-box">
+                                    <div class="recipe-content" id="doc-prompt-1">你是政府公文撰寫專家。請根據以下資訊撰寫一份正式公文。
+
+【發文對象】各縣市衛生局
+【事由】加強登革熱防治措施
+【背景說明】近期南部地區登革熱疫情升溫，需請各縣市加強孳生源清除及衛教宣導
+
+【格式要求】
+- 包含：主旨、說明、辦法
+- 使用正式公文語氣
+- 說明段落以條列方式呈現
+- 辦法需明確列出請各單位配合事項</div>
+                                    <button class="btn btn-copy btn-sm" data-copy-target="doc-prompt-1" style="margin-top: 12px;">複製 Prompt</button>
+                                </div>
+
+                                <h4>範例對比</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 模糊的公文 Prompt
+                                        </div>
+                                        <div class="comparison-content">幫我寫一份公文給衛生局</div>
+                                        <div class="comparison-result">
+                                            AI 不知道主題、不知道格式要求
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 完整的公文 Prompt
+                                        </div>
+                                        <div class="comparison-content">你是政府公文撰寫專家。請撰寫發文給各縣市衛生局的函文，主旨為「加強流感疫苗接種作業」，格式包含主旨、說明（含背景與現況）、辦法（請各單位配合事項），使用正式公文語氣。</div>
+                                        <div class="comparison-result">
+                                            AI 能產出格式正確的公文初稿
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>填空練習</h4>
+                                <div class="fill-blank-container" id="doc-practice">
+                                    <p class="fill-blank-text">
+                                        情境：需要發文給各縣市衛生局，通知防疫物資配送事宜<br><br>
+                                        你是
+                                        <select class="fill-blank-select" data-answer="政府公文撰寫專家">
+                                            <option value="">請選擇...</option>
+                                            <option value="美食評論家">美食評論家</option>
+                                            <option value="政府公文撰寫專家">政府公文撰寫專家</option>
+                                            <option value="旅遊部落客">旅遊部落客</option>
+                                        </select>
+                                        。請撰寫發文給
+                                        <input type="text" class="fill-blank-input" data-answer="各縣市衛生局" placeholder="輸入發文對象..." style="width: 150px;">
+                                        的函文，主旨為
+                                        <input type="text" class="fill-blank-input" data-answer="防疫物資配送|防疫物資配送事宜" placeholder="輸入主旨..." style="width: 200px;">
+                                    </p>
+                                    <div style="margin-top: 16px;">
+                                        <button class="btn btn-primary" onclick="checkFillBlankAnswer('doc-practice')">檢查答案</button>
+                                        <button class="btn btn-secondary" onclick="showFillBlankAnswers('doc-practice')">看答案</button>
+                                    </div>
+                                    <div class="fill-blank-feedback quiz-feedback"></div>
+                                </div>
+
+                                <div class="alert alert-warning" style="margin-top: 24px;">
+                                    <span class="alert-icon">⚠️</span>
+                                    <div>
+                                        <strong>重要提醒</strong>
+                                        <p style="margin: 5px 0 0;">AI 產出的公文是「初稿」，必須經過審核，確認內容正確、格式符合規定後才能使用。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 3.2: 會議紀錄 -->
+                        <div class="unit-container" data-unit-index="1">
+                            <div class="content-section">
+                                <h3>單元 3.2：會議紀錄整理</h3>
+
+                                <p>會議紀錄是許多同仁的日常工作。AI 可以幫助您從會議逐字稿或筆記，快速整理出結構化的會議紀錄。</p>
+
+                                <h4>會議紀錄 Prompt 的關鍵要素</h4>
+                                <ul>
+                                    <li><strong>明確的輸出格式</strong>：會議資訊、討論重點、決議、待辦</li>
+                                    <li><strong>標註重點</strong>：權責單位、負責人、期限</li>
+                                    <li><strong>提供原始內容</strong>：會議逐字稿或筆記</li>
+                                </ul>
+
+                                <h4>範例：防疫會議紀錄整理</h4>
+                                <div class="scenario-box">
+                                    <div class="recipe-content" id="meeting-prompt">請將以下防疫會議內容整理成結構化的會議紀錄。
+
+【輸出格式】
+1. 會議資訊（時間、地點、主持人、出席單位）
+2. 疫情現況說明摘要
+3. 討論議題與各單位意見
+4. 決議事項（含權責單位）
+5. 待辦事項（含負責人、期限）
+6. 下次會議時間
+
+【注意事項】
+- 決議與待辦需明確標註負責單位
+- 使用條列式呈現，方便閱讀
+- 重點內容使用粗體標示
+
+【會議內容】
+（在此貼上會議逐字稿或筆記）</div>
+                                    <button class="btn btn-copy btn-sm" data-copy-target="meeting-prompt" style="margin-top: 12px;">複製 Prompt</button>
+                                </div>
+
+                                <h4>範例對比</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 模糊的會議紀錄 Prompt
+                                        </div>
+                                        <div class="comparison-content">整理這個會議紀錄
+
+（貼上會議內容）</div>
+                                        <div class="comparison-result">
+                                            AI 可能產出格式不一、缺少重要資訊的紀錄
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 結構化的會議紀錄 Prompt
+                                        </div>
+                                        <div class="comparison-content">請將以下會議內容整理成會議紀錄，格式包含：
+1. 會議基本資訊
+2. 討論議題摘要
+3. 決議事項（標註權責單位）
+4. 待辦追蹤（含負責人與期限）
+
+（貼上會議內容）</div>
+                                        <div class="comparison-result">
+                                            AI 會按照指定格式整理，資訊完整
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>實際應用情境</h4>
+                                <div class="scenario-box">
+                                    <h4>情境：整理跨部門防疫協調會議</h4>
+                                    <p>您參加了一場跨部門的防疫協調會議，手上有會議的速記筆記。會議討論了疫苗配送、衛教宣導分工、經費編列等議題。</p>
+                                    <p><strong>使用 AI 的步驟：</strong></p>
+                                    <ol>
+                                        <li>確認筆記中沒有敏感個資</li>
+                                        <li>使用結構化的 Prompt 請 AI 整理</li>
+                                        <li>審核 AI 產出的紀錄是否正確</li>
+                                        <li>補充 AI 可能遺漏的細節</li>
+                                        <li>確認權責單位與期限標註正確</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 3.3: Email 撰寫 -->
+                        <div class="unit-container" data-unit-index="2">
+                            <div class="content-section">
+                                <h3>單元 3.3：Email 撰寫技巧</h3>
+
+                                <p>Email 是日常溝通的重要工具。AI 可以幫助您快速撰寫各種類型的 Email。</p>
+
+                                <h4>Email Prompt 的關鍵要素</h4>
+                                <ul>
+                                    <li><strong>收件對象</strong>：內部同仁？外部單位？民眾？</li>
+                                    <li><strong>目的</strong>：通知、邀請、回覆、催辦？</li>
+                                    <li><strong>語氣</strong>：正式、禮貌、簡潔</li>
+                                    <li><strong>重點內容</strong>：需要傳達的關鍵資訊</li>
+                                </ul>
+
+                                <h4>常見 Email 類型</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 20px 0;">
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>會議通知</strong><br>
+                                        <span style="font-size: 0.9rem; color: var(--text-muted);">時間、地點、議程、出席</span>
+                                    </div>
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>催辦提醒</strong><br>
+                                        <span style="font-size: 0.9rem; color: var(--text-muted);">事項、期限、聯絡方式</span>
+                                    </div>
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>回覆詢問</strong><br>
+                                        <span style="font-size: 0.9rem; color: var(--text-muted);">問題、答覆、後續說明</span>
+                                    </div>
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>資料轉發</strong><br>
+                                        <span style="font-size: 0.9rem; color: var(--text-muted);">說明、附件、注意事項</span>
+                                    </div>
+                                </div>
+
+                                <h4>範例：回覆民眾詢問</h4>
+                                <div class="scenario-box">
+                                    <div class="recipe-content" id="email-prompt">請撰寫一封回覆民眾的 Email。
+
+【情境】
+民眾來信詢問流感疫苗接種相關問題，包含：
+- 哪裡可以接種？
+- 需要付費嗎？
+- 接種後有什麼注意事項？
+
+【Email 要求】
+- 語氣：禮貌、親切、專業
+- 結構：問候、逐點回覆、結語、署名
+- 提供官方資訊查詢管道（如疾管署網站、1922）
+- 長度適中，不要過長</div>
+                                    <button class="btn btn-copy btn-sm" data-copy-target="email-prompt" style="margin-top: 12px;">複製 Prompt</button>
+                                </div>
+
+                                <h4>範例：催辦各單位填報</h4>
+                                <div class="scenario-box">
+                                    <div class="recipe-content" id="email-prompt-2">請撰寫一封催辦 Email。
+
+【情境】
+需要催辦各縣市衛生局填報本月疫情監測資料，截止日期為本週五
+
+【Email 要求】
+- 收件對象：各縣市衛生局承辦人
+- 語氣：正式但不失禮貌
+- 內容：填報事項、系統連結、截止時間、聯絡窗口
+- 簡潔有力，重點明確</div>
+                                    <button class="btn btn-copy btn-sm" data-copy-target="email-prompt-2" style="margin-top: 12px;">複製 Prompt</button>
+                                </div>
+
+                                <h4>選擇題練習</h4>
+                                <div class="quiz-container" data-quiz-id="email-practice" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>情境：需要寫一封 Email 通知同仁下週二的防疫會議，以下哪個 Prompt 最適合？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="email-q">
+                                                <span>「寫一封開會通知」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="email-q">
+                                                <span>「Email」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="email-q">
+                                                <span>「請撰寫會議通知 Email，通知同仁下週二 14:00 在 B1 會議室召開防疫策略會議，請各組派員出席。語氣正式，列出時間、地點、議程。」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="email-q">
+                                                <span>「幫我聯絡大家」</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 3.4: 文書類 Prompt 食譜 -->
+                        <div class="unit-container" data-unit-index="3">
+                            <div class="content-section">
+                                <h3>單元 3.4：文書類 Prompt 食譜</h3>
+
+                                <p>以下是疾管署常用的文書類 Prompt 模板，可以直接複製使用！</p>
+
+                                <div class="recipe-grid">
+                                    <!-- Recipe 1 -->
+                                    <div class="recipe-card">
+                                        <div class="recipe-header">
+                                            <span class="recipe-title">疫情通報公文</span>
+                                        </div>
+                                        <div class="recipe-body">
+                                            <div class="recipe-tags">
+                                                <span class="recipe-tag">公文</span>
+                                                <span class="recipe-tag">通報</span>
+                                            </div>
+                                            <div class="recipe-content" id="recipe-1">你是政府公文撰寫專家。請根據以下資訊撰寫正式公文。
+
+【發文對象】[填入：如各縣市衛生局]
+【事由】[填入：如加強登革熱防治措施]
+【背景】[填入相關背景說明]
+
+【格式要求】
+- 包含：主旨、說明、辦法
+- 使用正式公文語氣
+- 說明以條列方式呈現</div>
+                                        </div>
+                                        <div class="recipe-footer">
+                                            <button class="btn btn-copy btn-sm" data-copy-target="recipe-1">複製</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recipe 2 -->
+                                    <div class="recipe-card">
+                                        <div class="recipe-header">
+                                            <span class="recipe-title">衛教文宣撰寫</span>
+                                        </div>
+                                        <div class="recipe-body">
+                                            <div class="recipe-tags">
+                                                <span class="recipe-tag">衛教</span>
+                                                <span class="recipe-tag">文宣</span>
+                                            </div>
+                                            <div class="recipe-content" id="recipe-2">你是疾管署衛教專家。請撰寫衛教文宣。
+
+【主題】[填入：如流感疫苗接種須知]
+【對象】[一般民眾/醫護人員/長者]
+【重點】[填入 2-3 個宣導重點]
+
+【格式】
+- 分段：什麼是XX、為什麼重要、如何預防
+- 字數：[填入] 字以內
+- 語氣：親切專業，避免術語</div>
+                                        </div>
+                                        <div class="recipe-footer">
+                                            <button class="btn btn-copy btn-sm" data-copy-target="recipe-2">複製</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recipe 3 -->
+                                    <div class="recipe-card">
+                                        <div class="recipe-header">
+                                            <span class="recipe-title">會議紀錄整理</span>
+                                        </div>
+                                        <div class="recipe-body">
+                                            <div class="recipe-tags">
+                                                <span class="recipe-tag">會議</span>
+                                                <span class="recipe-tag">紀錄</span>
+                                            </div>
+                                            <div class="recipe-content" id="recipe-3">請將以下會議內容整理成結構化紀錄。
+
+【輸出格式】
+1. 會議資訊（時間、地點、主持人）
+2. 出席單位/人員
+3. 討論議題摘要
+4. 決議事項（含權責單位）
+5. 待辦追蹤（負責人、期限）
+
+【會議內容】
+[貼上逐字稿或筆記]</div>
+                                        </div>
+                                        <div class="recipe-footer">
+                                            <button class="btn btn-copy btn-sm" data-copy-target="recipe-3">複製</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recipe 4 -->
+                                    <div class="recipe-card">
+                                        <div class="recipe-header">
+                                            <span class="recipe-title">回覆民眾詢問</span>
+                                        </div>
+                                        <div class="recipe-body">
+                                            <div class="recipe-tags">
+                                                <span class="recipe-tag">Email</span>
+                                                <span class="recipe-tag">回覆</span>
+                                            </div>
+                                            <div class="recipe-content" id="recipe-4">請撰寫回覆民眾詢問的 Email。
+
+【民眾問題】
+[列出民眾詢問的問題]
+
+【回覆要求】
+- 語氣：禮貌、親切、專業
+- 結構：問候、逐點回覆、結語
+- 提供官方查詢管道（疾管署網站、1922）
+- 長度適中</div>
+                                        </div>
+                                        <div class="recipe-footer">
+                                            <button class="btn btn-copy btn-sm" data-copy-target="recipe-4">複製</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info" style="margin-top: 24px;">
+                                    <span class="alert-icon">💡</span>
+                                    <div>
+                                        <strong>更多 Prompt 食譜</strong>
+                                        <p style="margin: 5px 0 0;">前往 <a href="../recipes/prompt-recipes.html">Prompt 食譜庫</a> 查看更多疾管署專用模板！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 3.5: 單元測驗 -->
+                        <div class="unit-container" data-unit-index="4">
+                            <div class="content-section">
+                                <h3>單元 3.5：單元測驗</h3>
+
+                                <p>來測試一下您對文書處理應用的掌握！</p>
+
+                                <!-- Quiz 1 -->
+                                <div class="quiz-container" data-quiz-id="m3-quiz-1" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>1. 使用 AI 撰寫公文時，以下哪個做法最正確？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m3q1">
+                                                <span>AI 產出後直接發文</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m3q1">
+                                                <span>AI 產出後審核內容、確認格式正確再使用</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m3q1">
+                                                <span>公文不能使用 AI 協助</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m3q1">
+                                                <span>只要使用付費版 AI 就不需要審核</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 2 -->
+                                <div class="quiz-container" data-quiz-id="m3-quiz-2" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>2. 請 AI 整理會議紀錄時，以下哪個 Prompt 要素最重要？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m3q2">
+                                                <span>請 AI 扮演會議記錄專家</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m3q2">
+                                                <span>限制字數在 500 字以內</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m3q2">
+                                                <span>明確指定輸出格式（如決議、待辦、權責單位）</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m3q2">
+                                                <span>使用英文撰寫 Prompt</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 3 -->
+                                <div class="quiz-container" data-quiz-id="m3-quiz-3" data-correct="a">
+                                    <div class="quiz-question">
+                                        <h4>3. 以下哪種會議內容「不適合」直接貼給 AI 整理？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m3q3">
+                                                <span>討論特定個案疫調細節的會議（含個人資料）</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m3q3">
+                                                <span>防疫物資配送協調會議</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m3q3">
+                                                <span>衛教宣導活動規劃會議</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m3q3">
+                                                <span>內部行政會議（不含敏感資訊）</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <div class="alert alert-success" style="margin-top: 30px;">
+                                    <span class="alert-icon">🎉</span>
+                                    <div>
+                                        <strong>完成模組 3！</strong>
+                                        <p style="margin: 5px 0 0;">您已學會如何運用 AI 處理日常文書工作。接下來，讓我們學習資料整理的應用！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="nav-buttons">
+                            <button class="btn btn-secondary prev-unit" style="display: none;">
+                                ← 上一單元
+                            </button>
+                            <div></div>
+                            <button class="btn btn-primary next-unit">
+                                下一單元 →
+                            </button>
+                            <a href="module4.html" class="btn btn-success complete-module" style="display: none;">
+                                前往模組 4 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>衛生福利部疾病管制署 AI 應用基礎班線上自學平台</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

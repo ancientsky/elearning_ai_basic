@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模組 0：學前準備 | 疾管署 AI 應用基礎班</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <div class="logo-icon">AI</div>
+                    <div>
+                        <h1>AI 應用基礎班</h1>
+                        <span class="logo-subtitle">疾病管制署 第一年基礎班</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">首頁</a></li>
+                        <li><a href="../recipes/prompt-recipes.html">Prompt 食譜</a></li>
+                        <li><a href="../resources/links.html">學習資源</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- Module Header -->
+                <div class="content-section" style="margin-bottom: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                        <div>
+                            <span class="badge badge-primary">模組 0</span>
+                            <h2 style="margin: 10px 0 5px; font-size: 1.8rem;">學前準備</h2>
+                            <p style="color: var(--text-muted); margin: 0;">課程介紹、帳號設定、課前自我檢測</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="color: var(--text-muted);">預計時間：約 10 分鐘</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-layout" data-module="module0">
+                    <!-- Sidebar Navigation -->
+                    <aside class="module-sidebar">
+                        <nav class="module-nav">
+                            <h4>單元導覽</h4>
+                            <ul class="module-nav-list">
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link active" data-unit="0">
+                                        <span class="nav-step-number">1</span>
+                                        課程介紹與學習目標
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="1">
+                                        <span class="nav-step-number">2</span>
+                                        AI 工具帳號設定
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="2">
+                                        <span class="nav-step-number">3</span>
+                                        課前自我檢測
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="module-content">
+                        <!-- Unit 0.1: 課程介紹 -->
+                        <div class="unit-container active" data-unit-index="0">
+                            <div class="content-section">
+                                <h3>單元 0.1：課程介紹與學習目標</h3>
+
+                                <!-- 影片嵌入區：製作完影片後，將下方整個 video-placeholder 區塊替換為：
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/您的影片ID"
+                                            title="課程介紹影片"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                                -->
+                                <div class="video-placeholder">
+                                    <div class="play-icon">▶</div>
+                                    <h4>課程介紹影片</h4>
+                                    <p>（影片時長約 3 分鐘）</p>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);">腳本請見：docs/影片腳本.md</p>
+                                </div>
+
+                                <h4>歡迎來到 AI 應用基礎班！</h4>
+                                <p>本課程專為疾管署同仁設計，幫助您了解並有效運用生成式 AI 工具，提升日常工作效率。</p>
+
+                                <h4>您將學到什麼？</h4>
+                                <ul>
+                                    <li>了解生成式 AI 的基本概念與運作原理</li>
+                                    <li>掌握撰寫有效 Prompt 的四大要素</li>
+                                    <li>學會將 AI 應用於公文撰寫、會議紀錄等文書工作</li>
+                                    <li>善用 AI 進行資料整理、摘要與圖表說明</li>
+                                    <li>了解使用 AI 的資安規範與注意事項</li>
+                                </ul>
+
+                                <h4>學習方式</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px;">
+                                    <div class="card">
+                                        <h5 style="color: var(--primary-color);">自主學習</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">按照自己的步調完成各模組</p>
+                                    </div>
+                                    <div class="card">
+                                        <h5 style="color: var(--primary-color);">互動練習</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">每個概念都有動手練習機會</p>
+                                    </div>
+                                    <div class="card">
+                                        <h5 style="color: var(--primary-color);">即時回饋</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">測驗與練習提供立即回饋</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info" style="margin-top: 24px;">
+                                    <span class="alert-icon">💡</span>
+                                    <div>
+                                        <strong>小提醒</strong>
+                                        <p style="margin: 5px 0 0;">建議準備好一個 AI 工具（如 ChatGPT 或 Claude），邊學邊練效果更好！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 0.2: 帳號設定 -->
+                        <div class="unit-container" data-unit-index="1">
+                            <div class="content-section">
+                                <h3>單元 0.2：AI 工具帳號設定指引</h3>
+
+                                <p>在開始學習前，請確保您已完成以下 AI 工具的帳號設定。我們建議至少準備一個工具供練習使用。</p>
+
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <button class="accordion-header">
+                                            <span>ChatGPT（OpenAI）帳號設定</span>
+                                            <span class="accordion-icon">▼</span>
+                                        </button>
+                                        <div class="accordion-body">
+                                            <h5>註冊步驟：</h5>
+                                            <ol>
+                                                <li>前往 <a href="https://chat.openai.com" target="_blank">chat.openai.com</a></li>
+                                                <li>點擊「Sign up」（註冊）</li>
+                                                <li>使用 Email 或 Google/Microsoft 帳號註冊</li>
+                                                <li>完成電子郵件驗證</li>
+                                                <li>登入後即可開始使用免費版</li>
+                                            </ol>
+                                            <div class="alert alert-info">
+                                                <span class="alert-icon">💡</span>
+                                                <span>免費版即足夠本課程練習使用，無需付費升級。</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <button class="accordion-header">
+                                            <span>Claude（Anthropic）帳號設定</span>
+                                            <span class="accordion-icon">▼</span>
+                                        </button>
+                                        <div class="accordion-body">
+                                            <h5>註冊步驟：</h5>
+                                            <ol>
+                                                <li>前往 <a href="https://claude.ai" target="_blank">claude.ai</a></li>
+                                                <li>點擊「Start for free」（免費開始）</li>
+                                                <li>使用 Email 或 Google 帳號註冊</li>
+                                                <li>完成手機號碼驗證</li>
+                                                <li>登入後即可開始使用</li>
+                                            </ol>
+                                            <div class="alert alert-info">
+                                                <span class="alert-icon">💡</span>
+                                                <span>Claude 免費版每日有訊息數量限制，但足夠一般練習使用。</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <button class="accordion-header">
+                                            <span>Google Gemini 帳號設定</span>
+                                            <span class="accordion-icon">▼</span>
+                                        </button>
+                                        <div class="accordion-body">
+                                            <h5>註冊步驟：</h5>
+                                            <ol>
+                                                <li>前往 <a href="https://gemini.google.com" target="_blank">gemini.google.com</a></li>
+                                                <li>使用您的 Google 帳號登入</li>
+                                                <li>同意使用條款</li>
+                                                <li>即可開始使用</li>
+                                            </ol>
+                                            <div class="alert alert-info">
+                                                <span class="alert-icon">💡</span>
+                                                <span>如果您已有 Google 帳號，無需額外註冊。</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4 style="margin-top: 30px;">帳號設定檢核清單</h4>
+                                <p>請確認您已完成以下項目：</p>
+
+                                <ul class="checklist">
+                                    <li class="checklist-item" data-item-id="setup-1">
+                                        <div class="checklist-checkbox"></div>
+                                        <span class="checklist-text">已選擇至少一個 AI 工具並完成註冊</span>
+                                    </li>
+                                    <li class="checklist-item" data-item-id="setup-2">
+                                        <div class="checklist-checkbox"></div>
+                                        <span class="checklist-text">已成功登入並看到對話介面</span>
+                                    </li>
+                                    <li class="checklist-item" data-item-id="setup-3">
+                                        <div class="checklist-checkbox"></div>
+                                        <span class="checklist-text">已嘗試送出一則測試訊息（如「你好」）</span>
+                                    </li>
+                                    <li class="checklist-item" data-item-id="setup-4">
+                                        <div class="checklist-checkbox"></div>
+                                        <span class="checklist-text">已確認 AI 能正常回覆</span>
+                                    </li>
+                                </ul>
+
+                                <div class="alert alert-warning" style="margin-top: 20px;">
+                                    <span class="alert-icon">⚠️</span>
+                                    <div>
+                                        <strong>重要提醒</strong>
+                                        <p style="margin: 5px 0 0;">使用 AI 工具時，請勿輸入任何機密資料、個資或敏感資訊。詳細資安規範將在模組 1 說明。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 0.3: 課前自我檢測 -->
+                        <div class="unit-container" data-unit-index="2">
+                            <div class="content-section">
+                                <h3>單元 0.3：課前自我檢測</h3>
+
+                                <p>這個小測驗幫助您了解目前對 AI 的認識程度，不計分，輕鬆作答即可！</p>
+
+                                <!-- Quiz 1 -->
+                                <div class="quiz-container" data-quiz-id="pre-test-1" data-correct="c" data-success-msg="正確！生成式 AI 是根據提示產生新內容的 AI 技術。" data-error-msg="再想想看，生成式 AI 的核心功能是什麼呢？">
+                                    <div class="quiz-question">
+                                        <h4>1. 什麼是「生成式 AI」？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="q1">
+                                                <span>專門用來搜尋網頁資料的工具</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="q1">
+                                                <span>只能回答是非題的程式</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="q1">
+                                                <span>能夠根據提示產生文字、圖片等新內容的 AI</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="q1">
+                                                <span>一種電腦病毒</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 2 -->
+                                <div class="quiz-container" data-quiz-id="pre-test-2" data-correct="b" data-success-msg="正確！Prompt 就是我們給 AI 的指令或提示。" data-error-msg="Prompt 是一個很重要的概念喔！">
+                                    <div class="quiz-question">
+                                        <h4>2. 「Prompt」（提示詞）指的是什麼？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="q2">
+                                                <span>AI 的品牌名稱</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="q2">
+                                                <span>我們輸入給 AI 的指令或問題</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="q2">
+                                                <span>AI 回覆的內容</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="q2">
+                                                <span>一種程式語言</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 3 -->
+                                <div class="quiz-container" data-quiz-id="pre-test-3" data-correct="d" data-success-msg="正確！個人資料（如身分證字號）絕對不可以輸入 AI。" data-error-msg="想想看，什麼資料是敏感的、不應該輸入 AI 呢？">
+                                    <div class="quiz-question">
+                                        <h4>3. 以下哪一項「不應該」輸入 AI 工具？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="q3">
+                                                <span>公開的防疫宣導文字</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="q3">
+                                                <span>請 AI 幫忙翻譯英文期刊摘要</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="q3">
+                                                <span>請 AI 整理會議大綱（不含敏感內容）</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="q3">
+                                                <span>包含民眾姓名與身分證字號的個案資料</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 4 -->
+                                <div class="quiz-container" data-quiz-id="pre-test-4" data-correct="b" data-success-msg="正確！AI 生成的內容需要經過專業人員審核確認。" data-error-msg="AI 是很好的輔助工具，但它的輸出還是需要人工確認喔！">
+                                    <div class="quiz-question">
+                                        <h4>4. 使用 AI 輔助工作時，以下哪個做法最正確？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="q4">
+                                                <span>AI 產出的內容一定是正確的，可直接使用</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="q4">
+                                                <span>AI 產出的內容需要經過審核與確認後才能使用</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="q4">
+                                                <span>AI 只會產出錯誤內容，完全不能信任</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="q4">
+                                                <span>使用 AI 產出的內容不需要標註來源</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 5 -->
+                                <div class="quiz-container" data-quiz-id="pre-test-5" data-correct="c" data-success-msg="正確！清楚具體的指令能讓 AI 產出更符合需求的內容。" data-error-msg="想想看，怎樣的指令對 AI 來說更容易理解？">
+                                    <div class="quiz-question">
+                                        <h4>5. 哪種 Prompt 寫法比較好？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="q5">
+                                                <span>「寫一篇文章」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="q5">
+                                                <span>「幫我做事」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="q5">
+                                                <span>「請撰寫一篇 300 字的登革熱預防衛教文章，對象是一般民眾」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="q5">
+                                                <span>「登革熱」</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <div class="alert alert-success" style="margin-top: 30px;">
+                                    <span class="alert-icon">🎯</span>
+                                    <div>
+                                        <strong>完成測驗了嗎？</strong>
+                                        <p style="margin: 5px 0 0;">不管答對多少題都沒關係，這些概念我們會在後續課程中詳細說明。準備好了就開始模組 1 吧！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="nav-buttons">
+                            <button class="btn btn-secondary prev-unit" style="display: none;">
+                                ← 上一單元
+                            </button>
+                            <div></div>
+                            <button class="btn btn-primary next-unit">
+                                下一單元 →
+                            </button>
+                            <a href="module1.html" class="btn btn-success complete-module" style="display: none;">
+                                前往模組 1 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>衛生福利部疾病管制署 AI 應用基礎班線上自學平台</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

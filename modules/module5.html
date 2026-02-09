@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模組 5：進階技巧 | 疾管署 AI 應用基礎班</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <div class="logo-icon">AI</div>
+                    <div>
+                        <h1>AI 應用基礎班</h1>
+                        <span class="logo-subtitle">疾病管制署 第一年基礎班</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">首頁</a></li>
+                        <li><a href="../recipes/prompt-recipes.html">Prompt 食譜</a></li>
+                        <li><a href="../resources/links.html">學習資源</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- Module Header -->
+                <div class="content-section" style="margin-bottom: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                        <div>
+                            <span class="badge badge-primary">模組 5</span>
+                            <h2 style="margin: 10px 0 5px; font-size: 1.8rem;">進階技巧</h2>
+                            <p style="color: var(--text-muted); margin: 0;">多輪對話、迭代優化、常見錯誤、持續學習</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="color: var(--text-muted);">預計時間：約 15 分鐘</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-layout" data-module="module5">
+                    <!-- Sidebar Navigation -->
+                    <aside class="module-sidebar">
+                        <nav class="module-nav">
+                            <h4>單元導覽</h4>
+                            <ul class="module-nav-list">
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link active" data-unit="0">
+                                        <span class="nav-step-number">1</span>
+                                        多輪對話與迭代優化
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="1">
+                                        <span class="nav-step-number">2</span>
+                                        常見錯誤與避坑指南
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="2">
+                                        <span class="nav-step-number">3</span>
+                                        持續學習資源
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="3">
+                                        <span class="nav-step-number">4</span>
+                                        結業測驗
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="module-content">
+                        <!-- Unit 5.1: 多輪對話 -->
+                        <div class="unit-container active" data-unit-index="0">
+                            <div class="content-section">
+                                <h3>單元 5.1：多輪對話與迭代優化</h3>
+
+                                <p>很多時候，一次 Prompt 不一定能得到完美結果。學會與 AI「對話」，透過多輪互動逐步優化，是進階使用者的關鍵技能。</p>
+
+                                <h4>什麼時候需要多輪對話？</h4>
+                                <ul>
+                                    <li>第一次回應不夠完整或不符期望</li>
+                                    <li>需要 AI 修改特定部分</li>
+                                    <li>想要調整語氣、長度或格式</li>
+                                    <li>複雜任務需要分步進行</li>
+                                </ul>
+
+                                <h4>範例：衛教文宣的迭代優化</h4>
+                                <div class="scenario-box">
+                                    <h4>對話範例</h4>
+
+                                    <div style="background: var(--bg-color); padding: 16px; border-radius: var(--radius-md); margin: 12px 0;">
+                                        <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 8px;">第一輪 (初始請求)：</p>
+                                        <p style="margin: 0; font-family: monospace; font-size: 0.9rem;">你是疾管署衛教專家。請撰寫一篇登革熱預防衛教文宣，給一般民眾，300字以內。</p>
+                                    </div>
+
+                                    <div style="background: rgba(87, 197, 182, 0.1); padding: 16px; border-radius: var(--radius-md); margin: 12px 0; border-left: 4px solid var(--secondary-color);">
+                                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px;">AI 回應後，您發現語氣太正式...</p>
+                                    </div>
+
+                                    <div style="background: var(--bg-color); padding: 16px; border-radius: var(--radius-md); margin: 12px 0;">
+                                        <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 8px;">第二輪 (調整語氣)：</p>
+                                        <p style="margin: 0; font-family: monospace; font-size: 0.9rem;">語氣可以再親切一點嗎？像是鄰居阿姨在提醒你的感覺。</p>
+                                    </div>
+
+                                    <div style="background: rgba(87, 197, 182, 0.1); padding: 16px; border-radius: var(--radius-md); margin: 12px 0; border-left: 4px solid var(--secondary-color);">
+                                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px;">AI 調整後，您想要加入具體行動...</p>
+                                    </div>
+
+                                    <div style="background: var(--bg-color); padding: 16px; border-radius: var(--radius-md); margin: 12px 0;">
+                                        <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 8px;">第三輪 (增加內容)：</p>
+                                        <p style="margin: 0; font-family: monospace; font-size: 0.9rem;">請在預防措施加入「巡、倒、清、刷」口訣的說明。</p>
+                                    </div>
+
+                                    <div style="background: rgba(87, 197, 182, 0.1); padding: 16px; border-radius: var(--radius-md); margin: 12px 0; border-left: 4px solid var(--secondary-color);">
+                                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px;">最後，您想要確認格式...</p>
+                                    </div>
+
+                                    <div style="background: var(--bg-color); padding: 16px; border-radius: var(--radius-md); margin: 12px 0;">
+                                        <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 8px;">第四輪 (調整格式)：</p>
+                                        <p style="margin: 0; font-family: monospace; font-size: 0.9rem;">請把重點用條列式呈現，方便民眾閱讀。</p>
+                                    </div>
+                                </div>
+
+                                <h4>迭代優化的常用指令</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>調整需求</th>
+                                            <th>可以這樣說</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>調整語氣</td>
+                                            <td>「語氣再正式/親切/活潑一點」</td>
+                                        </tr>
+                                        <tr>
+                                            <td>增減內容</td>
+                                            <td>「請加入...」「請移除...」「請縮短/擴充...」</td>
+                                        </tr>
+                                        <tr>
+                                            <td>調整格式</td>
+                                            <td>「請改成條列式」「請加入標題」</td>
+                                        </tr>
+                                        <tr>
+                                            <td>修正錯誤</td>
+                                            <td>「這部分不對，應該是...」</td>
+                                        </tr>
+                                        <tr>
+                                            <td>聚焦特定部分</td>
+                                            <td>「第二段請重寫」「只修改結尾」</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="alert alert-info" style="margin-top: 24px;">
+                                    <span class="alert-icon">💡</span>
+                                    <div>
+                                        <strong>小技巧</strong>
+                                        <p style="margin: 5px 0 0;">如果對結果不滿意，與其重新寫一個全新的 Prompt，不如在同一對話中告訴 AI 哪裡需要調整，這樣 AI 會保留之前的理解，產出更符合期望的結果。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 5.2: 常見錯誤 -->
+                        <div class="unit-container" data-unit-index="1">
+                            <div class="content-section">
+                                <h3>單元 5.2：常見錯誤與避坑指南</h3>
+
+                                <p>使用 AI 時容易踩到的坑，讓我們一起來避開！</p>
+
+                                <h4>資安相關錯誤（最嚴重！）</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 輸入個人資料
+                                        </div>
+                                        <div class="comparison-content">「請幫我整理這份疫調報告：
+患者姓名：王大明
+身分證字號：A123456789
+地址：台北市...」</div>
+                                        <div class="comparison-result">
+                                            <strong>嚴重違反資安規範！</strong>可能導致個資外洩
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 去識別化後使用
+                                        </div>
+                                        <div class="comparison-content">「請幫我整理這份疫調報告格式：
+患者 A，50歲男性，北部地區居民，
+發病日期：2024/10/15...」</div>
+                                        <div class="comparison-result">
+                                            移除可識別個人的資訊後，可以使用 AI 協助
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>Prompt 撰寫錯誤</h4>
+
+                                <div style="margin: 20px 0;">
+                                    <div class="comparison-item bad" style="margin-bottom: 16px;">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 指令模糊不清
+                                        </div>
+                                        <div class="comparison-content">「幫我處理這個」
+「寫點東西」
+「改好一點」</div>
+                                        <div class="comparison-result">
+                                            AI 不知道要做什麼，會猜測或給出不相關的回應
+                                        </div>
+                                    </div>
+
+                                    <div class="comparison-item bad" style="margin-bottom: 16px;">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 一次要求太多
+                                        </div>
+                                        <div class="comparison-content">「請幫我寫一份公文、整理會議紀錄、翻譯這篇文章、做一份簡報...」</div>
+                                        <div class="comparison-result">
+                                            任務太多太雜，AI 容易遺漏或品質下降。建議分次請求。
+                                        </div>
+                                    </div>
+
+                                    <div class="comparison-item bad" style="margin-bottom: 16px;">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 完全信任 AI 輸出
+                                        </div>
+                                        <div class="comparison-content">「AI 說的一定對！」
+直接複製貼上發布</div>
+                                        <div class="comparison-result">
+                                            AI 可能有錯誤或「幻覺」，必須審核確認
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>錯誤辨識小測驗</h4>
+                                <div class="quiz-container" data-quiz-id="error-quiz" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>以下哪個做法是正確的？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="error-q">
+                                                <span>將包含民眾電話的陳情信直接貼給 AI 回覆</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="error-q">
+                                                <span>AI 產出的疫情資訊直接發布到官網</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="error-q">
+                                                <span>用 AI 草擬衛教文宣，經專業人員審核後才發布</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="error-q">
+                                                <span>把內部機密會議紀錄給 AI 整理</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <h4>使用 AI 的正確心態</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 20px 0;">
+                                    <div class="card" style="border-left: 4px solid var(--success-color);">
+                                        <h5 style="color: var(--success-color);">AI 是助手，不是主管</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">最終決策權在您手上，AI 只是提供草稿和建議</p>
+                                    </div>
+                                    <div class="card" style="border-left: 4px solid var(--success-color);">
+                                        <h5 style="color: var(--success-color);">審核是必要步驟</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">所有 AI 產出都要經過人工審核確認</p>
+                                    </div>
+                                    <div class="card" style="border-left: 4px solid var(--success-color);">
+                                        <h5 style="color: var(--success-color);">資安永遠第一</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">有疑慮就不要輸入，寧可保守</p>
+                                    </div>
+                                    <div class="card" style="border-left: 4px solid var(--success-color);">
+                                        <h5 style="color: var(--success-color);">持續學習優化</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">每次使用都是學習機會，累積經驗</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 5.3: 持續學習資源 -->
+                        <div class="unit-container" data-unit-index="2">
+                            <div class="content-section">
+                                <h3>單元 5.3：持續學習資源</h3>
+
+                                <p>AI 技術發展快速，持續學習是保持競爭力的關鍵。以下是精選的免費學習資源：</p>
+
+                                <h4>官方學習資源</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>資源</th>
+                                            <th>說明</th>
+                                            <th>連結</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Anthropic Academy</strong></td>
+                                            <td>Claude 官方課程，含 Claude 101 入門</td>
+                                            <td><a href="https://anthropic.skilljar.com/" target="_blank">前往</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Anthropic Learn</strong></td>
+                                            <td>Claude 學習資源與使用指南</td>
+                                            <td><a href="https://www.anthropic.com/learn" target="_blank">前往</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>OpenAI 教學</strong></td>
+                                            <td>ChatGPT 官方使用說明</td>
+                                            <td><a href="https://platform.openai.com/docs" target="_blank">前往</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h4>免費學習平台</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>資源</th>
+                                            <th>說明</th>
+                                            <th>連結</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Learn Prompting</strong></td>
+                                            <td>最完整的免費 Prompt 課程，4.8 星評價</td>
+                                            <td><a href="https://learnprompting.org/" target="_blank">前往</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Google AI Essentials</strong></td>
+                                            <td>職場 AI 應用，5 模組約 10 小時</td>
+                                            <td><a href="https://grow.google/ai-essentials/" target="_blank">前往</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Anthropic 互動教學</strong></td>
+                                            <td>9 章節互動練習，含 Playground</td>
+                                            <td><a href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank">前往</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>IBM Prompt Engineering</strong></td>
+                                            <td>Coursera 免費旁聽，結構化教學</td>
+                                            <td><a href="https://www.coursera.org/learn/generative-ai-prompt-engineering-for-everyone" target="_blank">前往</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h4>進階學習資源</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>資源</th>
+                                            <th>說明</th>
+                                            <th>連結</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Prompt Engineering Guide</strong></td>
+                                            <td>GitHub 開源指南，深入技術細節</td>
+                                            <td><a href="https://www.promptingguide.ai/" target="_blank">前往</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DeepLearning.AI</strong></td>
+                                            <td>吳恩達的 ChatGPT 課程</td>
+                                            <td><a href="https://www.deeplearning.ai/" target="_blank">前往</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Microsoft AI Training</strong></td>
+                                            <td>Azure AI 學習路徑</td>
+                                            <td><a href="https://learn.microsoft.com/training/" target="_blank">前往</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="alert alert-info" style="margin-top: 24px;">
+                                    <span class="alert-icon">💡</span>
+                                    <div>
+                                        <strong>學習建議</strong>
+                                        <p style="margin: 5px 0 0;">建議從 Learn Prompting 或 Google AI Essentials 開始，這兩個平台內容完整且適合初學者。完整的資源連結請見 <a href="../resources/links.html">學習資源頁面</a>。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 5.4: 結業測驗 -->
+                        <div class="unit-container" data-unit-index="3">
+                            <div class="content-section">
+                                <h3>單元 5.4：結業測驗</h3>
+
+                                <p>恭喜您完成所有課程！讓我們透過這份綜合測驗，複習整個課程的重點。</p>
+
+                                <!-- Quiz 1 -->
+                                <div class="quiz-container" data-quiz-id="final-1" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>1. Prompt 四要素是指？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq1">
+                                                <span>輸入、處理、輸出、儲存</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq1">
+                                                <span>角色、任務、格式、限制</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq1">
+                                                <span>主旨、說明、辦法、附件</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq1">
+                                                <span>問題、回答、追問、確認</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 2 -->
+                                <div class="quiz-container" data-quiz-id="final-2" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>2. 以下哪項資料「絕對不可以」輸入 AI？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq2">
+                                                <span>已公開的疫情統計數據</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq2">
+                                                <span>疾管署官網上的衛教資訊</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq2">
+                                                <span>包含民眾姓名與身分證字號的資料</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq2">
+                                                <span>去識別化的症狀描述</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 3 -->
+                                <div class="quiz-container" data-quiz-id="final-3" data-correct="a">
+                                    <div class="quiz-question">
+                                        <h4>3. AI 的「幻覺」（Hallucination）是指？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq3">
+                                                <span>AI 可能編造看起來合理但其實不正確的資訊</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq3">
+                                                <span>AI 產生視覺幻覺</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq3">
+                                                <span>使用者看到不存在的 AI</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq3">
+                                                <span>AI 故意欺騙使用者</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 4 -->
+                                <div class="quiz-container" data-quiz-id="final-4" data-correct="d">
+                                    <div class="quiz-question">
+                                        <h4>4. AI 產出的公文或衛教文宣，正確的處理方式是？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq4">
+                                                <span>直接發布使用</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq4">
+                                                <span>標註「AI 生成」就可以發布</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq4">
+                                                <span>完全不能使用 AI 輔助</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq4">
+                                                <span>經過專業人員審核確認後才能使用</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 5 -->
+                                <div class="quiz-container" data-quiz-id="final-5" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>5. 如果 AI 第一次回應不符合期望，最好的做法是？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq5">
+                                                <span>放棄使用 AI</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq5">
+                                                <span>在同一對話中告訴 AI 需要調整的地方</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq5">
+                                                <span>完全重新開始一個新對話</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq5">
+                                                <span>接受 AI 的回答，因為沒辦法改變</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 6 -->
+                                <div class="quiz-container" data-quiz-id="final-6" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>6. 請 AI 生成 Excel 公式時，最重要的資訊是？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq6">
+                                                <span>Excel 的版本</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq6">
+                                                <span>電腦的作業系統</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq6">
+                                                <span>資料結構（欄位位置）與計算邏輯的描述</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq6">
+                                                <span>檔案大小</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 7 -->
+                                <div class="quiz-container" data-quiz-id="final-7" data-correct="a">
+                                    <div class="quiz-question">
+                                        <h4>7. 「你是疾管署的衛教專家」這句話屬於 Prompt 四要素中的？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq7">
+                                                <span>角色 (Role)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq7">
+                                                <span>任務 (Task)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq7">
+                                                <span>格式 (Format)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq7">
+                                                <span>限制 (Constraint)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 8 -->
+                                <div class="quiz-container" data-quiz-id="final-8" data-correct="d">
+                                    <div class="quiz-question">
+                                        <h4>8. 以下哪個 Prompt 最完整？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq8">
+                                                <span>「寫文章」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq8">
+                                                <span>「寫一篇關於流感的文章」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq8">
+                                                <span>「寫流感衛教，300字」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq8">
+                                                <span>「你是衛教專家，請撰寫流感預防衛教，對象是一般民眾，使用條列式，300字以內，語氣親切」</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 9 -->
+                                <div class="quiz-container" data-quiz-id="final-9" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>9. 使用 AI 整理會議紀錄時，以下哪種會議內容需要特別注意？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq9">
+                                                <span>防疫物資配送協調會議</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq9">
+                                                <span>討論特定個案的疫調會議（含個人資料）</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq9">
+                                                <span>衛教活動規劃會議</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq9">
+                                                <span>一般行政事務會議</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 10 -->
+                                <div class="quiz-container" data-quiz-id="final-10" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>10. 使用 AI 的正確心態是？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="fq10">
+                                                <span>AI 永遠是對的，完全信任</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="fq10">
+                                                <span>AI 完全不可信，不該使用</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="fq10">
+                                                <span>AI 是輔助工具，產出需要審核，最終決策權在人</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="fq10">
+                                                <span>只有專家才能使用 AI</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <div class="alert alert-success" style="margin-top: 30px;">
+                                    <span class="alert-icon">🎓</span>
+                                    <div>
+                                        <strong>恭喜完成課程！</strong>
+                                        <p style="margin: 5px 0 0;">您已經完成 AI 應用基礎班的所有學習內容！記得善用 <a href="../recipes/prompt-recipes.html">Prompt 食譜庫</a> 和 <a href="../resources/links.html">學習資源</a> 持續精進。</p>
+                                    </div>
+                                </div>
+                                <div style="text-align: center; margin-top: 20px;">
+                                    <a href="../certificate.html" class="btn btn-success btn-lg">
+                                        前往領取結業證書
+                                    </a>
+                                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">
+                                        需完成所有模組且結業測驗成績 ≥ 80%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="nav-buttons">
+                            <button class="btn btn-secondary prev-unit" style="display: none;">
+                                ← 上一單元
+                            </button>
+                            <div></div>
+                            <button class="btn btn-primary next-unit">
+                                下一單元 →
+                            </button>
+                            <a href="../index.html" class="btn btn-success complete-module" style="display: none;">
+                                返回首頁
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>衛生福利部疾病管制署 AI 應用基礎班線上自學平台</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt 食譜庫 | 疾管署 AI 應用基礎班</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <div class="logo-icon">AI</div>
+                    <div>
+                        <h1>AI 應用基礎班</h1>
+                        <span class="logo-subtitle">疾病管制署 第一年基礎班</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">首頁</a></li>
+                        <li><a href="prompt-recipes.html" class="active">Prompt 食譜</a></li>
+                        <li><a href="../resources/links.html">學習資源</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- Page Header -->
+                <div class="content-section" style="margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Prompt 食譜庫</h2>
+                    <p style="color: var(--text-muted);">疾管署專用 Prompt 模板，一鍵複製直接使用！請記得依據實際情況修改 [填入] 的部分。</p>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="tabs">
+                    <button class="tab active" data-tab="doc-recipes">文書類</button>
+                    <button class="tab" data-tab="data-recipes">資料類</button>
+                    <button class="tab" data-tab="comm-recipes">溝通類</button>
+                    <button class="tab" data-tab="other-recipes">其他</button>
+                </div>
+
+                <!-- Document Recipes -->
+                <div class="tab-content active" id="doc-recipes">
+                    <div class="recipe-grid">
+                        <!-- Recipe 1: 疫情通報公文 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫情通報公文</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">公文</span>
+                                    <span class="recipe-tag">通報</span>
+                                    <span class="recipe-tag">衛生局</span>
+                                </div>
+                                <div class="recipe-content" id="doc-recipe-1">你是疾病管制署的公文撰寫專家。請根據以下資訊撰寫一份正式公文。
+
+【發文對象】各縣市衛生局
+【事由】[填入：如「加強登革熱防治措施」]
+【背景說明】[填入相關背景]
+
+【格式要求】
+- 包含：主旨、說明、辦法
+- 使用正式公文語氣
+- 說明段落以條列方式呈現
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="doc-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 2: 衛教文宣撰寫 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">衛教文宣撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">衛教</span>
+                                    <span class="recipe-tag">文宣</span>
+                                    <span class="recipe-tag">民眾</span>
+                                </div>
+                                <div class="recipe-content" id="doc-recipe-2">你是公共衛生衛教專家。請針對以下主題撰寫衛教文宣。
+
+【主題】[填入：如「流感疫苗接種須知」]
+【目標對象】[一般民眾/醫護人員/特定族群]
+【宣導重點】[填入 2-3 個重點]
+
+【格式要求】
+- 使用民眾易懂的語言，避免專業術語
+- 分為：什麼是XX、為什麼重要、如何預防/處理
+- 字數：[填入] 字以內
+- 語氣：親切但專業
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="doc-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 3: 防疫會議紀錄整理 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫會議紀錄整理</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">會議</span>
+                                    <span class="recipe-tag">紀錄</span>
+                                    <span class="recipe-tag">整理</span>
+                                </div>
+                                <div class="recipe-content" id="doc-recipe-3">請將以下防疫會議內容整理成結構化的會議紀錄。
+
+【輸出格式】
+1. 會議資訊 (時間、地點、主持人、出席單位)
+2. 疫情現況說明摘要
+3. 討論議題與各單位意見
+4. 決議事項 (含權責單位)
+5. 待辦事項 (含負責人、期限)
+6. 下次會議時間
+
+【會議內容】
+[貼上會議逐字稿或筆記]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="doc-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 4: 簽呈撰寫 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">簽呈撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">簽呈</span>
+                                    <span class="recipe-tag">公文</span>
+                                    <span class="recipe-tag">內部</span>
+                                </div>
+                                <div class="recipe-content" id="doc-recipe-4">你是政府機關文書專家。請撰寫一份內部簽呈。
+
+【簽呈事由】[填入：如「申請參加研討會」]
+【主要內容】[填入相關說明]
+【建議辦理方式】[填入擬辦內容]
+
+【格式要求】
+- 包含：主旨、說明、擬辦
+- 說明清楚事由、依據、理由
+- 擬辦列出具體建議
+- 使用正式公文語氣
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="doc-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 5: 新聞稿撰寫 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">新聞稿撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">新聞稿</span>
+                                    <span class="recipe-tag">媒體</span>
+                                    <span class="recipe-tag">公關</span>
+                                </div>
+                                <div class="recipe-content" id="doc-recipe-5">你是疾管署公關文宣專家。請撰寫一份新聞稿。
+
+【主題】[填入新聞主題]
+【重點訊息】[填入 2-3 個核心訊息]
+【引用數據】[填入相關統計數據]
+【呼籲事項】[填入希望民眾配合的事項]
+
+【格式要求】
+- 標題吸引人且正確傳達訊息
+- 第一段包含最重要的 5W1H
+- 內文分段，每段有小標題
+- 結尾有明確的行動呼籲
+- 字數：500-800 字
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="doc-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 6: 活動企劃書 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">活動企劃書</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">企劃</span>
+                                    <span class="recipe-tag">活動</span>
+                                    <span class="recipe-tag">宣導</span>
+                                </div>
+                                <div class="recipe-content" id="doc-recipe-6">你是活動企劃專家。請撰寫一份衛教宣導活動企劃書。
+
+【活動名稱】[填入]
+【活動目的】[填入]
+【目標對象】[填入]
+【預計時間/地點】[填入]
+
+【企劃書需包含】
+1. 活動緣起與目的
+2. 活動對象與預期人數
+3. 活動時間與地點
+4. 活動流程（含時間分配）
+5. 所需資源與預算概估
+6. 預期效益
+7. 工作分配
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="doc-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Recipes -->
+                <div class="tab-content" id="data-recipes">
+                    <div class="recipe-grid">
+                        <!-- Recipe 1: 疫情週報摘要 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫情週報摘要</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">摘要</span>
+                                    <span class="recipe-tag">週報</span>
+                                    <span class="recipe-tag">疫情</span>
+                                </div>
+                                <div class="recipe-content" id="data-recipe-1">請閱讀以下疫情監測週報，並產出摘要。
+
+【摘要需求】
+- 本週重點 (50字以內)
+- 各類傳染病監測數據變化 (條列式)
+- 需特別關注的疫情趨勢
+- 建議防疫作為
+
+【目標讀者】[署長室/各組室主管/第一線人員]
+
+【週報內容】
+[貼上週報內容]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 2: 疫調報告重點提取 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫調報告重點提取</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">疫調</span>
+                                    <span class="recipe-tag">摘要</span>
+                                    <span class="recipe-tag">分析</span>
+                                </div>
+                                <div class="recipe-content" id="data-recipe-2">請分析以下疫調報告，提取關鍵資訊。
+
+【提取項目】
+- 個案基本資訊摘要（已去識別化）
+- 感染源研判
+- 接觸者追蹤情形
+- 防治措施建議
+- 需進一步釐清事項
+
+【注意事項】
+- 不得輸出任何可辨識個人的資訊
+- 專注於疫情防治相關重點
+
+【報告內容】
+[貼上已去識別化的報告摘要]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 3: 傳染病統計圖表說明 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">傳染病統計圖表說明</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">圖表</span>
+                                    <span class="recipe-tag">說明</span>
+                                    <span class="recipe-tag">統計</span>
+                                </div>
+                                <div class="recipe-content" id="data-recipe-3">以下是一張傳染病統計圖表的資料，請撰寫說明文字。
+
+【圖表資訊】
+- 主題：[如「2024年登革熱本土病例週趨勢圖」]
+- 圖表類型：[折線圖/長條圖/圓餅圖]
+- X軸：[如「週別」]
+- Y軸：[如「病例數」]
+- 數據摘要：[列出關鍵數據點]
+
+【說明需求】
+- 描述整體趨勢
+- 指出關鍵轉折點或異常
+- 與去年同期比較（如有資料）
+- 字數：100-150 字
+
+請撰寫圖表說明：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 4: Excel 公式生成 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">Excel 公式生成</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">Excel</span>
+                                    <span class="recipe-tag">公式</span>
+                                    <span class="recipe-tag">計算</span>
+                                </div>
+                                <div class="recipe-content" id="data-recipe-4">我需要一個 Excel 公式。
+
+【資料結構】
+- A 欄：[說明欄位內容]
+- B 欄：[說明欄位內容]
+- C 欄：[說明欄位內容]
+- 資料範圍：[如 A2:C100]
+
+【計算需求】
+[用白話描述想要的計算邏輯]
+
+【範例】
+輸入：[範例資料]
+預期輸出：[預期結果]
+
+請提供公式：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 5: 文獻重點提取 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">文獻重點提取</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">文獻</span>
+                                    <span class="recipe-tag">摘要</span>
+                                    <span class="recipe-tag">研究</span>
+                                </div>
+                                <div class="recipe-content" id="data-recipe-5">請分析以下研究文獻，提取關鍵資訊。
+
+【提取項目】
+1. 研究目的
+2. 研究方法（簡述）
+3. 主要發現（條列 3-5 點）
+4. 結論與建議
+5. 對我國防疫的啟示
+
+【輸出格式】
+使用條列式，每點不超過 50 字
+
+【文獻內容】
+[貼上文獻摘要或全文]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 6: 資料格式轉換 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">資料格式轉換</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">格式</span>
+                                    <span class="recipe-tag">轉換</span>
+                                    <span class="recipe-tag">整理</span>
+                                </div>
+                                <div class="recipe-content" id="data-recipe-6">請將以下資料轉換格式。
+
+【原始格式】
+[描述原始資料的格式，如「逗號分隔的文字」]
+
+【目標格式】
+[描述想要的格式，如「表格」「條列式」「JSON」]
+
+【轉換需求】
+[其他特殊需求，如排序、篩選、分類]
+
+【原始資料】
+[貼上原始資料]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communication Recipes -->
+                <div class="tab-content" id="comm-recipes">
+                    <div class="recipe-grid">
+                        <!-- Recipe 1: 回覆民眾詢問 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">回覆民眾詢問</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">Email</span>
+                                    <span class="recipe-tag">回覆</span>
+                                    <span class="recipe-tag">民眾</span>
+                                </div>
+                                <div class="recipe-content" id="comm-recipe-1">請撰寫一封回覆民眾的 Email。
+
+【民眾問題】
+[列出民眾詢問的問題]
+
+【回覆要求】
+- 語氣：禮貌、親切、專業
+- 結構：問候、逐點回覆、結語、署名
+- 提供官方資訊查詢管道（疾管署網站、1922）
+- 長度適中，不要過長
+
+請撰寫回覆：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="comm-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 2: 催辦通知 Email -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">催辦通知 Email</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">Email</span>
+                                    <span class="recipe-tag">催辦</span>
+                                    <span class="recipe-tag">提醒</span>
+                                </div>
+                                <div class="recipe-content" id="comm-recipe-2">請撰寫一封催辦 Email。
+
+【催辦事項】[填入待辦事項]
+【截止日期】[填入日期]
+【收件對象】[填入對象]
+
+【Email 要求】
+- 語氣：正式但不失禮貌
+- 內容：事項說明、截止時間、聯絡窗口
+- 簡潔有力，重點明確
+
+請撰寫 Email：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="comm-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 3: 會議通知 Email -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">會議通知 Email</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">Email</span>
+                                    <span class="recipe-tag">會議</span>
+                                    <span class="recipe-tag">通知</span>
+                                </div>
+                                <div class="recipe-content" id="comm-recipe-3">請撰寫一封會議通知 Email。
+
+【會議名稱】[填入]
+【時間】[填入日期與時間]
+【地點】[填入地點或線上會議連結]
+【出席對象】[填入]
+【會議議程】[填入主要議題]
+
+【Email 要求】
+- 主旨明確
+- 列出時間、地點、議程
+- 說明需準備事項（如有）
+- 請收件者確認出席
+
+請撰寫 Email：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="comm-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 4: 感謝函 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">感謝函撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">感謝函</span>
+                                    <span class="recipe-tag">公關</span>
+                                    <span class="recipe-tag">正式</span>
+                                </div>
+                                <div class="recipe-content" id="comm-recipe-4">請撰寫一封感謝函。
+
+【感謝對象】[填入]
+【感謝事由】[填入：如協助防疫、捐贈物資等]
+【具體貢獻】[填入對方的具體貢獻]
+
+【格式要求】
+- 語氣：正式、誠摯
+- 結構：問候、感謝事由、具體貢獻、祝福語
+- 署名：疾病管制署
+
+請撰寫感謝函：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="comm-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 5: 跨單位協調 Email -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">跨單位協調 Email</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">Email</span>
+                                    <span class="recipe-tag">協調</span>
+                                    <span class="recipe-tag">合作</span>
+                                </div>
+                                <div class="recipe-content" id="comm-recipe-5">請撰寫一封跨單位協調 Email。
+
+【協調事項】[填入需要協調的事項]
+【相關單位】[填入需要配合的單位]
+【希望配合事項】[填入具體請求]
+【時程】[填入相關時程]
+
+【Email 要求】
+- 語氣：禮貌、專業
+- 說明背景與必要性
+- 明確列出需要配合事項
+- 提供聯絡窗口
+
+請撰寫 Email：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="comm-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 6: 社群媒體貼文 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">社群媒體貼文</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">社群</span>
+                                    <span class="recipe-tag">貼文</span>
+                                    <span class="recipe-tag">宣導</span>
+                                </div>
+                                <div class="recipe-content" id="comm-recipe-6">請撰寫社群媒體衛教貼文。
+
+【主題】[填入衛教主題]
+【平台】[Facebook/Instagram/LINE]
+【目標對象】[填入目標族群]
+【核心訊息】[填入 1-2 個核心訊息]
+
+【貼文要求】
+- 開頭吸引注意力
+- 語氣活潑親切
+- 適當使用表情符號
+- 加入行動呼籲
+- 字數：[填入] 字以內
+
+請撰寫貼文：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="comm-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Recipes -->
+                <div class="tab-content" id="other-recipes">
+                    <div class="recipe-grid">
+                        <!-- Recipe 1: 翻譯 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">專業翻譯</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">翻譯</span>
+                                    <span class="recipe-tag">英中</span>
+                                    <span class="recipe-tag">專業</span>
+                                </div>
+                                <div class="recipe-content" id="other-recipe-1">請將以下內容翻譯成繁體中文。
+
+【翻譯要求】
+- 使用台灣常用的專業術語
+- 保持原文的專業性與準確性
+- 流暢自然的中文表達
+- 專有名詞可保留英文並加註中文
+
+【原文】
+[貼上英文內容]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="other-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 2: 文章潤飾 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">文章潤飾</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">潤飾</span>
+                                    <span class="recipe-tag">修改</span>
+                                    <span class="recipe-tag">文字</span>
+                                </div>
+                                <div class="recipe-content" id="other-recipe-2">請潤飾以下文章。
+
+【潤飾目標】
+- 改善文句流暢度
+- 修正錯別字與標點
+- 統一用語風格
+- 保持原意不變
+
+【語氣要求】[正式/親切/專業]
+
+【原文】
+[貼上需要潤飾的文章]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="other-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 3: Q&A 整理 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">Q&A 問答整理</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">Q&A</span>
+                                    <span class="recipe-tag">整理</span>
+                                    <span class="recipe-tag">問答</span>
+                                </div>
+                                <div class="recipe-content" id="other-recipe-3">請根據以下資訊，整理成 Q&A 問答集。
+
+【主題】[填入主題]
+【目標對象】[填入對象]
+【問題數量】約 [填入] 題
+
+【Q&A 要求】
+- 問題從使用者角度出發
+- 答案簡潔明確
+- 涵蓋常見疑問
+- 語氣親切易懂
+
+【參考資料】
+[貼上相關資料]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="other-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 4: 簡報大綱 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">簡報大綱規劃</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">簡報</span>
+                                    <span class="recipe-tag">大綱</span>
+                                    <span class="recipe-tag">規劃</span>
+                                </div>
+                                <div class="recipe-content" id="other-recipe-4">請為以下主題規劃簡報大綱。
+
+【簡報主題】[填入]
+【報告對象】[填入]
+【報告時間】約 [填入] 分鐘
+【重點內容】[填入 2-3 個重點]
+
+【大綱要求】
+- 列出各張投影片的標題與重點
+- 建議每張投影片的內容摘要
+- 標註哪些地方需要圖表或數據
+- 安排適當的邏輯順序
+
+請規劃簡報大綱：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="other-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 5: 腦力激盪 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">腦力激盪</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">創意</span>
+                                    <span class="recipe-tag">發想</span>
+                                    <span class="recipe-tag">點子</span>
+                                </div>
+                                <div class="recipe-content" id="other-recipe-5">請幫我進行腦力激盪。
+
+【主題/問題】[填入需要發想的主題或問題]
+【背景說明】[填入相關背景]
+【限制條件】[填入任何限制，如預算、時間、對象等]
+
+【請提供】
+- 至少 5 個不同方向的想法
+- 每個想法簡要說明可行性
+- 標註最推薦的 1-2 個方案
+
+請開始發想：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="other-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 6: 檢查清單 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">檢查清單製作</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">清單</span>
+                                    <span class="recipe-tag">檢核</span>
+                                    <span class="recipe-tag">SOP</span>
+                                </div>
+                                <div class="recipe-content" id="other-recipe-6">請製作一份檢查清單。
+
+【用途】[填入：如「活動前準備」「出國前確認」]
+【使用對象】[填入]
+【涵蓋範圍】[填入需要檢查的面向]
+
+【清單要求】
+- 分類清楚
+- 項目具體可執行
+- 按照執行順序排列
+- 可加入提醒事項
+
+請製作檢查清單：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="other-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips Section -->
+                <div class="content-section" style="margin-top: 40px;">
+                    <h3>使用小提醒</h3>
+                    <div class="alert alert-info">
+                        <span class="alert-icon">💡</span>
+                        <div>
+                            <strong>如何使用這些食譜</strong>
+                            <ol style="margin: 10px 0 0; padding-left: 20px;">
+                                <li>點擊「複製 Prompt」按鈕</li>
+                                <li>貼到您的 AI 工具（如 ChatGPT、Claude）</li>
+                                <li>將 [填入] 的部分替換成您的實際內容</li>
+                                <li>送出後審核 AI 的回應，必要時進行調整</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="alert alert-warning">
+                        <span class="alert-icon">⚠️</span>
+                        <div>
+                            <strong>資安提醒</strong>
+                            <p style="margin: 5px 0 0;">使用這些 Prompt 時，請確保不要輸入任何個人資料、機密資訊或敏感資料。AI 產出的內容請務必審核後再使用。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>衛生福利部疾病管制署 AI 應用基礎班線上自學平台</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

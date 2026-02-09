@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模組 4：資料整理應用 | 疾管署 AI 應用基礎班</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <div class="logo-icon">AI</div>
+                    <div>
+                        <h1>AI 應用基礎班</h1>
+                        <span class="logo-subtitle">疾病管制署 第一年基礎班</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">首頁</a></li>
+                        <li><a href="../recipes/prompt-recipes.html">Prompt 食譜</a></li>
+                        <li><a href="../resources/links.html">學習資源</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- Module Header -->
+                <div class="content-section" style="margin-bottom: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                        <div>
+                            <span class="badge badge-primary">模組 4</span>
+                            <h2 style="margin: 10px 0 5px; font-size: 1.8rem;">資料整理應用</h2>
+                            <p style="color: var(--text-muted); margin: 0;">Excel 公式、資料摘要、圖表說明 — 數據處理好幫手</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="color: var(--text-muted);">預計時間：約 25 分鐘</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-layout" data-module="module4">
+                    <!-- Sidebar Navigation -->
+                    <aside class="module-sidebar">
+                        <nav class="module-nav">
+                            <h4>單元導覽</h4>
+                            <ul class="module-nav-list">
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link active" data-unit="0">
+                                        <span class="nav-step-number">1</span>
+                                        Excel 公式生成
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="1">
+                                        <span class="nav-step-number">2</span>
+                                        資料摘要與重點提取
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="2">
+                                        <span class="nav-step-number">3</span>
+                                        圖表說明文字生成
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="3">
+                                        <span class="nav-step-number">4</span>
+                                        資料類 Prompt 食譜
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="4">
+                                        <span class="nav-step-number">5</span>
+                                        單元測驗
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="module-content">
+                        <!-- Unit 4.1: Excel 公式 -->
+                        <div class="unit-container active" data-unit-index="0">
+                            <div class="content-section">
+                                <h3>單元 4.1：Excel 公式生成技巧</h3>
+
+                                <p>不熟悉 Excel 公式？AI 可以幫您！只要描述想要的計算邏輯，AI 就能生成對應的公式。</p>
+
+                                <h4>Excel 公式 Prompt 的關鍵</h4>
+                                <ul>
+                                    <li><strong>說明資料結構</strong>：欄位位置（如 A 欄是日期、B 欄是數量）</li>
+                                    <li><strong>描述計算邏輯</strong>：用白話說明想要的結果</li>
+                                    <li><strong>指定條件</strong>：如果有篩選條件要說清楚</li>
+                                    <li><strong>範例資料</strong>：提供一些範例能幫助 AI 理解</li>
+                                </ul>
+
+                                <h4>範例：計算疫苗覆蓋率</h4>
+                                <div class="scenario-box">
+                                    <div class="recipe-content" id="excel-prompt-1">我需要一個 Excel 公式。
+
+【資料說明】
+- A 欄：縣市名稱
+- B 欄：65 歲以上人口數
+- C 欄：已接種人數
+
+【需求】
+請幫我寫一個公式，放在 D 欄，計算每個縣市的疫苗覆蓋率（已接種人數 / 65歲以上人口數），以百分比顯示，保留一位小數。
+
+【範例資料】
+A2: 台北市, B2: 500000, C2: 350000
+預期 D2 結果：70.0%</div>
+                                    <button class="btn btn-copy btn-sm" data-copy-target="excel-prompt-1" style="margin-top: 12px;">複製 Prompt</button>
+                                </div>
+
+                                <h4>常見 Excel 公式需求</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>需求類型</th>
+                                            <th>範例描述</th>
+                                            <th>常用函數</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>條件加總</td>
+                                            <td>加總某縣市的所有病例數</td>
+                                            <td>SUMIF, SUMIFS</td>
+                                        </tr>
+                                        <tr>
+                                            <td>條件計數</td>
+                                            <td>計算符合條件的紀錄筆數</td>
+                                            <td>COUNTIF, COUNTIFS</td>
+                                        </tr>
+                                        <tr>
+                                            <td>查表</td>
+                                            <td>根據代碼查出對應的名稱</td>
+                                            <td>VLOOKUP, XLOOKUP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>日期計算</td>
+                                            <td>計算兩日期間隔天數</td>
+                                            <td>DATEDIF, DATE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>文字處理</td>
+                                            <td>合併或擷取文字</td>
+                                            <td>CONCAT, LEFT, RIGHT</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h4>範例對比</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 模糊的 Excel Prompt
+                                        </div>
+                                        <div class="comparison-content">幫我寫一個 Excel 公式算總數</div>
+                                        <div class="comparison-result">
+                                            AI 不知道要算什麼、資料在哪裡
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 清楚的 Excel Prompt
+                                        </div>
+                                        <div class="comparison-content">Excel 公式需求：
+A 欄是縣市、B 欄是病例數（B2:B23）。
+我要在 B24 計算所有縣市的病例總數。
+請提供公式。</div>
+                                        <div class="comparison-result">
+                                            AI 能正確產出 =SUM(B2:B23)
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning" style="margin-top: 24px;">
+                                    <span class="alert-icon">⚠️</span>
+                                    <div>
+                                        <strong>注意事項</strong>
+                                        <p style="margin: 5px 0 0;">AI 生成的公式請在少量資料上先測試，確認邏輯正確後再大量使用。複雜公式建議分步驗證。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 4.2: 資料摘要 -->
+                        <div class="unit-container" data-unit-index="1">
+                            <div class="content-section">
+                                <h3>單元 4.2：資料摘要與重點提取</h3>
+
+                                <p>面對大量文字資料時，AI 可以幫您快速提取重點，產出結構化的摘要。</p>
+
+                                <h4>資料摘要的常見應用</h4>
+                                <ul>
+                                    <li>疫情監測週報摘要</li>
+                                    <li>研究期刊重點提取</li>
+                                    <li>長篇報告精華整理</li>
+                                    <li>新聞資訊彙整</li>
+                                </ul>
+
+                                <h4>範例：疫情週報摘要</h4>
+                                <div class="scenario-box">
+                                    <div class="recipe-content" id="summary-prompt">請閱讀以下疫情監測週報，並產出摘要。
+
+【摘要需求】
+1. 本週重點（50字以內）
+2. 各類傳染病監測數據變化（條列式）
+3. 需特別關注的疫情趨勢
+4. 建議防疫作為
+
+【目標讀者】署長室主管
+
+【週報內容】
+（在此貼上週報內容，請確保已移除敏感個資）</div>
+                                    <button class="btn btn-copy btn-sm" data-copy-target="summary-prompt" style="margin-top: 12px;">複製 Prompt</button>
+                                </div>
+
+                                <h4>範例：期刊文獻重點提取</h4>
+                                <div class="scenario-box">
+                                    <div class="recipe-content" id="literature-prompt">請分析以下研究文獻，提取關鍵資訊。
+
+【提取項目】
+1. 研究目的
+2. 研究方法（簡述）
+3. 主要發現（條列 3-5 點）
+4. 結論與建議
+5. 對我國防疫的啟示
+
+【輸出格式】
+使用條列式，每點不超過 50 字
+
+【文獻內容】
+（貼上文獻摘要或全文）</div>
+                                    <button class="btn btn-copy btn-sm" data-copy-target="literature-prompt" style="margin-top: 12px;">複製 Prompt</button>
+                                </div>
+
+                                <h4>摘要品質的關鍵</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 20px 0;">
+                                    <div class="card" style="border-left: 4px solid var(--success-color);">
+                                        <h5 style="color: var(--success-color);">指定讀者</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">不同讀者需要不同深度的摘要</p>
+                                    </div>
+                                    <div class="card" style="border-left: 4px solid var(--success-color);">
+                                        <h5 style="color: var(--success-color);">明確結構</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">指定要提取哪些項目</p>
+                                    </div>
+                                    <div class="card" style="border-left: 4px solid var(--success-color);">
+                                        <h5 style="color: var(--success-color);">字數限制</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">控制摘要長度</p>
+                                    </div>
+                                    <div class="card" style="border-left: 4px solid var(--success-color);">
+                                        <h5 style="color: var(--success-color);">格式要求</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">條列式或段落式</p>
+                                    </div>
+                                </div>
+
+                                <h4>選擇題練習</h4>
+                                <div class="quiz-container" data-quiz-id="summary-practice" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>情境：需要將 10 頁的 WHO 疫情報告摘要給署長參閱，以下哪個 Prompt 最適合？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="summary-q">
+                                                <span>「摘要這份報告」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="summary-q">
+                                                <span>「請摘要以下 WHO 報告，供署長參閱。摘要需包含：疫情現況、關鍵數據變化、WHO 建議措施、對我國的啟示。使用條列式，總長度 300 字以內。」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="summary-q">
+                                                <span>「把報告變短一點」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="summary-q">
+                                                <span>「翻譯成中文」</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 4.3: 圖表說明 -->
+                        <div class="unit-container" data-unit-index="2">
+                            <div class="content-section">
+                                <h3>單元 4.3：圖表說明文字生成</h3>
+
+                                <p>製作簡報或報告時，常需要為圖表撰寫說明文字。AI 可以根據您提供的數據，生成專業的圖表說明。</p>
+
+                                <h4>圖表說明的要素</h4>
+                                <ul>
+                                    <li><strong>整體趨勢</strong>：上升、下降、持平</li>
+                                    <li><strong>關鍵數據點</strong>：最高、最低、轉折點</li>
+                                    <li><strong>時間比較</strong>：與去年同期、與上週比較</li>
+                                    <li><strong>意義解讀</strong>：這個趨勢代表什麼</li>
+                                </ul>
+
+                                <h4>範例：登革熱病例趨勢圖說明</h4>
+                                <div class="scenario-box">
+                                    <div class="recipe-content" id="chart-prompt">請為以下統計圖表撰寫說明文字。
+
+【圖表資訊】
+- 主題：2024年登革熱本土病例週趨勢圖
+- 圖表類型：折線圖
+- X軸：週別（第1週至第40週）
+- Y軸：病例數
+
+【數據摘要】
+- 第1-20週：每週 0-5 例，累計 50 例
+- 第21週起：病例開始上升
+- 第30週：達到高峰，單週 150 例
+- 第31-40週：緩慢下降，目前每週約 80 例
+- 累計病例數：1,200 例
+
+【說明需求】
+- 描述整體趨勢
+- 指出關鍵轉折點
+- 與去年同期比較（去年同期累計 800 例）
+- 字數：100-150 字</div>
+                                    <button class="btn btn-copy btn-sm" data-copy-target="chart-prompt" style="margin-top: 12px;">複製 Prompt</button>
+                                </div>
+
+                                <h4>範例對比</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 缺乏數據的 Prompt
+                                        </div>
+                                        <div class="comparison-content">幫我寫圖表說明</div>
+                                        <div class="comparison-result">
+                                            AI 無法憑空寫出有意義的說明
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 提供完整數據的 Prompt
+                                        </div>
+                                        <div class="comparison-content">這是流感就診人次折線圖，X軸是週別（1-52週），Y軸是就診人次。第1-10週約 5000 人次/週，第11週開始上升，第15週達高峰 12000 人次，之後逐漸下降。請撰寫 100 字說明。</div>
+                                        <div class="comparison-result">
+                                            AI 能產出準確的圖表說明
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>不同圖表類型的說明重點</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>圖表類型</th>
+                                            <th>說明重點</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>折線圖</td>
+                                            <td>趨勢變化、轉折點、時間比較</td>
+                                        </tr>
+                                        <tr>
+                                            <td>長條圖</td>
+                                            <td>各項目比較、最高/最低、差異幅度</td>
+                                        </tr>
+                                        <tr>
+                                            <td>圓餅圖</td>
+                                            <td>佔比分布、最大/最小項目</td>
+                                        </tr>
+                                        <tr>
+                                            <td>地圖（熱區圖）</td>
+                                            <td>地理分布、熱區位置、區域比較</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Unit 4.4: 資料類 Prompt 食譜 -->
+                        <div class="unit-container" data-unit-index="3">
+                            <div class="content-section">
+                                <h3>單元 4.4：資料類 Prompt 食譜</h3>
+
+                                <p>以下是疾管署常用的資料處理 Prompt 模板！</p>
+
+                                <div class="recipe-grid">
+                                    <!-- Recipe 1 -->
+                                    <div class="recipe-card">
+                                        <div class="recipe-header">
+                                            <span class="recipe-title">Excel 公式生成</span>
+                                        </div>
+                                        <div class="recipe-body">
+                                            <div class="recipe-tags">
+                                                <span class="recipe-tag">Excel</span>
+                                                <span class="recipe-tag">公式</span>
+                                            </div>
+                                            <div class="recipe-content" id="data-recipe-1">我需要一個 Excel 公式。
+
+【資料結構】
+- A 欄：[說明欄位內容]
+- B 欄：[說明欄位內容]
+- 資料範圍：[如 A2:B100]
+
+【計算需求】
+[用白話描述想要的計算]
+
+【範例】
+輸入：[範例資料]
+預期輸出：[預期結果]</div>
+                                        </div>
+                                        <div class="recipe-footer">
+                                            <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-1">複製</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recipe 2 -->
+                                    <div class="recipe-card">
+                                        <div class="recipe-header">
+                                            <span class="recipe-title">疫情週報摘要</span>
+                                        </div>
+                                        <div class="recipe-body">
+                                            <div class="recipe-tags">
+                                                <span class="recipe-tag">摘要</span>
+                                                <span class="recipe-tag">週報</span>
+                                            </div>
+                                            <div class="recipe-content" id="data-recipe-2">請摘要以下疫情監測週報。
+
+【摘要需求】
+1. 本週重點（50字內）
+2. 各類傳染病數據變化
+3. 需關注的趨勢
+4. 建議防疫作為
+
+【讀者】[署長室/各組主管]
+
+【週報內容】
+[貼上週報，確保無敏感個資]</div>
+                                        </div>
+                                        <div class="recipe-footer">
+                                            <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-2">複製</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recipe 3 -->
+                                    <div class="recipe-card">
+                                        <div class="recipe-header">
+                                            <span class="recipe-title">圖表說明生成</span>
+                                        </div>
+                                        <div class="recipe-body">
+                                            <div class="recipe-tags">
+                                                <span class="recipe-tag">圖表</span>
+                                                <span class="recipe-tag">說明</span>
+                                            </div>
+                                            <div class="recipe-content" id="data-recipe-3">請為以下圖表撰寫說明。
+
+【圖表資訊】
+- 主題：[圖表標題]
+- 類型：[折線圖/長條圖/圓餅圖]
+- X軸：[說明]
+- Y軸：[說明]
+
+【數據摘要】
+[列出關鍵數據點]
+
+【說明需求】
+- 描述趨勢
+- 指出關鍵點
+- 字數：100-150字</div>
+                                        </div>
+                                        <div class="recipe-footer">
+                                            <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-3">複製</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recipe 4 -->
+                                    <div class="recipe-card">
+                                        <div class="recipe-header">
+                                            <span class="recipe-title">文獻重點提取</span>
+                                        </div>
+                                        <div class="recipe-body">
+                                            <div class="recipe-tags">
+                                                <span class="recipe-tag">文獻</span>
+                                                <span class="recipe-tag">摘要</span>
+                                            </div>
+                                            <div class="recipe-content" id="data-recipe-4">請分析以下文獻，提取重點。
+
+【提取項目】
+1. 研究目的
+2. 研究方法
+3. 主要發現（3-5點）
+4. 結論與建議
+5. 對我國的啟示
+
+【格式】條列式，每點 50 字內
+
+【文獻】
+[貼上文獻內容]</div>
+                                        </div>
+                                        <div class="recipe-footer">
+                                            <button class="btn btn-copy btn-sm" data-copy-target="data-recipe-4">複製</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info" style="margin-top: 24px;">
+                                    <span class="alert-icon">💡</span>
+                                    <div>
+                                        <strong>更多 Prompt 食譜</strong>
+                                        <p style="margin: 5px 0 0;">前往 <a href="../recipes/prompt-recipes.html">Prompt 食譜庫</a> 查看完整模板！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 4.5: 單元測驗 -->
+                        <div class="unit-container" data-unit-index="4">
+                            <div class="content-section">
+                                <h3>單元 4.5：單元測驗</h3>
+
+                                <p>測試一下您對資料整理應用的理解！</p>
+
+                                <!-- Quiz 1 -->
+                                <div class="quiz-container" data-quiz-id="m4-quiz-1" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>1. 請 AI 生成 Excel 公式時，以下哪項資訊最重要？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m4q1">
+                                                <span>Excel 的版本</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m4q1">
+                                                <span>電腦的作業系統</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m4q1">
+                                                <span>資料結構與計算邏輯的描述</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m4q1">
+                                                <span>檔案名稱</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 2 -->
+                                <div class="quiz-container" data-quiz-id="m4-quiz-2" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>2. 請 AI 摘要週報時，以下哪個做法能產出更好的結果？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m4q2">
+                                                <span>只說「摘要這份報告」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m4q2">
+                                                <span>指定讀者對象、摘要項目、字數限制</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m4q2">
+                                                <span>請 AI 隨意發揮</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m4q2">
+                                                <span>不需要給 AI 任何指示</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 3 -->
+                                <div class="quiz-container" data-quiz-id="m4-quiz-3" data-correct="d">
+                                    <div class="quiz-question">
+                                        <h4>3. 請 AI 撰寫圖表說明時，以下哪項資訊「不一定需要」提供？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m4q3">
+                                                <span>圖表類型（折線圖/長條圖等）</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m4q3">
+                                                <span>關鍵數據點</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m4q3">
+                                                <span>圖表主題</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m4q3">
+                                                <span>製作圖表的軟體名稱</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <div class="alert alert-success" style="margin-top: 30px;">
+                                    <span class="alert-icon">🎉</span>
+                                    <div>
+                                        <strong>完成模組 4！</strong>
+                                        <p style="margin: 5px 0 0;">您已學會如何運用 AI 進行資料整理！最後一個模組，我們來學習進階技巧。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="nav-buttons">
+                            <button class="btn btn-secondary prev-unit" style="display: none;">
+                                ← 上一單元
+                            </button>
+                            <div></div>
+                            <button class="btn btn-primary next-unit">
+                                下一單元 →
+                            </button>
+                            <a href="module5.html" class="btn btn-success complete-module" style="display: none;">
+                                前往模組 5 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>衛生福利部疾病管制署 AI 應用基礎班線上自學平台</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

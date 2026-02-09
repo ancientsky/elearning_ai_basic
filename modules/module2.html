@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模組 2：Prompt 四要素 | 疾管署 AI 應用基礎班</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <div class="logo-icon">AI</div>
+                    <div>
+                        <h1>AI 應用基礎班</h1>
+                        <span class="logo-subtitle">疾病管制署 第一年基礎班</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">首頁</a></li>
+                        <li><a href="../recipes/prompt-recipes.html">Prompt 食譜</a></li>
+                        <li><a href="../resources/links.html">學習資源</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- Module Header -->
+                <div class="content-section" style="margin-bottom: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                        <div>
+                            <span class="badge badge-primary">模組 2</span>
+                            <h2 style="margin: 10px 0 5px; font-size: 1.8rem;">Prompt 四要素</h2>
+                            <p style="color: var(--text-muted); margin: 0;">角色、任務、格式、限制 — 撰寫有效 Prompt 的核心</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="color: var(--text-muted);">預計時間：約 20 分鐘</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-layout" data-module="module2">
+                    <!-- Sidebar Navigation -->
+                    <aside class="module-sidebar">
+                        <nav class="module-nav">
+                            <h4>單元導覽</h4>
+                            <ul class="module-nav-list">
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link active" data-unit="0">
+                                        <span class="nav-step-number">1</span>
+                                        Prompt 是什麼？
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="1">
+                                        <span class="nav-step-number">2</span>
+                                        角色 (Role)
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="2">
+                                        <span class="nav-step-number">3</span>
+                                        任務 (Task)
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="3">
+                                        <span class="nav-step-number">4</span>
+                                        格式 (Format)
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="4">
+                                        <span class="nav-step-number">5</span>
+                                        限制 (Constraint)
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="5">
+                                        <span class="nav-step-number">6</span>
+                                        綜合練習
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="6">
+                                        <span class="nav-step-number">7</span>
+                                        單元測驗
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="module-content">
+                        <!-- Unit 2.1: Prompt 是什麼 -->
+                        <div class="unit-container active" data-unit-index="0">
+                            <div class="content-section">
+                                <h3>單元 2.1：Prompt 是什麼？</h3>
+
+                                <!-- 影片嵌入區：製作完影片後，將下方整個 video-placeholder 區塊替換為：
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/您的影片ID"
+                                            title="Prompt四要素介紹"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                                -->
+                                <div class="video-placeholder">
+                                    <div class="play-icon">▶</div>
+                                    <h4>Prompt 基礎介紹</h4>
+                                    <p>（影片時長約 3 分鐘）</p>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);">腳本請見：docs/影片腳本.md</p>
+                                </div>
+
+                                <h4>Prompt 的定義</h4>
+                                <p><strong>Prompt（提示詞）</strong>是您輸入給 AI 的指令或問題。Prompt 的品質直接影響 AI 回應的品質。</p>
+
+                                <div class="scenario-box">
+                                    <h4>簡單比喻</h4>
+                                    <p>Prompt 就像是您給助理的工作指示。如果指示模糊，助理可能做出不符期望的結果；如果指示清楚具體，就更容易得到想要的成果。</p>
+                                </div>
+
+                                <h4>好的 Prompt vs 差的 Prompt</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 模糊的 Prompt
+                                        </div>
+                                        <div class="comparison-content">幫我寫登革熱文章</div>
+                                        <div class="comparison-result">
+                                            AI 可能產出過長、不知道對象是誰、格式不確定的內容
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 清楚的 Prompt
+                                        </div>
+                                        <div class="comparison-content">你是疾管署衛教專家。請撰寫一篇給一般民眾的登革熱預防衛教文章，包含病媒蚊特徵、居家防蚊措施、就醫時機，300 字以內，語氣親切易懂。</div>
+                                        <div class="comparison-result">
+                                            AI 會產出符合需求的結構化內容
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>Prompt 四要素框架</h4>
+                                <p>一個完整的 Prompt 通常包含四個要素：</p>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0;">
+                                    <div class="card" style="border-left: 4px solid #e74c3c;">
+                                        <h5 style="color: #e74c3c;">1. 角色 (Role)</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">告訴 AI 要扮演什麼身分</p>
+                                    </div>
+                                    <div class="card" style="border-left: 4px solid #3498db;">
+                                        <h5 style="color: #3498db;">2. 任務 (Task)</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">具體說明要做什麼事</p>
+                                    </div>
+                                    <div class="card" style="border-left: 4px solid #2ecc71;">
+                                        <h5 style="color: #2ecc71;">3. 格式 (Format)</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">指定輸出的呈現方式</p>
+                                    </div>
+                                    <div class="card" style="border-left: 4px solid #9b59b6;">
+                                        <h5 style="color: #9b59b6;">4. 限制 (Constraint)</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">設定條件或注意事項</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info">
+                                    <span class="alert-icon">💡</span>
+                                    <div>
+                                        <strong>記憶口訣</strong>
+                                        <p style="margin: 5px 0 0;">「角任格限」= 角色、任務、格式、限制。不是每個 Prompt 都需要四個要素，視情況靈活運用。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 2.2: 角色 (Role) -->
+                        <div class="unit-container" data-unit-index="1">
+                            <div class="content-section">
+                                <h3>單元 2.2：角色 (Role) 設定</h3>
+
+                                <p>設定角色能讓 AI 用特定的專業視角來回應，產出更符合情境的內容。</p>
+
+                                <h4>為什麼要設定角色？</h4>
+                                <ul>
+                                    <li>讓 AI 採用特定領域的專業知識</li>
+                                    <li>影響回應的語氣和風格</li>
+                                    <li>獲得更符合實際工作需求的內容</li>
+                                </ul>
+
+                                <h4>疾管署常用角色範例</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>角色</th>
+                                            <th>適用情境</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>疾管署衛教專家</td>
+                                            <td>撰寫衛教文宣、民眾溝通</td>
+                                        </tr>
+                                        <tr>
+                                            <td>公共衛生專業人員</td>
+                                            <td>疫情分析、防疫策略</td>
+                                        </tr>
+                                        <tr>
+                                            <td>政府公文撰寫專家</td>
+                                            <td>正式公文、函文</td>
+                                        </tr>
+                                        <tr>
+                                            <td>會議記錄專員</td>
+                                            <td>整理會議紀錄</td>
+                                        </tr>
+                                        <tr>
+                                            <td>資料分析師</td>
+                                            <td>統計資料解讀、圖表說明</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h4>範例對比</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 沒有設定角色
+                                        </div>
+                                        <div class="comparison-content">請說明登革熱的預防方法</div>
+                                        <div class="comparison-result">
+                                            可能得到一般性的、不確定對象的說明
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 設定明確角色
+                                        </div>
+                                        <div class="comparison-content">你是疾管署的衛教專家，擅長用淺顯易懂的方式向民眾說明疾病預防知識。請說明登革熱的預防方法。</div>
+                                        <div class="comparison-result">
+                                            會得到專業但親民的衛教內容
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>填空練習</h4>
+                                <div class="fill-blank-container" id="role-practice">
+                                    <p class="fill-blank-text">
+                                        情境：需要撰寫給醫護人員的流感疫苗接種指引<br><br>
+                                        你是
+                                        <select class="fill-blank-select" data-answer="公共衛生專業人員|疾管署專業人員">
+                                            <option value="">請選擇角色...</option>
+                                            <option value="美食部落客">美食部落客</option>
+                                            <option value="公共衛生專業人員">公共衛生專業人員</option>
+                                            <option value="旅遊作家">旅遊作家</option>
+                                            <option value="兒童故事作者">兒童故事作者</option>
+                                        </select>
+                                        ，請撰寫流感疫苗接種指引...
+                                    </p>
+                                    <div style="margin-top: 16px;">
+                                        <button class="btn btn-primary" onclick="checkFillBlankAnswer('role-practice')">檢查答案</button>
+                                        <button class="btn btn-secondary" onclick="showFillBlankAnswers('role-practice')">看答案</button>
+                                    </div>
+                                    <div class="fill-blank-feedback quiz-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 2.3: 任務 (Task) -->
+                        <div class="unit-container" data-unit-index="2">
+                            <div class="content-section">
+                                <h3>單元 2.3：任務 (Task) 描述</h3>
+
+                                <p>明確的任務描述是 Prompt 的核心，它告訴 AI 具體要做什麼事。</p>
+
+                                <h4>任務描述的要訣</h4>
+                                <ul>
+                                    <li><strong>使用動詞開頭</strong>：撰寫、整理、翻譯、摘要、分析...</li>
+                                    <li><strong>具體明確</strong>：避免「幫我做事」這類模糊指令</li>
+                                    <li><strong>說明目的</strong>：讓 AI 了解這項任務的用途</li>
+                                    <li><strong>提供背景</strong>：必要時說明相關情境</li>
+                                </ul>
+
+                                <h4>疾管署常見任務類型</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 20px 0;">
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>撰寫</strong>：公文、衛教文宣、Email
+                                    </div>
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>整理</strong>：會議紀錄、資料彙整
+                                    </div>
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>摘要</strong>：報告、期刊、週報
+                                    </div>
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>翻譯</strong>：英文文獻、WHO 報告
+                                    </div>
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>分析</strong>：數據解讀、趨勢說明
+                                    </div>
+                                    <div style="background: var(--bg-color); padding: 12px 16px; border-radius: var(--radius-md);">
+                                        <strong>修改</strong>：潤稿、格式調整
+                                    </div>
+                                </div>
+
+                                <h4>範例對比</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 模糊的任務
+                                        </div>
+                                        <div class="comparison-content">處理一下這個會議</div>
+                                        <div class="comparison-result">
+                                            AI 不知道要「處理」什麼，會議的什麼內容？
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 明確的任務
+                                        </div>
+                                        <div class="comparison-content">請將以下防疫會議的逐字稿整理成結構化的會議紀錄，包含：會議資訊、討論重點、決議事項、待辦追蹤。</div>
+                                        <div class="comparison-result">
+                                            AI 清楚知道要做什麼、輸出什麼
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>填空練習</h4>
+                                <div class="fill-blank-container" id="task-practice">
+                                    <p class="fill-blank-text">
+                                        情境：有一份英文的 WHO 疫情報告需要變成中文<br><br>
+                                        請
+                                        <input type="text" class="fill-blank-input" data-answer="翻譯|將...翻譯成中文" placeholder="輸入動作（動詞）...">
+                                        以下 WHO 疫情報告為繁體中文...
+                                    </p>
+                                    <div style="margin-top: 16px;">
+                                        <button class="btn btn-primary" onclick="checkFillBlankAnswer('task-practice')">檢查答案</button>
+                                        <button class="btn btn-secondary" onclick="showFillBlankAnswers('task-practice')">看答案</button>
+                                    </div>
+                                    <div class="fill-blank-feedback quiz-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 2.4: 格式 (Format) -->
+                        <div class="unit-container" data-unit-index="3">
+                            <div class="content-section">
+                                <h3>單元 2.4：格式 (Format) 指定</h3>
+
+                                <p>指定格式可以讓 AI 的輸出更符合您的使用需求，不用再花時間重新排版。</p>
+
+                                <h4>常用格式類型</h4>
+                                <ul>
+                                    <li><strong>條列式</strong>：使用編號或項目符號</li>
+                                    <li><strong>表格</strong>：比較、整理資料時特別有用</li>
+                                    <li><strong>段落式</strong>：正式文章、報告</li>
+                                    <li><strong>公文格式</strong>：主旨、說明、辦法</li>
+                                    <li><strong>特定結構</strong>：如 SWOT、5W1H 等</li>
+                                </ul>
+
+                                <h4>疾管署常用格式範例</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>工作類型</th>
+                                            <th>建議格式</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>公文</td>
+                                            <td>主旨、說明（條列）、辦法</td>
+                                        </tr>
+                                        <tr>
+                                            <td>會議紀錄</td>
+                                            <td>會議資訊、出席、討論、決議、待辦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>衛教單張</td>
+                                            <td>症狀、預防、就醫時機（三段式）</td>
+                                        </tr>
+                                        <tr>
+                                            <td>週報摘要</td>
+                                            <td>本週重點、數據變化、後續關注</td>
+                                        </tr>
+                                        <tr>
+                                            <td>資料比較</td>
+                                            <td>表格形式</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h4>範例對比</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 沒有指定格式
+                                        </div>
+                                        <div class="comparison-content">請說明三種傳染病的預防方式</div>
+                                        <div class="comparison-result">
+                                            可能得到雜亂的段落文字，不易閱讀比較
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 指定表格格式
+                                        </div>
+                                        <div class="comparison-content">請用表格比較登革熱、流感、COVID-19 三種傳染病，欄位包含：傳播途徑、主要症狀、預防方式。</div>
+                                        <div class="comparison-result">
+                                            AI 會產出清楚的比較表格
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>選擇題練習</h4>
+                                <div class="quiz-container" data-quiz-id="format-practice" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>情境：需要撰寫一份給各縣市衛生局的正式公文，最適合指定的格式是？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="format-q">
+                                                <span>使用表格呈現</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="format-q">
+                                                <span>使用 Q&A 問答形式</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="format-q">
+                                                <span>包含主旨、說明、辦法的公文格式</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="format-q">
+                                                <span>使用對話體撰寫</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 2.5: 限制 (Constraint) -->
+                        <div class="unit-container" data-unit-index="4">
+                            <div class="content-section">
+                                <h3>單元 2.5：限制 (Constraint) 設定</h3>
+
+                                <p>設定限制條件可以讓 AI 的輸出更精準地符合您的需求。</p>
+
+                                <h4>常見的限制類型</h4>
+                                <ul>
+                                    <li><strong>字數限制</strong>：「300 字以內」「不超過 500 字」</li>
+                                    <li><strong>語氣/風格</strong>：「正式」「親切」「專業」</li>
+                                    <li><strong>對象</strong>：「給一般民眾」「給醫護人員」</li>
+                                    <li><strong>排除項目</strong>：「不要使用專業術語」「不要列出參考資料」</li>
+                                    <li><strong>語言</strong>：「使用繁體中文」「避免使用簡體字詞」</li>
+                                </ul>
+
+                                <h4>疾管署常用限制範例</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>限制類型</th>
+                                            <th>範例</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>字數</td>
+                                            <td>300 字以內、約 500 字</td>
+                                        </tr>
+                                        <tr>
+                                            <td>語氣</td>
+                                            <td>正式公文語氣、親切易懂</td>
+                                        </tr>
+                                        <tr>
+                                            <td>對象</td>
+                                            <td>一般民眾、醫護人員、長者</td>
+                                        </tr>
+                                        <tr>
+                                            <td>用語</td>
+                                            <td>避免專業術語、使用台灣常用詞彙</td>
+                                        </tr>
+                                        <tr>
+                                            <td>內容</td>
+                                            <td>只討論預防措施、不涉及治療</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h4>範例對比</h4>
+                                <div class="comparison-box">
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 沒有設定限制
+                                        </div>
+                                        <div class="comparison-content">撰寫登革熱衛教文宣</div>
+                                        <div class="comparison-result">
+                                            可能得到過長、用語不適合對象的內容
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> 設定具體限制
+                                        </div>
+                                        <div class="comparison-content">撰寫登革熱衛教文宣。目標對象是國小學童，使用簡單易懂的詞彙，300 字以內，語氣活潑親切。</div>
+                                        <div class="comparison-result">
+                                            AI 會產出適合兒童閱讀的內容
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>選擇題練習</h4>
+                                <div class="quiz-container" data-quiz-id="constraint-practice" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>情境：撰寫給 65 歲以上長者的疫苗接種衛教，以下哪個限制設定最合適？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="constraint-q">
+                                                <span>使用大量專業醫學術語</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="constraint-q">
+                                                <span>使用簡單易懂的詞彙，字體建議放大，重點用粗體標示</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="constraint-q">
+                                                <span>使用網路流行用語，語氣輕鬆幽默</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="constraint-q">
+                                                <span>使用英文專有名詞，顯示專業度</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 2.6: 綜合練習 -->
+                        <div class="unit-container" data-unit-index="5">
+                            <div class="content-section">
+                                <h3>單元 2.6：綜合練習 — 組合四要素</h3>
+
+                                <p>現在讓我們練習將四個要素組合成完整的 Prompt！</p>
+
+                                <h4>拖放組合練習</h4>
+                                <div class="drag-drop-container" id="combine-practice">
+                                    <p><strong>情境：</strong>需要撰寫一份流感疫苗接種通知給各單位同仁</p>
+                                    <p>請將以下元素拖放到正確的位置：</p>
+
+                                    <div class="drag-items">
+                                        <div class="drag-item" id="item1" data-value="疾管署公文撰寫專家">疾管署公文撰寫專家</div>
+                                        <div class="drag-item" id="item2" data-value="撰寫流感疫苗接種通知">撰寫流感疫苗接種通知</div>
+                                        <div class="drag-item" id="item3" data-value="主旨、說明、辦法">主旨、說明、辦法</div>
+                                        <div class="drag-item" id="item4" data-value="200字以內">200字以內</div>
+                                    </div>
+
+                                    <div class="drop-template" style="background: var(--bg-color); padding: 20px; border-radius: var(--radius-md);">
+                                        <p>你是 <span class="drop-zone" data-expected="疾管署公文撰寫專家"></span>。</p>
+                                        <p>請 <span class="drop-zone" data-expected="撰寫流感疫苗接種通知"></span>。</p>
+                                        <p>格式為 <span class="drop-zone" data-expected="主旨、說明、辦法"></span>。</p>
+                                        <p>字數限制 <span class="drop-zone" data-expected="200字以內"></span>。</p>
+                                    </div>
+
+                                    <div style="margin-top: 16px;">
+                                        <button class="btn btn-primary check-answer" onclick="checkDragDropAnswer('combine-practice')" disabled>檢查答案</button>
+                                        <button class="btn btn-secondary" onclick="resetDragDrop('combine-practice')">重新開始</button>
+                                    </div>
+                                    <div class="drag-drop-feedback quiz-feedback"></div>
+                                </div>
+
+                                <h4 style="margin-top: 40px;">完整 Prompt 範例</h4>
+                                <div class="scenario-box">
+                                    <h4>登革熱衛教文宣 Prompt</h4>
+                                    <div class="recipe-content" id="example-prompt" style="margin-top: 12px;">你是疾管署的衛教專家。
+
+請撰寫一篇登革熱預防衛教文宣。
+
+【格式要求】
+分為三個段落：
+1. 認識登革熱（什麼是登革熱、傳播方式）
+2. 預防措施（居家清除積水容器、個人防護）
+3. 就醫時機（出現哪些症狀要就醫）
+
+【限制條件】
+- 目標對象：一般民眾
+- 字數：300 字以內
+- 語氣：親切易懂，避免專業術語
+- 使用繁體中文</div>
+                                    <button class="btn btn-copy btn-sm" data-copy-target="example-prompt" style="margin-top: 12px;">複製 Prompt</button>
+                                </div>
+
+                                <div class="alert alert-info" style="margin-top: 24px;">
+                                    <span class="alert-icon">💡</span>
+                                    <div>
+                                        <strong>練習建議</strong>
+                                        <p style="margin: 5px 0 0;">複製上面的 Prompt 範例，到您的 AI 工具中試試看！觀察 AI 產出的結果是否符合預期。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 2.7: 單元測驗 -->
+                        <div class="unit-container" data-unit-index="6">
+                            <div class="content-section">
+                                <h3>單元 2.7：單元測驗</h3>
+
+                                <p>測試一下您對 Prompt 四要素的掌握程度！</p>
+
+                                <!-- Quiz 1 -->
+                                <div class="quiz-container" data-quiz-id="m2-quiz-1" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>1. Prompt 四要素是指？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m2q1">
+                                                <span>主旨、說明、辦法、附件</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m2q1">
+                                                <span>角色、任務、格式、限制</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m2q1">
+                                                <span>輸入、處理、輸出、儲存</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m2q1">
+                                                <span>問題、回答、追問、確認</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 2 -->
+                                <div class="quiz-container" data-quiz-id="m2-quiz-2" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>2. 「你是疾管署的衛教專家」這句話在 Prompt 中屬於哪個要素？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m2q2">
+                                                <span>任務 (Task)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m2q2">
+                                                <span>格式 (Format)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m2q2">
+                                                <span>角色 (Role)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m2q2">
+                                                <span>限制 (Constraint)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 3 -->
+                                <div class="quiz-container" data-quiz-id="m2-quiz-3" data-correct="a">
+                                    <div class="quiz-question">
+                                        <h4>3. 「請使用表格比較三種疾病」這句話主要設定了哪個要素？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m2q3">
+                                                <span>格式 (Format)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m2q3">
+                                                <span>角色 (Role)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m2q3">
+                                                <span>限制 (Constraint)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m2q3">
+                                                <span>以上皆是</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 4 -->
+                                <div class="quiz-container" data-quiz-id="m2-quiz-4" data-correct="d">
+                                    <div class="quiz-question">
+                                        <h4>4. 「300 字以內，語氣親切易懂，目標對象是一般民眾」這些敘述屬於？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m2q4">
+                                                <span>角色 (Role)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m2q4">
+                                                <span>任務 (Task)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m2q4">
+                                                <span>格式 (Format)</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m2q4">
+                                                <span>限制 (Constraint)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 5 -->
+                                <div class="quiz-container" data-quiz-id="m2-quiz-5" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>5. 以下哪個 Prompt 的四要素最完整？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m2q5">
+                                                <span>「幫我寫衛教文章」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m2q5">
+                                                <span>「你是衛教專家，請撰寫流感預防衛教文章，使用條列式，300字以內，對象是一般民眾」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m2q5">
+                                                <span>「寫一篇關於流感的文章」</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m2q5">
+                                                <span>「流感預防」</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <div class="alert alert-success" style="margin-top: 30px;">
+                                    <span class="alert-icon">🎉</span>
+                                    <div>
+                                        <strong>完成模組 2！</strong>
+                                        <p style="margin: 5px 0 0;">恭喜您掌握了 Prompt 四要素！接下來，讓我們學習如何將這些技巧應用到實際的文書工作中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="nav-buttons">
+                            <button class="btn btn-secondary prev-unit" style="display: none;">
+                                ← 上一單元
+                            </button>
+                            <div></div>
+                            <button class="btn btn-primary next-unit">
+                                下一單元 →
+                            </button>
+                            <a href="module3.html" class="btn btn-success complete-module" style="display: none;">
+                                前往模組 3 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>衛生福利部疾病管制署 AI 應用基礎班線上自學平台</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模組 1：認識生成式 AI | 疾管署 AI 應用基礎班</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <div class="logo-icon">AI</div>
+                    <div>
+                        <h1>AI 應用基礎班</h1>
+                        <span class="logo-subtitle">疾病管制署 第一年基礎班</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">首頁</a></li>
+                        <li><a href="../recipes/prompt-recipes.html">Prompt 食譜</a></li>
+                        <li><a href="../resources/links.html">學習資源</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- Module Header -->
+                <div class="content-section" style="margin-bottom: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                        <div>
+                            <span class="badge badge-primary">模組 1</span>
+                            <h2 style="margin: 10px 0 5px; font-size: 1.8rem;">認識生成式 AI</h2>
+                            <p style="color: var(--text-muted); margin: 0;">AI 基本概念、能力與限制、資安規範</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="color: var(--text-muted);">預計時間：約 15 分鐘</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-layout" data-module="module1">
+                    <!-- Sidebar Navigation -->
+                    <aside class="module-sidebar">
+                        <nav class="module-nav">
+                            <h4>單元導覽</h4>
+                            <ul class="module-nav-list">
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link active" data-unit="0">
+                                        <span class="nav-step-number">1</span>
+                                        什麼是生成式 AI？
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="1">
+                                        <span class="nav-step-number">2</span>
+                                        AI 能做什麼？
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="2">
+                                        <span class="nav-step-number">3</span>
+                                        資安規範與注意事項
+                                    </a>
+                                </li>
+                                <li class="module-nav-item">
+                                    <a href="#" class="module-nav-link" data-unit="3">
+                                        <span class="nav-step-number">4</span>
+                                        單元測驗
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="module-content">
+                        <!-- Unit 1.1: 什麼是生成式 AI -->
+                        <div class="unit-container active" data-unit-index="0">
+                            <div class="content-section">
+                                <h3>單元 1.1：什麼是生成式 AI？</h3>
+
+                                <!-- 影片嵌入區：製作完影片後，將下方整個 video-placeholder 區塊替換為：
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/您的影片ID"
+                                            title="什麼是生成式AI"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                                -->
+                                <div class="video-placeholder">
+                                    <div class="play-icon">▶</div>
+                                    <h4>生成式 AI 介紹影片</h4>
+                                    <p>（影片時長約 5 分鐘）</p>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);">腳本請見：docs/影片腳本.md</p>
+                                </div>
+
+                                <h4>生成式 AI 的定義</h4>
+                                <p>生成式 AI（Generative AI）是一種能夠根據使用者的提示（Prompt），「生成」新內容的人工智慧技術。這些內容可以是文字、圖片、程式碼、音樂等各種形式。</p>
+
+                                <div class="scenario-box">
+                                    <h4>簡單比喻</h4>
+                                    <p>想像 AI 是一位超級助理，他讀過非常多書籍和資料。當您提出問題或需求時，他會根據學到的知識，為您「創造」出回應。但要注意，這位助理有時也會出錯或「腦補」一些不存在的內容。</p>
+                                </div>
+
+                                <h4>常見的生成式 AI 工具</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 20px 0;">
+                                    <div class="card" style="text-align: center;">
+                                        <h5 style="color: var(--primary-color);">ChatGPT</h5>
+                                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">OpenAI 開發<br>最廣泛使用的聊天 AI</p>
+                                    </div>
+                                    <div class="card" style="text-align: center;">
+                                        <h5 style="color: var(--primary-color);">Claude</h5>
+                                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Anthropic 開發<br>注重安全性與長文處理</p>
+                                    </div>
+                                    <div class="card" style="text-align: center;">
+                                        <h5 style="color: var(--primary-color);">Gemini</h5>
+                                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Google 開發<br>整合 Google 生態系</p>
+                                    </div>
+                                    <div class="card" style="text-align: center;">
+                                        <h5 style="color: var(--primary-color);">Copilot</h5>
+                                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Microsoft 開發<br>整合 Office 應用</p>
+                                    </div>
+                                </div>
+
+                                <h4>AI 如何運作？（簡化說明）</h4>
+                                <ol>
+                                    <li><strong>學習階段</strong>：AI 被「餵食」大量的文字資料（書籍、網頁、文章等），學習語言的模式和知識</li>
+                                    <li><strong>理解提示</strong>：當您輸入問題時，AI 會分析您的意圖</li>
+                                    <li><strong>生成回應</strong>：根據學到的知識，一個字一個字地「預測」最適合的回應</li>
+                                </ol>
+
+                                <div class="alert alert-info">
+                                    <span class="alert-icon">💡</span>
+                                    <div>
+                                        <strong>重要概念</strong>
+                                        <p style="margin: 5px 0 0;">AI 的知識有「截止日期」，它不知道訓練資料之後發生的事情。例如，某些 AI 的知識可能只到 2023 年。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 1.2: AI 能做什麼 -->
+                        <div class="unit-container" data-unit-index="1">
+                            <div class="content-section">
+                                <h3>單元 1.2：AI 能做什麼、不能做什麼</h3>
+
+                                <p>了解 AI 的能力與限制，有助於您更有效地運用這個工具。</p>
+
+                                <h4>AI 擅長的事情</h4>
+                                <div style="background: rgba(40, 167, 69, 0.1); padding: 20px; border-radius: var(--radius-md); margin: 16px 0;">
+                                    <ul style="margin: 0; padding-left: 20px;">
+                                        <li>文字撰寫與潤飾（文案、Email、摘要）</li>
+                                        <li>資料整理與格式轉換</li>
+                                        <li>翻譯與語言修正</li>
+                                        <li>腦力激盪與創意發想</li>
+                                        <li>程式碼撰寫與除錯</li>
+                                        <li>問答與解釋概念</li>
+                                        <li>文件摘要與重點提取</li>
+                                    </ul>
+                                </div>
+
+                                <h4>AI 的限制</h4>
+                                <div style="background: rgba(220, 53, 69, 0.1); padding: 20px; border-radius: var(--radius-md); margin: 16px 0;">
+                                    <ul style="margin: 0; padding-left: 20px;">
+                                        <li><strong>會「幻覺」（Hallucination）</strong>：可能編造看起來合理但其實不存在的資訊</li>
+                                        <li><strong>知識有截止日期</strong>：不知道最新發生的事</li>
+                                        <li><strong>無法存取即時資訊</strong>：除非有特別功能，否則無法上網查資料</li>
+                                        <li><strong>數學運算可能出錯</strong>：複雜計算不是 AI 的強項</li>
+                                        <li><strong>缺乏真正的理解</strong>：是模式匹配，不是真正「懂」</li>
+                                        <li><strong>可能有偏見</strong>：訓練資料的偏見可能反映在輸出中</li>
+                                    </ul>
+                                </div>
+
+                                <h4>疾管署情境：配對練習</h4>
+                                <p>以下是一些工作情境，請判斷 AI 是否適合協助：</p>
+
+                                <div class="comparison-box">
+                                    <div class="comparison-item good">
+                                        <div class="comparison-label">
+                                            <span>✓</span> AI 可協助
+                                        </div>
+                                        <div class="comparison-content">
+                                            • 撰寫疫情週報摘要
+                                            • 整理防疫會議紀錄大綱
+                                            • 翻譯 WHO 疫情報告
+                                            • 草擬衛教宣導文案
+                                            • 彙整防疫指引重點
+                                        </div>
+                                    </div>
+                                    <div class="comparison-item bad">
+                                        <div class="comparison-label">
+                                            <span>✗</span> 不適合使用 AI
+                                        </div>
+                                        <div class="comparison-content">
+                                            • 處理含個資的疫調報告
+                                            • 查詢即時疫情數據
+                                            • 做為唯一的醫學診斷依據
+                                            • 處理機密文件內容
+                                            • 發布未經審核的疫情資訊
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning" style="margin-top: 20px;">
+                                    <span class="alert-icon">⚠️</span>
+                                    <div>
+                                        <strong>核心原則</strong>
+                                        <p style="margin: 5px 0 0;">AI 是輔助工具，不是決策者。所有 AI 產出的內容都需要專業人員審核確認後才能使用。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 1.3: 資安規範 -->
+                        <div class="unit-container" data-unit-index="2">
+                            <div class="content-section">
+                                <h3>單元 1.3：資安規範與注意事項</h3>
+
+                                <div class="alert alert-danger">
+                                    <span class="alert-icon">🔒</span>
+                                    <div>
+                                        <strong>最重要的原則</strong>
+                                        <p style="margin: 5px 0 0;">絕對不要將機密資料、個人資料、敏感資訊輸入任何公開的 AI 工具！</p>
+                                    </div>
+                                </div>
+
+                                <h4>不可輸入 AI 的資料類型</h4>
+                                <table class="resource-table">
+                                    <thead>
+                                        <tr>
+                                            <th>資料類型</th>
+                                            <th>範例</th>
+                                            <th>風險說明</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>個人資料</strong></td>
+                                            <td>姓名、身分證字號、電話、地址</td>
+                                            <td>違反個資法</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>醫療資訊</strong></td>
+                                            <td>病歷、診斷、用藥紀錄</td>
+                                            <td>涉及隱私與機密</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>機密文件</strong></td>
+                                            <td>內部簽呈、未公開政策</td>
+                                            <td>洩漏公務機密</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>敏感資料</strong></td>
+                                            <td>接觸者名單、疫調細節</td>
+                                            <td>影響疫調與隱私</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h4>安全使用 AI 的原則</h4>
+                                <ol>
+                                    <li><strong>去識別化</strong>：如需處理案例，先移除所有可辨識個人的資訊</li>
+                                    <li><strong>使用假資料</strong>：練習時使用虛構的範例資料</li>
+                                    <li><strong>不留存敏感對話</strong>：處理完畢後清除對話紀錄</li>
+                                    <li><strong>遵守機關規定</strong>：依照署內資安政策使用 AI 工具</li>
+                                    <li><strong>審核再發布</strong>：AI 產出內容必須經過審核才能對外使用</li>
+                                </ol>
+
+                                <h4>情境判斷練習</h4>
+                                <p>以下哪些內容可以輸入 AI？請選擇所有正確的選項：</p>
+
+                                <div class="quiz-container multi-select" id="security-quiz" data-quiz-id="security-1" data-correct="b,d,f" data-success-msg="完全正確！您已掌握資安原則。" data-error-msg="有些選項不正確，請參考下方解說。">
+                                    <div class="quiz-question">
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="checkbox" value="a">
+                                                <span>個案的姓名與身分證字號</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="checkbox" value="b">
+                                                <span>已公開的疫情統計數據</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="checkbox" value="c">
+                                                <span>個案的居住地址與聯絡電話</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="checkbox" value="d">
+                                                <span>已公開的防疫指引內容</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="e">
+                                                <input type="checkbox" value="e">
+                                                <span>接觸者追蹤名單</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="f">
+                                                <input type="checkbox" value="f">
+                                                <span>去識別化的症狀描述（如「患者出現發燒、咳嗽症狀」）</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                    <div class="quiz-explanation" style="display: none; margin-top: 16px; padding: 16px; background: var(--bg-color); border-radius: var(--radius-md);">
+                                        <h5 style="color: var(--primary-color); margin-bottom: 12px;">答案解說</h5>
+                                        <p><strong>可以輸入 AI 的內容：</strong></p>
+                                        <ul style="margin: 8px 0 16px 20px;">
+                                            <li><strong>已公開的疫情統計數據</strong> — 公開資訊，無隱私疑慮</li>
+                                            <li><strong>已公開的防疫指引內容</strong> — 公開資訊，可安全使用</li>
+                                            <li><strong>去識別化的症狀描述</strong> — 已移除個人識別資訊</li>
+                                        </ul>
+                                        <p><strong>不可輸入 AI 的內容：</strong></p>
+                                        <ul style="margin: 8px 0 0 20px;">
+                                            <li><strong>個案的姓名與身分證字號</strong> — 個人資料，違反個資法</li>
+                                            <li><strong>個案的居住地址與聯絡電話</strong> — 個人資料，可識別身分</li>
+                                            <li><strong>接觸者追蹤名單</strong> — 敏感個資，涉及隱私</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="scenario-box" style="margin-top: 24px;">
+                                    <h4>常見情境 Q&A</h4>
+                                    <p><strong>Q：可以請 AI 幫我整理疫調報告嗎？</strong></p>
+                                    <p>A：可以，但必須先將報告中所有可識別個人的資訊移除（去識別化），包括姓名、身分證號、地址、電話等。</p>
+
+                                    <p><strong>Q：可以將會議錄音逐字稿丟給 AI 整理嗎？</strong></p>
+                                    <p>A：視內容而定。如果會議涉及機密事項或提及特定個人資料，應先進行處理。一般行政會議的內容通常可以。</p>
+
+                                    <p><strong>Q：AI 產出的衛教文案可以直接發布嗎？</strong></p>
+                                    <p>A：不可以。必須經過專業人員審核，確認內容正確無誤後才能發布。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unit 1.4: 單元測驗 -->
+                        <div class="unit-container" data-unit-index="3">
+                            <div class="content-section">
+                                <h3>單元 1.4：單元測驗</h3>
+
+                                <p>測試一下您對本模組的理解！</p>
+
+                                <!-- Quiz 1 -->
+                                <div class="quiz-container" data-quiz-id="m1-quiz-1" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>1. 關於生成式 AI 的「幻覺」（Hallucination）現象，以下敘述何者正確？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m1q1">
+                                                <span>AI 會產生視覺幻覺</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m1q1">
+                                                <span>只有品質差的 AI 才會有這個問題</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m1q1">
+                                                <span>AI 可能編造看起來合理但其實不正確的資訊</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m1q1">
+                                                <span>這是 AI 故意欺騙使用者</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 2 -->
+                                <div class="quiz-container" data-quiz-id="m1-quiz-2" data-correct="d">
+                                    <div class="quiz-question">
+                                        <h4>2. 使用 AI 協助工作時，以下哪項原則最重要？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m1q2">
+                                                <span>選擇最貴的 AI 工具</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m1q2">
+                                                <span>完全相信 AI 的回答</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m1q2">
+                                                <span>把所有資料都給 AI 以獲得最佳結果</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m1q2">
+                                                <span>審核 AI 產出的內容後才使用</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 3 -->
+                                <div class="quiz-container" data-quiz-id="m1-quiz-3" data-correct="b">
+                                    <div class="quiz-question">
+                                        <h4>3. 同仁想用 AI 整理疫調報告，應該怎麼做？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m1q3">
+                                                <span>直接將完整報告貼給 AI</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m1q3">
+                                                <span>先移除所有個人資料（去識別化）後再使用</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m1q3">
+                                                <span>疫調報告絕對不能使用 AI</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m1q3">
+                                                <span>請 AI 保密就好</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 4 -->
+                                <div class="quiz-container" data-quiz-id="m1-quiz-4" data-correct="a">
+                                    <div class="quiz-question">
+                                        <h4>4. 以下哪種資料「可以」輸入 AI？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m1q4">
+                                                <span>疾管署官網上已公開的疫情週報</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m1q4">
+                                                <span>民眾陳情信件（含姓名電話）</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m1q4">
+                                                <span>尚未公開的政策草案</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m1q4">
+                                                <span>傳染病通報系統的原始資料</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <!-- Quiz 5 -->
+                                <div class="quiz-container" data-quiz-id="m1-quiz-5" data-correct="c">
+                                    <div class="quiz-question">
+                                        <h4>5. AI 生成的衛教文案，正確的處理方式是？</h4>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option" data-answer="a">
+                                                <input type="radio" name="m1q5">
+                                                <span>直接發布，因為 AI 很聰明</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="b">
+                                                <input type="radio" name="m1q5">
+                                                <span>完全不能使用，必須從頭自己寫</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="c">
+                                                <input type="radio" name="m1q5">
+                                                <span>經專業人員審核確認後才能發布</span>
+                                            </label>
+                                            <label class="quiz-option" data-answer="d">
+                                                <input type="radio" name="m1q5">
+                                                <span>標註「由 AI 生成」就可以直接發布</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary quiz-submit">確認答案</button>
+                                    <div class="quiz-feedback"></div>
+                                </div>
+
+                                <div class="alert alert-success" style="margin-top: 30px;">
+                                    <span class="alert-icon">🎉</span>
+                                    <div>
+                                        <strong>完成模組 1！</strong>
+                                        <p style="margin: 5px 0 0;">您已經了解生成式 AI 的基礎概念與資安規範。接下來，讓我們學習如何撰寫有效的 Prompt！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="nav-buttons">
+                            <button class="btn btn-secondary prev-unit" style="display: none;">
+                                ← 上一單元
+                            </button>
+                            <div></div>
+                            <button class="btn btn-primary next-unit">
+                                下一單元 →
+                            </button>
+                            <a href="module2.html" class="btn btn-success complete-module" style="display: none;">
+                                前往模組 2 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>衛生福利部疾病管制署 AI 應用基礎班線上自學平台</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

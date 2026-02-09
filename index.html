@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疾管署 AI 應用基礎班 | 線上自學平台</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <div class="logo-icon">AI</div>
+                    <div>
+                        <h1>AI 應用基礎班</h1>
+                        <span class="logo-subtitle">疾病管制署 第一年基礎班</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">首頁</a></li>
+                        <li><a href="recipes/prompt-recipes.html">Prompt 食譜</a></li>
+                        <li><a href="resources/links.html">學習資源</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>歡迎來到 AI 應用自學平台</h2>
+                <p>為疾管署同仁設計的 self-paced 互動式學習課程，從基礎概念到實務應用，
+                   幫助您掌握 AI 工具，提升工作效率。</p>
+                <div class="hero-buttons">
+                    <a href="modules/module0.html" class="btn btn-secondary btn-lg">開始學習</a>
+                    <a href="recipes/prompt-recipes.html" class="btn btn-outline btn-lg" style="border-color: white; color: white;">瀏覽 Prompt 食譜</a>
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <div class="container">
+                <!-- Learning Map -->
+                <section class="learning-map">
+                    <h3>學習地圖</h3>
+                    <div class="map-progress">
+                        <div class="map-step current" data-module="module0" title="模組 0：學前準備">0</div>
+                        <div class="map-step" data-module="module1" title="模組 1：認識生成式 AI">1</div>
+                        <div class="map-step" data-module="module2" title="模組 2：Prompt 四要素">2</div>
+                        <div class="map-step" data-module="module3" title="模組 3：文書處理應用">3</div>
+                        <div class="map-step" data-module="module4" title="模組 4：資料整理應用">4</div>
+                        <div class="map-step" data-module="module5" title="模組 5：進階技巧">5</div>
+                    </div>
+                    <div class="overall-progress">
+                        <h4>0%</h4>
+                        <p>整體完成進度</p>
+                    </div>
+                </section>
+
+                <!-- Course Purpose -->
+                <section class="content-section">
+                    <h3>課程設計目的</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                        <div class="card">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px;">課前預習</h4>
+                            <p style="color: var(--text-muted); margin: 0;">在實體課程前建立基礎概念，讓您更有效地參與課堂互動。</p>
+                        </div>
+                        <div class="card">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px;">課後複習</h4>
+                            <p style="color: var(--text-muted); margin: 0;">透過互動練習強化學習成效，隨時回顧重要概念。</p>
+                        </div>
+                        <div class="card">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px;">自主學習</h4>
+                            <p style="color: var(--text-muted); margin: 0;">按照自己的步調持續精進技能，有 Prompt 食譜隨時查閱。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Modules Section -->
+                <section>
+                    <h3 class="section-title">課程模組</h3>
+                    <p class="section-subtitle">共 6 個模組，建議依序完成。每個模組包含概念說明、互動練習與測驗。</p>
+
+                    <div class="modules-grid">
+                        <!-- Module 0 -->
+                        <div class="module-card" data-module="module0">
+                            <div class="module-header">
+                                <span class="module-number">模組 0</span>
+                                <h3 class="module-title">學前準備</h3>
+                            </div>
+                            <div class="module-body">
+                                <p class="module-description">課程介紹、AI 工具帳號設定、課前自我檢測</p>
+                                <div class="module-meta">
+                                    <span>約 10 分鐘</span>
+                                    <span>3 個單元</span>
+                                </div>
+                                <div class="module-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0% 完成</span>
+                                </div>
+                                <a href="modules/module0.html" class="btn btn-primary" style="width: 100%;">開始學習</a>
+                            </div>
+                        </div>
+
+                        <!-- Module 1 -->
+                        <div class="module-card" data-module="module1">
+                            <div class="module-header">
+                                <span class="module-number">模組 1</span>
+                                <h3 class="module-title">認識生成式 AI</h3>
+                            </div>
+                            <div class="module-body">
+                                <p class="module-description">AI 基本概念、能力與限制、資安規範與注意事項</p>
+                                <div class="module-meta">
+                                    <span>約 15 分鐘</span>
+                                    <span>4 個單元</span>
+                                </div>
+                                <div class="module-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0% 完成</span>
+                                </div>
+                                <a href="modules/module1.html" class="btn btn-primary" style="width: 100%;">開始學習</a>
+                            </div>
+                        </div>
+
+                        <!-- Module 2 -->
+                        <div class="module-card" data-module="module2">
+                            <div class="module-header">
+                                <span class="module-number">模組 2</span>
+                                <h3 class="module-title">Prompt 四要素</h3>
+                            </div>
+                            <div class="module-body">
+                                <p class="module-description">角色、任務、格式、限制 — 撰寫有效 Prompt 的核心技巧</p>
+                                <div class="module-meta">
+                                    <span>約 20 分鐘</span>
+                                    <span>7 個單元</span>
+                                </div>
+                                <div class="module-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0% 完成</span>
+                                </div>
+                                <a href="modules/module2.html" class="btn btn-primary" style="width: 100%;">開始學習</a>
+                            </div>
+                        </div>
+
+                        <!-- Module 3 -->
+                        <div class="module-card" data-module="module3">
+                            <div class="module-header">
+                                <span class="module-number">模組 3</span>
+                                <h3 class="module-title">文書處理應用</h3>
+                            </div>
+                            <div class="module-body">
+                                <p class="module-description">公文撰寫、會議紀錄、Email — 日常文書工作效率提升</p>
+                                <div class="module-meta">
+                                    <span>約 25 分鐘</span>
+                                    <span>5 個單元</span>
+                                </div>
+                                <div class="module-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0% 完成</span>
+                                </div>
+                                <a href="modules/module3.html" class="btn btn-primary" style="width: 100%;">開始學習</a>
+                            </div>
+                        </div>
+
+                        <!-- Module 4 -->
+                        <div class="module-card" data-module="module4">
+                            <div class="module-header">
+                                <span class="module-number">模組 4</span>
+                                <h3 class="module-title">資料整理應用</h3>
+                            </div>
+                            <div class="module-body">
+                                <p class="module-description">Excel 公式、資料摘要、圖表說明 — 數據處理好幫手</p>
+                                <div class="module-meta">
+                                    <span>約 25 分鐘</span>
+                                    <span>5 個單元</span>
+                                </div>
+                                <div class="module-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0% 完成</span>
+                                </div>
+                                <a href="modules/module4.html" class="btn btn-primary" style="width: 100%;">開始學習</a>
+                            </div>
+                        </div>
+
+                        <!-- Module 5 -->
+                        <div class="module-card" data-module="module5">
+                            <div class="module-header">
+                                <span class="module-number">模組 5</span>
+                                <h3 class="module-title">進階技巧</h3>
+                            </div>
+                            <div class="module-body">
+                                <p class="module-description">多輪對話、迭代優化、常見錯誤、持續學習資源</p>
+                                <div class="module-meta">
+                                    <span>約 15 分鐘</span>
+                                    <span>4 個單元</span>
+                                </div>
+                                <div class="module-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0% 完成</span>
+                                </div>
+                                <a href="modules/module5.html" class="btn btn-primary" style="width: 100%;">開始學習</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Links Section -->
+                <section class="content-section" style="margin-top: 40px;">
+                    <h3>快速連結</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <a href="recipes/prompt-recipes.html" class="card" style="text-decoration: none; display: flex; align-items: center; gap: 16px;">
+                            <span style="font-size: 2.5rem;">📝</span>
+                            <div>
+                                <h4 style="color: var(--text-color); margin-bottom: 4px;">Prompt 食譜庫</h4>
+                                <p style="color: var(--text-muted); margin: 0; font-size: 0.9rem;">疾管署專用 Prompt 模板，一鍵複製使用</p>
+                            </div>
+                        </a>
+                        <a href="resources/links.html" class="card" style="text-decoration: none; display: flex; align-items: center; gap: 16px;">
+                            <span style="font-size: 2.5rem;">🔗</span>
+                            <div>
+                                <h4 style="color: var(--text-color); margin-bottom: 4px;">學習資源連結</h4>
+                                <p style="color: var(--text-muted); margin: 0; font-size: 0.9rem;">精選免費學習平台與進階資源</p>
+                            </div>
+                        </a>
+                        <a href="certificate.html" class="card" style="text-decoration: none; display: flex; align-items: center; gap: 16px;">
+                            <span style="font-size: 2.5rem;">🎓</span>
+                            <div>
+                                <h4 style="color: var(--text-color); margin-bottom: 4px;">結業證書</h4>
+                                <p style="color: var(--text-muted); margin: 0; font-size: 0.9rem;">完成課程後領取結業證書</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Tips Section -->
+                <section class="content-section" style="margin-top: 40px;">
+                    <h3>學習小提醒</h3>
+                    <div class="alert alert-info">
+                        <span class="alert-icon">💡</span>
+                        <div>
+                            <strong>自主學習節奏</strong>
+                            <p style="margin: 8px 0 0;">每個單元設計為 5-15 分鐘，您可以利用零碎時間學習。系統會自動儲存您的進度，隨時可以繼續。</p>
+                        </div>
+                    </div>
+                    <div class="alert alert-warning">
+                        <span class="alert-icon">⚠️</span>
+                        <div>
+                            <strong>資安提醒</strong>
+                            <p style="margin: 8px 0 0;">使用 AI 工具時，請勿輸入任何可識別個人身分的資料、機密文件或敏感資訊。</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>關於本平台</h4>
+                        <p style="opacity: 0.8; font-size: 0.9rem;">
+                            本平台為疾病管制署第一年基礎班 AI 應用課程的線上自學資源，
+                            提供課前預習、課後複習及自主學習使用。
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>快速連結</h4>
+                        <ul>
+                            <li><a href="modules/module0.html">開始學習</a></li>
+                            <li><a href="recipes/prompt-recipes.html">Prompt 食譜</a></li>
+                            <li><a href="resources/links.html">學習資源</a></li>
+                            <li><a href="certificate.html">結業證書</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>外部資源</h4>
+                        <ul>
+                            <li><a href="https://learnprompting.org/" target="_blank">Learn Prompting</a></li>
+                            <li><a href="https://anthropic.skilljar.com/" target="_blank">Anthropic Academy</a></li>
+                            <li><a href="https://grow.google/ai-essentials/" target="_blank">Google AI Essentials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>衛生福利部疾病管制署 AI 應用基礎班線上自學平台</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
