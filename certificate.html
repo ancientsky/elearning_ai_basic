@@ -116,8 +116,8 @@
         var certId = '';
         var certScore = null;
 
-        // Check eligibility on load
-        (function() {
+        // Check eligibility on load (must wait for DOMContentLoaded so loadProgress() runs first)
+        document.addEventListener('DOMContentLoaded', function() {
             var result = CDC_Learning.isCertificateEligible();
             var details = result.details;
 
@@ -152,7 +152,7 @@
 
                 listEl.innerHTML = html;
             }
-        })();
+        });
 
         function generateCertificate() {
             var nameInput = document.getElementById('cert-name-input');
