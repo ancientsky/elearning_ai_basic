@@ -937,9 +937,17 @@ function getFinalExamScore() {
 
 function isCertificateEligible() {
     const modules = ['module0', 'module1', 'module2', 'module3', 'module4', 'module5'];
-    const allModulesCompleted = modules.every(m => APP_STATE.progress[m]?.completed === true);
     const examScore = getFinalExamScore();
     const examPassed = examScore.percentage >= 80;
+
+    // Auto-fix: if final exam passed, module5 must be completed
+    // (user may have clicked "前往領取結業證書" link instead of "Complete Module" button)
+    if (examPassed && APP_STATE.progress.module5 && !APP_STATE.progress.module5.completed) {
+        APP_STATE.progress.module5.completed = true;
+        saveProgress();
+    }
+
+    const allModulesCompleted = modules.every(m => APP_STATE.progress[m]?.completed === true);
     return {
         eligible: allModulesCompleted && examPassed,
         details: {
