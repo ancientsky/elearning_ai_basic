@@ -1708,6 +1708,14 @@ footer {
         visibility: hidden;
     }
 
+    /* Collapse page content so it doesn't generate extra blank pages */
+    .page-wrapper {
+        height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
     .cert-print-only,
     .cert-print-only * {
         visibility: visible !important;
@@ -1715,7 +1723,7 @@ footer {
     }
 
     .cert-print-only {
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 100%;
