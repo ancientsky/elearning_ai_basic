@@ -1497,6 +1497,30 @@ footer {
         width: 100%;
         justify-content: center;
     }
+
+    /* Fill-in-the-blank inputs: remove fixed min-width on mobile */
+    .fill-blank-input,
+    .fill-blank-select {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* Drag-drop: compact padding and full-width drop zones on mobile */
+    .drag-drop-container {
+        padding: 16px;
+    }
+
+    .drop-zone {
+        min-width: 0;
+        width: 100%;
+    }
+
+    /* Tabs: horizontal scroll instead of wrapping/overflow on mobile */
+    .tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1518,6 +1542,9 @@ footer {
 
     .resource-table {
         font-size: 0.9rem;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .resource-table th,

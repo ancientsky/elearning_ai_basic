@@ -32,9 +32,16 @@ Or just open `index.html` directly in a browser. There is no build step, no pack
 
 - `index.html` — Landing page with learning map and module grid
 - `modules/module0-5.html` — 6 course modules, each with sidebar unit navigation and a main content area containing units
+- `certificate.html` — Graduation certificate page (unlocked when all modules complete and final quiz ≥ 80%)
 - `recipes/prompt-recipes.html` — 20+ reusable prompt templates across 4 categories, each with copy-to-clipboard
 - `resources/links.html` — Curated external learning resources
 - `docs/影片腳本.md` — Video scripts for all modules (production reference)
+- `slides/` — Python slide generation scripts (python-pptx, managed via `uv`)
+  - `shared.py` — Brand constants and 15 reusable slide builder functions
+  - `generate_module0-5.py` — One script per module
+  - `generate_all.py` — Batch runner (`cd slides && uv run python generate_all.py`)
+  - `output/` — 6 generated `.pptx` files (115 slides total, 56–64 KB each)
+  - `output/pdf/` — PDF versions of slides (exported by user after generation)
 
 ## Interactive Components
 
@@ -47,7 +54,7 @@ Each module page may contain these component types, all driven by `main.js`:
 | Fill-in-the-blank | `.fill-blank-container` with inputs/selects | `checkFillBlankAnswer()` / `showFillBlankAnswers()` |
 | Scenario questions | `.scenario-container` | `checkScenarioAnswer()` |
 | Checklists | `.checklist` with checkboxes | `initChecklists()` (auto-persisted) |
-| Copy buttons | `.copy-btn` with `data-clipboard-target` | `initCopyButtons()` |
+| Copy buttons | `.btn-copy` with `data-copy-target` | `initCopyButtons()` |
 | Tabs / Accordions | `.tab-btn` / `.accordion-header` | `initTabs()` / `initAccordions()` |
 
 ## Key Conventions
@@ -57,4 +64,4 @@ Each module page may contain these component types, all driven by `main.js`:
 - Fill-in-the-blank accepts multiple answers separated by `|` (pipe), matching is case-insensitive
 - Unit navigation uses `showUnit(moduleId, unitIndex)` — called from sidebar links
 - Completion is tracked per-unit; module auto-completes when all units are done
-- Video sections use placeholder containers ready for YouTube iframe embeds
+- Video sections embed YouTube iframes via `.video-container` (16:9 padding-bottom aspect-ratio wrapper); a PDF slide deck download link (`../slides/output/pdf/`) appears below each video
