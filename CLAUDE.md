@@ -33,7 +33,7 @@ Or just open `index.html` directly in a browser. There is no build step, no pack
 - `index.html` — Landing page with learning map and module grid
 - `modules/module0-5.html` — 6 course modules, each with sidebar unit navigation and a main content area containing units
 - `certificate.html` — Graduation certificate page (unlocked when all modules complete and final quiz ≥ 80%)
-- `recipes/prompt-recipes.html` — 20+ reusable prompt templates across 4 categories, each with copy-to-clipboard
+- `recipes/prompt-recipes.html` — 124 reusable prompt templates across 11 categories (文書類、資料類、溝通類、其他、疫情應變、防疫衛教、檢疫檢驗、政策法規、國際合作、行政管理、專業研究), each with copy-to-clipboard
 - `resources/links.html` — Curated external learning resources
 - `docs/影片腳本.md` — Video scripts for all modules (production reference)
 - `slides/` — Python slide generation scripts (python-pptx, managed via `uv`)
