@@ -34,7 +34,7 @@
                 <!-- Page Header -->
                 <div class="content-section" style="margin-bottom: 30px;">
                     <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Prompt 食譜庫</h2>
-                    <p style="color: var(--text-muted);">疾管署專用 Prompt 模板，一鍵複製直接使用！請記得依據實際情況修改 [填入] 的部分。</p>
+                    <p style="color: var(--text-muted);">124 個疾管署專用 Prompt 模板，涵蓋防疫業務各面向，一鍵複製直接使用！請記得依據實際情況修改 [填入] 的部分。</p>
                 </div>
 
                 <!-- Category Tabs -->
@@ -43,6 +43,13 @@
                     <button class="tab" data-tab="data-recipes">資料類</button>
                     <button class="tab" data-tab="comm-recipes">溝通類</button>
                     <button class="tab" data-tab="other-recipes">其他</button>
+                    <button class="tab" data-tab="epi-recipes">疫情應變</button>
+                    <button class="tab" data-tab="edu-recipes">防疫衛教</button>
+                    <button class="tab" data-tab="lab-recipes">檢疫檢驗</button>
+                    <button class="tab" data-tab="policy-recipes">政策法規</button>
+                    <button class="tab" data-tab="intl-recipes">國際合作</button>
+                    <button class="tab" data-tab="admin-recipes">行政管理</button>
+                    <button class="tab" data-tab="research-recipes">專業研究</button>
                 </div>
 
                 <!-- Document Recipes -->
@@ -791,6 +798,3938 @@
                             </div>
                             <div class="recipe-footer">
                                 <button class="btn btn-copy btn-sm" data-copy-target="other-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Epidemic Response Recipes -->
+                <div class="tab-content" id="epi-recipes">
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫情風險評估報告</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">風險評估</span>
+                                    <span class="recipe-tag">疫情</span>
+                                    <span class="recipe-tag">研判</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-1">你是疾管署的流行病學專家。請根據以下疫情資訊，撰寫一份風險評估報告。
+
+【疾病名稱】[填入：如「登革熱」]
+【目前疫情概況】[填入：確診數、地理分布、趨勢]
+【評估時間區間】[填入：如「2024年第40-42週」]
+
+【報告需包含】
+1. 疫情摘要（50字以內）
+2. 流行病學分析（病例數趨勢、年齡/性別分布、地理分布）
+3. 風險等級研判（低/中/高/極高，並說明理由）
+4. 影響因素分析（氣候、社區環境、醫療量能等）
+5. 建議防治作為（分短期/中期）
+
+【注意事項】
+- 使用台灣公衛專業術語
+- 不得包含可辨識個人的資訊
+- 數據來源需明確標註
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫調摘要撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">疫調</span>
+                                    <span class="recipe-tag">摘要</span>
+                                    <span class="recipe-tag">個案</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-2">你是疾管署疫調專員。請將以下疫調資訊整理成結構化摘要。
+
+【疾病別】[填入]
+【個案代號】[填入：如「Case-2024-001」]
+
+【摘要格式】
+1. 基本資訊（年齡層、性別、居住縣市）
+2. 發病日與通報日
+3. 旅遊史/接觸史/職業史/群聚史（TOCC）
+4. 臨床症狀與就醫經過
+5. 檢驗結果
+6. 感染源研判
+7. 接觸者匡列與追蹤情形
+8. 後續建議處置
+
+【注意事項】
+- 所有資訊須已去識別化
+- 不得出現真實姓名、身分證字號、詳細地址
+- 使用疾管署標準疫調格式
+
+【原始疫調資料】
+[貼上已去識別化的疫調資料]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">接觸者匡列分析</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">接觸者</span>
+                                    <span class="recipe-tag">匡列</span>
+                                    <span class="recipe-tag">追蹤</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-3">你是疾管署接觸者追蹤管理專家。請根據以下個案資訊，規劃接觸者匡列策略。
+
+【確診疾病】[填入]
+【個案可傳染期】[填入：起迄日期]
+【已知活動足跡】[填入：日期、地點、停留時間]
+
+【請提供】
+1. 接觸者分級定義（密切接觸/一般接觸）
+2. 各級接觸者建議匡列範圍
+3. 追蹤監測期間與頻率
+4. 需採取的防疫措施（隔離/自主健康管理/衛教）
+5. 追蹤管理表格欄位建議
+
+【注意事項】
+- 依據現行傳染病防治法規定
+- 考量實務執行可行性
+
+請開始分析：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">群聚事件調查報告</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">群聚</span>
+                                    <span class="recipe-tag">調查</span>
+                                    <span class="recipe-tag">分析</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-4">你是疾管署群聚事件調查員。請協助撰寫群聚事件調查報告。
+
+【事件概述】[填入：機構類型、發生時間、受影響人數]
+【疑似疾病】[填入]
+【機構規模】[填入：總人數、樓層/區域配置]
+
+【報告架構】
+1. 事件摘要
+2. 背景說明（機構基本資料、通報經過）
+3. 調查方法（病例定義、調查對象、採檢策略）
+4. 調查結果（流行曲線、侵襲率、病例分布）
+5. 感染源與傳播途徑研判
+6. 防治措施（已採取/建議）
+7. 結論與建議
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫情趨勢分析摘要</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">趨勢</span>
+                                    <span class="recipe-tag">監測</span>
+                                    <span class="recipe-tag">預測</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-5">你是疾管署疫情監測分析師。請根據以下監測數據，撰寫疫情趨勢分析摘要。
+
+【監測疾病】[填入]
+【分析期間】[填入：如「最近12週」]
+【數據摘要】[填入：各週病例數、陽性率等]
+
+【分析需包含】
+1. 整體趨勢描述（上升/持平/下降）
+2. 與歷年同期比較
+3. 高風險地區/族群辨識
+4. 可能影響因素（季節、社區活動、防疫政策等）
+5. 未來2-4週趨勢預判
+6. 建議關注事項
+
+【格式要求】
+- 摘要200字以內
+- 搭配條列式重點
+- 適合署長室簡報使用
+
+請開始分析：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">應變中心開設建議</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">應變中心</span>
+                                    <span class="recipe-tag">開設</span>
+                                    <span class="recipe-tag">建議</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-6">你是疾管署應變整備專家。請根據以下疫情狀況，提供中央流行疫情指揮中心開設層級建議。
+
+【疫情現況】[填入：疾病名稱、病例數、傳播範圍]
+【國際疫情】[填入：WHO警示等級、主要流行國家]
+【國內醫療量能】[填入：病床使用率、重症比例]
+
+【請提供】
+1. 建議開設層級（一級/二級/三級）及理由
+2. 各組室應變分工建議
+3. 優先啟動的防疫措施清單
+4. 對外溝通策略要點
+5. 需協調的跨部會事項
+
+【參考依據】
+- 中央流行疫情指揮中心實施辦法
+- 過往類似疫情應變經驗
+
+請開始分析：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫物資需求預估</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">物資</span>
+                                    <span class="recipe-tag">預估</span>
+                                    <span class="recipe-tag">整備</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-7">你是疾管署物資整備專家。請根據疫情預測，估算防疫物資需求。
+
+【疫情情境】[填入：預估病例數、持續時間]
+【物資類別】[填入：如「個人防護裝備」「快篩試劑」「藥品」]
+【涵蓋對象】[填入：醫護人員/一般民眾/特定機構]
+
+【請提供】
+1. 各項物資每日消耗量估算（含計算基礎）
+2. 安全庫存量建議（以30/60/90天計算）
+3. 現有庫存與缺口分析
+4. 優先採購建議清單
+5. 物資調度與配送規劃要點
+
+【格式】表格形式呈現，含品項、規格、數量、單位
+
+請開始估算：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-7">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫情新聞輿情摘要</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">輿情</span>
+                                    <span class="recipe-tag">新聞</span>
+                                    <span class="recipe-tag">監測</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-8">你是疾管署輿情監測分析師。請整理以下新聞/社群內容，產出輿情摘要報告。
+
+【監測期間】[填入日期區間]
+【關注議題】[填入：如「新冠疫苗副作用討論」]
+
+【摘要需包含】
+1. 輿情概覽（正面/中性/負面比例）
+2. 主要媒體報導重點（條列前5則）
+3. 社群熱議話題
+4. 不實訊息或謠言辨識
+5. 民眾主要疑慮
+6. 建議回應策略與澄清要點
+
+【格式要求】
+- 每項簡明扼要，不超過3行
+- 針對不實訊息標註「需澄清」
+
+【新聞/社群內容】
+[貼上蒐集的輿情資料]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-8">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">醫療體系量能評估</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">醫療量能</span>
+                                    <span class="recipe-tag">評估</span>
+                                    <span class="recipe-tag">整備</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-9">你是疾管署醫療整備專家。請評估目前醫療體系因應疫情的量能。
+
+【疫情情境】[填入：疾病、預估重症率、預估高峰期]
+【評估範圍】[填入：全國/特定縣市]
+
+【請評估以下面向】
+1. 負壓隔離病房數與使用率
+2. 加護病房（ICU）餘裕量
+3. 呼吸器等關鍵設備數量
+4. 專責醫護人力充足度
+5. 社區篩檢/採檢站能量
+6. 後送轉院機制順暢度
+
+【輸出格式】
+- 各面向以「綠/黃/紅」燈號標示
+- 附具體數據與建議改善措施
+- 摘要控制在A4一頁
+
+請開始評估：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-9">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">社區傳播風險研判</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">社區</span>
+                                    <span class="recipe-tag">傳播</span>
+                                    <span class="recipe-tag">風險</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-10">你是疾管署社區防疫專家。請分析以下資訊，研判社區傳播風險。
+
+【疾病別】[填入]
+【社區資訊】[填入：地區、人口密度、近期病例數]
+【已知傳播鏈】[填入：已知感染源比例、不明感染源比例]
+
+【研判需包含】
+1. 社區傳播風險等級（無/低/中/高）
+2. 關鍵風險指標分析
+3. 高風險場域辨識（市場、學校、長照機構等）
+4. 預警指標與監測建議
+5. 社區防疫強化措施建議
+6. 需通知的相關單位清單
+
+請開始研判：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-10">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫情通報流程 SOP 撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">SOP</span>
+                                    <span class="recipe-tag">通報</span>
+                                    <span class="recipe-tag">流程</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-11">你是疾管署標準作業程序撰寫專家。請草擬一份疫情通報流程SOP。
+
+【適用對象】[填入：如「醫療機構」「學校」「長照機構」]
+【適用疾病】[填入：如「法定傳染病」「特定疾病」]
+
+【SOP需包含】
+1. 目的與適用範圍
+2. 通報時機與法定時限
+3. 通報流程圖（以文字描述步驟順序）
+4. 各步驟負責人員與職責
+5. 通報表單填寫要點
+6. 檢體採集與送驗注意事項
+7. 通報後續追蹤作業
+8. 常見問題Q&A（3-5題）
+9. 相關法規依據
+10. 聯絡窗口資訊
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-11">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">新興傳染病文獻快速彙整</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">新興傳染病</span>
+                                    <span class="recipe-tag">文獻</span>
+                                    <span class="recipe-tag">彙整</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-12">你是疾管署新興傳染病情報分析師。請將以下文獻資料快速彙整為決策參考摘要。
+
+【疾病名稱】[填入]
+【文獻來源】[填入：如「WHO、CDC、ECDC最新報告」]
+
+【彙整需包含】
+1. 病原體特性（傳播途徑、潛伏期、致死率）
+2. 全球流行概況（受影響國家、病例數趨勢）
+3. 臨床表現與診斷方法
+4. 現有治療與疫苗進展
+5. 各國防疫措施比較
+6. 對台灣的風險評估
+7. 建議整備行動
+
+【格式】每項以條列式呈現，全文不超過A4兩頁
+
+【文獻內容】
+[貼上文獻摘要或全文]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-12">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">每日疫情簡報講稿</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">簡報</span>
+                                    <span class="recipe-tag">講稿</span>
+                                    <span class="recipe-tag">疫情</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-13">你是疾管署疫情簡報撰稿人。請根據以下資料撰寫每日疫情簡報講稿。
+
+【日期】[填入]
+【當日新增病例】[填入：本土/境外、確診數]
+【累計數據】[填入：累計確診、住院、重症、死亡]
+【重要事件】[填入：如新增群聚、政策調整等]
+
+【講稿結構】
+1. 開場（今日疫情重點一句話）
+2. 疫情數據說明（簡要、以重點為主）
+3. 重要事件或政策說明
+4. 民眾注意事項與呼籲
+5. 結語
+
+【要求】
+- 口語化，適合記者會使用
+- 全長約3-5分鐘（600-1000字）
+- 語氣穩定、專業、不造成恐慌
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-13">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫調報告品質審閱建議</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">審閱</span>
+                                    <span class="recipe-tag">疫調</span>
+                                    <span class="recipe-tag">品質</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-14">你是疾管署資深疫調督導。請審閱以下疫調報告，並提供品質改善建議。
+
+【審閱重點】
+1. 資料完整性（TOCC是否齊全）
+2. 時序邏輯是否合理
+3. 感染源研判是否有依據
+4. 接觸者匡列是否周延
+5. 防治建議是否具體可行
+6. 文字表述是否清晰
+
+【請提供】
+- 各項審閱結果（通過/需補充/需修改）
+- 具體修改建議
+- 優點提示（鼓勵為主）
+
+【疫調報告內容】
+[貼上已去識別化的疫調報告]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-14">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫決策方案比較分析</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">決策</span>
+                                    <span class="recipe-tag">比較</span>
+                                    <span class="recipe-tag">方案</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-15">你是疾管署政策分析專家。請比較以下防疫方案，提供決策參考。
+
+【議題】[填入：如「邊境管制措施調整方案」]
+【方案A】[填入方案概述]
+【方案B】[填入方案概述]
+【方案C（如有）】[填入方案概述]
+
+【比較面向】
+1. 防疫效果預估
+2. 社會經濟影響
+3. 執行可行性（人力、經費、法規）
+4. 民意接受度
+5. 國際慣例參考
+6. 風險與不確定性
+
+【輸出格式】
+- 比較表格（方案 × 面向）
+- 綜合建議（含優先推薦方案及理由）
+
+請開始分析：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-15">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫情事件時序整理</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">時序</span>
+                                    <span class="recipe-tag">事件</span>
+                                    <span class="recipe-tag">時間軸</span>
+                                </div>
+                                <div class="recipe-content" id="epi-recipe-16">你是疾管署疫情紀錄管理員。請將以下資訊整理成疫情事件時序表。
+
+【事件名稱】[填入：如「2024年某縣市登革熱群聚事件」]
+【時間範圍】[填入：起迄日期]
+
+【時序表格式】
+- 日期 | 事件描述 | 採取措施 | 負責單位
+- 按時間順序排列
+- 重要節點以粗體標示
+
+【需包含事件類型】
+- 首例通報/確診時間
+- 疫調啟動與結果
+- 防治措施實施時間
+- 應變會議召開
+- 疫情升降轉折點
+- 解除警報/結案
+
+【原始資料】
+[貼上會議紀錄、公文、新聞稿等相關資料]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="epi-recipe-16">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Education Recipes -->
+                <div class="tab-content" id="edu-recipes">
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">季節性流感衛教單張</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">流感</span>
+                                    <span class="recipe-tag">衛教</span>
+                                    <span class="recipe-tag">民眾</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-1">你是疾管署衛教文宣專家。請撰寫季節性流感衛教單張內容。
+
+【目標對象】[填入：一般民眾/銀髮族/孕婦/學童家長]
+【使用情境】[填入：如「衛生所候診區張貼」「學校發放」]
+
+【內容需包含】
+1. 流感是什麼？（與一般感冒的差異）
+2. 傳播途徑
+3. 常見症狀與危險徵兆
+4. 預防方法（疫苗接種、手部衛生、咳嗽禮節）
+5. 就醫時機
+6. 公費疫苗接種資訊
+
+【格式要求】
+- 文字簡潔，每段不超過50字
+- 適合搭配圖示設計
+- 使用民眾易懂用語
+- 字數：300字以內
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">登革熱社區宣導文案</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">登革熱</span>
+                                    <span class="recipe-tag">社區</span>
+                                    <span class="recipe-tag">宣導</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-2">你是疾管署登革熱防治衛教專家。請撰寫社區宣導文案。
+
+【目標社區】[填入：如「南部高風險社區」]
+【宣導重點】[填入：如「孳生源清除」「個人防護」]
+【使用管道】[填入：社區廣播/傳單/LINE群組]
+
+【文案需包含】
+1. 吸引注意的開場（貼近居民生活）
+2. 「巡、倒、清、刷」口訣說明
+3. 居家常見孳生源圖文描述
+4. 個人防護措施
+5. 出現疑似症狀的處理方式
+6. 通報專線（1922）
+
+【語氣】親切如鄰居提醒，避免恐嚇式宣導
+【字數】[填入] 字以內
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">腸病毒校園衛教教案</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">腸病毒</span>
+                                    <span class="recipe-tag">校園</span>
+                                    <span class="recipe-tag">教案</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-3">你是疾管署校園衛教教案設計師。請設計一份腸病毒防治衛教教案。
+
+【適用對象】[填入：幼兒園/國小低年級/國小中高年級]
+【教學時間】[填入：如「40分鐘」]
+
+【教案需包含】
+1. 教學目標（知識/態度/行為 各1-2項）
+2. 教學活動設計（含時間分配）
+3. 引起動機活動（故事/遊戲/影片）
+4. 發展活動（洗手步驟、症狀辨識）
+5. 互動問答題（3-5題）
+6. 總結與回家作業
+7. 所需教材教具清單
+
+【注意事項】
+- 內容適合該年齡層理解
+- 融入互動元素，避免單向講述
+
+請開始設計：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">結核病衛教懶人包</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">結核病</span>
+                                    <span class="recipe-tag">懶人包</span>
+                                    <span class="recipe-tag">圖文</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-4">你是疾管署結核病防治衛教專家。請規劃一份圖文懶人包的文字內容。
+
+【頁數】8-10 頁（含封面封底）
+【目標對象】[填入：一般民眾/結核病接觸者/醫護人員]
+
+【每頁內容規劃】
+1. 封面：標題與副標題
+2. 結核病是什麼？
+3. 如何傳播？（飛沫傳染的迷思破解）
+4. 常見症狀（咳二週、有乖乖）
+5. 潛伏結核感染 vs 活動性結核
+6. 檢查與治療方式
+7. 都治計畫（DOTS）說明
+8. 接觸者該怎麼做？
+9. 常見迷思Q&A
+10. 封底：諮詢管道
+
+【每頁字數】不超過60字，搭配圖示設計提示
+
+請開始規劃：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">HIV/AIDS 去汙名化宣導</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">HIV</span>
+                                    <span class="recipe-tag">去汙名</span>
+                                    <span class="recipe-tag">宣導</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-5">你是疾管署愛滋病防治衛教專家，專精去汙名化溝通。請撰寫HIV/AIDS去汙名化宣導文案。
+
+【使用場景】[填入：如「世界愛滋日活動」「職場平權宣導」]
+【目標對象】[填入：一般大眾/職場主管/醫護人員]
+
+【文案需包含】
+1. 破除常見迷思（至少3個）
+2. 正確傳播途徑知識
+3. U=U（測不到=不會傳染）概念說明
+4. 友善對待感染者的具體行為建議
+5. 匿名篩檢資訊
+
+【語氣要求】
+- 同理、尊重、不帶偏見
+- 避免使用「患者」，改用「感染者」
+- 強調「疾病不等於道德判斷」
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫苗接種 Q&A 問答集</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">疫苗</span>
+                                    <span class="recipe-tag">Q&A</span>
+                                    <span class="recipe-tag">民眾</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-6">你是疾管署預防接種衛教專家。請針對以下疫苗撰寫民眾Q&A問答集。
+
+【疫苗名稱】[填入：如「流感疫苗」「HPV疫苗」「COVID-19疫苗」]
+【目標讀者】[填入：一般民眾/家長/銀髮族]
+【題數】10-15 題
+
+【問答需涵蓋】
+- 誰需要接種？接種時程？
+- 接種前注意事項
+- 常見副作用與處理方式
+- 接種後注意事項
+- 禁忌症與不適合接種的情形
+- 公費 vs 自費資訊
+- 去哪裡接種？
+
+【格式】Q: 問題 / A: 回答（每則回答不超過100字）
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">旅遊醫學衛教手冊內容</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">旅遊醫學</span>
+                                    <span class="recipe-tag">出國</span>
+                                    <span class="recipe-tag">預防</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-7">你是疾管署旅遊醫學門診衛教專家。請撰寫出國旅遊健康手冊內容。
+
+【旅遊目的地】[填入：如「東南亞」「非洲」「南美洲」]
+【旅遊天數】[填入]
+【旅客類型】[填入：商務/觀光/志工/留學]
+
+【手冊需包含】
+1. 目的地主要傳染病風險
+2. 行前建議疫苗接種（含時程建議）
+3. 預防性用藥（如瘧疾預防藥物）
+4. 旅途中自我防護要點
+5. 飲食與飲水安全
+6. 蚊蟲防護措施
+7. 返國後注意事項與就醫時機
+8. 緊急聯絡資訊（駐外館處、旅外國人急難救助專線）
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-7">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">長照機構感染管制衛教</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">長照</span>
+                                    <span class="recipe-tag">感控</span>
+                                    <span class="recipe-tag">機構</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-8">你是疾管署感染管制專家。請撰寫長照機構工作人員感染管制衛教教材。
+
+【機構類型】[填入：護理之家/日照中心/居家照護]
+【重點疾病】[填入：如「流感」「疥瘡」「諾羅病毒」「COVID-19」]
+
+【教材需包含】
+1. 標準防護措施（手部衛生、PPE使用時機）
+2. 住民健康監測重點
+3. 疑似群聚事件通報流程
+4. 環境清潔消毒要點
+5. 訪客管理注意事項
+6. 工作人員健康管理
+7. 常見感控迷思破解
+8. 自我檢核表
+
+【格式】條列式，搭配圖片說明提示，適合製作投影片
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-8">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">抗生素正確使用衛教</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">抗生素</span>
+                                    <span class="recipe-tag">AMR</span>
+                                    <span class="recipe-tag">用藥</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-9">你是疾管署抗藥性防治衛教專家。請撰寫抗生素正確使用衛教文宣。
+
+【目標對象】[填入：一般民眾/基層醫師/藥師]
+【宣導重點】抗生素抗藥性（AMR）危機意識
+
+【文宣需包含】
+1. 什麼是抗生素？什麼時候該用？
+2. 抗藥性是什麼？為什麼危險？
+3. 「三不」原則：不自行購買、不主動要求、不隨便停藥
+4. 感冒不需要抗生素的說明
+5. 正確用藥的具體行為指引
+6. 全球AMR現況簡述
+
+【語氣】專業但親切，避免艱深醫學術語
+【字數】[填入] 字以內
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-9">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">食媒傳染病預防宣導</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">食媒</span>
+                                    <span class="recipe-tag">預防</span>
+                                    <span class="recipe-tag">食品安全</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-10">你是疾管署食媒傳染病防治專家。請撰寫食品安全衛教宣導文案。
+
+【季節/時機】[填入：如「夏季」「中秋烤肉季」「春節年菜準備」]
+【目標對象】[填入：家庭主婦/餐飲業者/外食族]
+
+【文案需涵蓋】
+1. 當季常見食媒傳染病（如沙門氏菌、諾羅病毒）
+2. 食物處理五要原則
+3. 正確保存食物的溫度與時間
+4. 生熟食交叉污染防範
+5. 出現疑似食物中毒症狀的處理
+6. 通報管道
+
+【格式】適合製作懶人包圖卡，每段文字精簡
+【字數】每要點不超過30字
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-10">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">多語衛教文宣翻譯改寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">多語</span>
+                                    <span class="recipe-tag">移工</span>
+                                    <span class="recipe-tag">新住民</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-11">你是多語衛教文宣翻譯專家。請將以下中文衛教內容翻譯並改寫成適合目標語言讀者的版本。
+
+【目標語言】[填入：英文/越南文/印尼文/泰文/菲律賓文]
+【目標對象】[填入：在台移工/新住民/外籍看護]
+【原始內容主題】[填入：如「手部衛生」「結核病就醫」]
+
+【翻譯要求】
+1. 使用簡單易懂的目標語言
+2. 考量文化差異，調整表達方式
+3. 保留關鍵醫學資訊的正確性
+4. 加註台灣特有資訊（如1922專線、健保制度）
+5. 適合低識字程度讀者理解
+
+【中文原文】
+[貼上需要翻譯的衛教內容]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-11">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">兒童版衛教故事撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">兒童</span>
+                                    <span class="recipe-tag">故事</span>
+                                    <span class="recipe-tag">衛教</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-12">你是兒童衛教繪本故事作家。請創作一個適合兒童的防疫衛教故事。
+
+【衛教主題】[填入：如「洗手的重要性」「打疫苗不害怕」「生病要看醫生」]
+【目標年齡】[填入：3-5歲/6-8歲/9-12歲]
+【故事角色】[填入：如「小熊」「超人醫生」或由AI發想]
+
+【故事要求】
+1. 有明確的衛教知識融入
+2. 角色遇到問題→學習正確做法→問題解決
+3. 語言活潑生動，適合該年齡層
+4. 可搭配繪本插圖的場景描述
+5. 結尾有正向學習結論
+6. 字數：[填入] 字以內
+
+請開始創作：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-12">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">銀髮族衛教大字版文宣</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">銀髮族</span>
+                                    <span class="recipe-tag">大字版</span>
+                                    <span class="recipe-tag">易讀</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-13">你是銀髮族衛教溝通專家。請將以下衛教內容改寫成適合長輩閱讀的大字版文宣。
+
+【原始主題】[填入：如「流感疫苗接種」「慢性病患者防疫注意事項」]
+
+【改寫原則】
+1. 每句話不超過15個字
+2. 使用長輩熟悉的用語（避免英文、網路用語）
+3. 重要訊息用「記住：」開頭強調
+4. 行動步驟用數字編號（第一步、第二步...）
+5. 文宣排版建議（字級、行距、色彩對比）
+
+【格式要求】
+- 總字數不超過200字
+- 分成3-5個段落
+- 每段有清楚小標題
+- 附上就醫/諮詢電話
+
+【原始衛教內容】
+[貼上需要改寫的衛教內容]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-13">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">短影音衛教腳本撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">短影音</span>
+                                    <span class="recipe-tag">腳本</span>
+                                    <span class="recipe-tag">社群</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-14">你是疾管署社群媒體內容創作者。請撰寫一支60秒防疫短影音腳本。
+
+【平台】[填入：TikTok/Instagram Reels/YouTube Shorts]
+【衛教主題】[填入]
+【目標受眾】[填入：年輕族群/家長/上班族]
+
+【腳本格式】
+秒數 | 畫面描述 | 旁白/字幕 | 音效/配樂提示
+
+【腳本要求】
+1. 前3秒要有吸引力的開場（提問/驚人事實）
+2. 中段傳遞核心知識（簡化為3個重點）
+3. 結尾有CTA（行動呼籲）
+4. 語氣輕鬆活潑，不說教
+5. 適合搭配流行音樂節奏剪輯
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-14">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">醫護人員繼續教育教材</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">醫護</span>
+                                    <span class="recipe-tag">教材</span>
+                                    <span class="recipe-tag">繼教</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-15">你是疾管署醫護繼續教育教材設計師。請設計一份感染管制繼續教育教材大綱。
+
+【課程主題】[填入：如「新興傳染病應變處置」「醫療照護相關感染預防」]
+【學員對象】[填入：醫師/護理師/感管師]
+【課程時數】[填入：如「2小時」]
+【學分類別】[填入：感染管制/傳染病防治]
+
+【教材需包含】
+1. 課程目標（3-5項具體學習目標）
+2. 課程大綱（各單元主題與時間分配）
+3. 各單元教學重點
+4. 案例討論題目（2-3個臨床情境）
+5. 課後測驗題（10題，含答案與解析）
+6. 參考文獻清單
+
+請開始設計：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-15">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫 Podcast 節目腳本</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">Podcast</span>
+                                    <span class="recipe-tag">腳本</span>
+                                    <span class="recipe-tag">衛教</span>
+                                </div>
+                                <div class="recipe-content" id="edu-recipe-16">你是疾管署Podcast節目企劃。請撰寫一集防疫主題Podcast節目腳本。
+
+【節目名稱】[填入：如「防疫小學堂」]
+【本集主題】[填入]
+【節目長度】[填入：如「15-20分鐘」]
+【主持風格】[填入：專業嚴謹/輕鬆對談/故事敘事]
+
+【腳本結構】
+1. 開場白與本集預告（1-2分鐘）
+2. 主題導入（為什麼這個議題重要）
+3. 核心內容（分3-4個段落，每段有小結）
+4. 聽眾Q&A或迷思破解環節
+5. 本集重點回顧
+6. 結語與下集預告
+
+【格式】標註說話者、預估時間、轉場提示
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="edu-recipe-16">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="admin-recipes">
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫人力需求評估表</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">人力</span>
+                                    <span class="recipe-tag">需求</span>
+                                    <span class="recipe-tag">評估</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-1">你是疾管署的人事管理專員，擅長人力規劃與需求分析。
+
+請根據以下資訊，製作一份防疫人力需求評估表：
+- 單位名稱：[填入單位名稱，如「急性傳染病組」]
+- 評估期間：[填入期間，如「114年度」]
+- 現有編制人數：[填入]
+- 現有實際在職人數：[填入]
+- 重點業務項目：[填入主要業務，如「登革熱防治、腸病毒監測」]
+- 預期新增業務：[填入，如「新興傳染病整備計畫」]
+
+【輸出格式】
+表格形式，包含：
+1. 現有人力配置（職稱、人數、主要職掌）
+2. 業務量分析（經常性業務與季節性業務）
+3. 人力缺口評估（依業務量推算所需人力）
+4. 應變人力需求（疫情升溫時額外需求）
+5. 建議補充方式（正式編制/約聘僱/派遣/其他）
+
+【注意事項】
+- 符合行政院人事行政總處人力評鑑規範
+- 考量防疫應變人力需求彈性
+- 區分經常性人力與臨時性人力需求
+- 納入人員培訓所需時間成本
+
+請開始製作：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">年度訓練計畫書撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">訓練</span>
+                                    <span class="recipe-tag">計畫</span>
+                                    <span class="recipe-tag">年度</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-2">你是疾管署的教育訓練承辦人，熟悉公務人員訓練進修法規與防疫專業訓練需求。
+
+請根據以下資訊，撰寫一份年度訓練計畫書：
+- 計畫年度：[填入，如「114年度」]
+- 適用對象：[填入，如「全署同仁」或「新進人員」]
+- 訓練重點領域：[填入，如「AI應用、疫情應變、實驗室安全」]
+- 年度訓練預算：[填入概估金額]
+- 去年訓練成效摘要：[填入，如「完訓率95%、滿意度4.2/5」]
+
+【輸出格式】
+1. 計畫依據（相關法規與上級指示）
+2. 計畫目標（具體可衡量的KPI）
+3. 訓練類別與課程規劃表（必修/選修、線上/實體）
+4. 各季訓練時程表
+5. 師資來源與遴選方式
+6. 經費概算表
+7. 預期效益與評估方式
+8. 訓練紀錄管理方式
+
+【注意事項】
+- 符合公務人員訓練進修法規定
+- 每人每年學習時數需達規定時數
+- 納入數位學習時數
+- 考量防疫業務特殊性，安排彈性補課機制
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">採購規格書草擬</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">採購</span>
+                                    <span class="recipe-tag">規格</span>
+                                    <span class="recipe-tag">草擬</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-3">你是疾管署的採購業務承辦人，熟悉政府採購法及相關子法規定。
+
+請根據以下資訊，草擬一份採購規格書：
+- 採購標的：[填入，如「防疫物資倉儲管理系統」]
+- 採購方式：[填入，如「公開招標/限制性招標/小額採購」]
+- 預算金額：[填入概估金額]
+- 需求單位：[填入]
+- 預計使用期間：[填入，如「114年1月至12月」]
+- 主要功能需求：[填入3-5項核心需求]
+
+【輸出格式】
+1. 採購名稱與編號
+2. 採購目的與背景說明
+3. 規格需求（功能規格、技術規格、數量）
+4. 廠商資格條件
+5. 交貨期限與地點
+6. 驗收標準與方式
+7. 保固與維護要求
+8. 付款條件
+9. 其他注意事項
+
+【注意事項】
+- 規格書不得限制競爭或為特定廠商量身訂做
+- 符合政府採購法第26條規定
+- 技術規格以功能性描述為主
+- 需註明是否接受同等品
+
+請開始草擬：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">績效考核自評報告</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">績效</span>
+                                    <span class="recipe-tag">考核</span>
+                                    <span class="recipe-tag">自評</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-4">你是疾管署的人事管理顧問，擅長協助公務人員撰寫績效考核自評報告。
+
+請根據以下資訊，撰寫一份績效考核自評報告：
+- 受考核人職稱：[填入，如「薦任技士」]
+- 所屬單位：[填入]
+- 考核期間：[填入，如「113年1月至12月」]
+- 主要職掌業務：[填入2-3項]
+- 本年度重要工作成果：[填入3-5項具體成果]
+- 參與專案或跨單位合作：[填入]
+- 進修訓練紀錄：[填入時數與課程]
+
+【輸出格式】
+1. 工作目標達成情形（對照年初設定目標）
+2. 重要工作績效（量化數據佐證）
+3. 業務創新或流程改善事蹟
+4. 團隊合作與跨單位協調貢獻
+5. 自我能力提升與進修成果
+6. 未來工作展望與改進方向
+
+【注意事項】
+- 內容具體，避免空泛描述
+- 盡量以數據佐證績效（如：處理案件數、完成率、時效等）
+- 語氣謙和但充分展現貢獻
+- 符合公務人員考績法相關規定
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">出差報告撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">出差</span>
+                                    <span class="recipe-tag">報告</span>
+                                    <span class="recipe-tag">心得</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-5">你是疾管署的行政管理專員，擅長撰寫結構化的出差報告。
+
+請根據以下資訊，撰寫一份出差報告：
+- 出差人員：[填入職稱與姓名]
+- 出差期間：[填入起迄日期]
+- 出差地點：[填入，如「日本國立感染症研究所」]
+- 出差目的：[填入，如「參加亞太地區新興傳染病防治研討會」]
+- 主要行程概述：[填入每日重點活動]
+- 重要收穫或發現：[填入3-5項]
+- 攜回資料：[填入，如「會議手冊、技術文件」]
+
+【輸出格式】
+1. 出差摘要（100字以內）
+2. 出差目的與背景
+3. 行程紀要（逐日記錄重點）
+4. 重要內容摘述（分主題整理）
+5. 心得與建議事項（對本署業務之啟示）
+6. 後續辦理事項（具體行動項目）
+7. 附件清單
+
+【注意事項】
+- 著重對本署業務的實質幫助與應用建議
+- 建議事項需具體可行
+- 涉及國際交流者需注意外交禮儀用語
+- 經費使用需符合國內外出差旅費報支規定
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">業務交接清單製作</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">交接</span>
+                                    <span class="recipe-tag">清單</span>
+                                    <span class="recipe-tag">業務</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-6">你是疾管署的業務管理專家，擅長製作完整且實用的業務交接文件。
+
+請根據以下資訊，製作一份業務交接清單：
+- 移交人職稱：[填入]
+- 所屬單位：[填入]
+- 交接原因：[填入，如「職務調動/退休/離職」]
+- 主要業務項目：[填入3-5項核心業務]
+- 交接期間：[填入預計交接起迄日]
+- 進行中專案：[填入目前執行中的專案名稱]
+
+【輸出格式】
+1. 業務總覽（所有職掌業務清單與優先順序）
+2. 各項業務詳細說明
+   - 業務名稱與內容描述
+   - 辦理時程（定期/不定期）
+   - 相關法規依據
+   - 協辦單位與聯絡窗口
+   - 常用表單與檔案位置
+3. 進行中案件狀態
+4. 例行性工作行事曆（月/季/年）
+5. 重要聯絡人清單
+6. 經管財產與物品清冊
+7. 系統帳號與權限清單
+8. 特別注意事項與經驗提醒
+
+【注意事項】
+- 清單需詳盡，讓接手人能快速上手
+- 標註各業務的急迫性與重要性
+- 納入非書面的隱性知識（如慣例、注意事項）
+- 系統帳號需依資安規定辦理移交
+
+請開始製作：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫物資盤點報告</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">物資</span>
+                                    <span class="recipe-tag">盤點</span>
+                                    <span class="recipe-tag">庫存</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-7">你是疾管署的物資管理專員，熟悉防疫物資儲備與管理作業。
+
+請根據以下資訊，撰寫一份防疫物資盤點報告：
+- 盤點日期：[填入]
+- 倉儲地點：[填入，如「中央防疫物資倉儲中心」]
+- 盤點範圍：[填入，如「個人防護裝備、快篩試劑、消毒用品」]
+- 上次盤點日期：[填入]
+- 異常狀況：[填入，如「部分N95口罩已逾保存期限」]
+
+【輸出格式】
+1. 盤點摘要（總品項數、總金額、異常品項數）
+2. 庫存明細表
+   - 品項名稱、規格
+   - 帳面數量 vs 實盤數量
+   - 差異數量與差異率
+   - 有效期限與剩餘效期
+   - 存放位置
+3. 安全庫存量檢核（對照安全庫存標準）
+4. 即將到期物資清單（3個月內到期）
+5. 盤盈盤虧分析與原因說明
+6. 改善建議（倉儲管理、進出管控、效期管理）
+7. 後續處理建議（屆期品處理、補充採購建議）
+
+【注意事項】
+- 數據需精確，帳實相符
+- 依據疾管署防疫物資管理要點辦理
+- 特殊管制物資需另行標註
+- 考量季節性疫情物資需求波動
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-7">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">年度預算說明書撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">預算</span>
+                                    <span class="recipe-tag">說明書</span>
+                                    <span class="recipe-tag">年度</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-8">你是疾管署的會計管理專員，熟悉政府預算編製作業與相關法規。
+
+請根據以下資訊，撰寫一份年度預算說明書：
+- 預算年度：[填入，如「115年度」]
+- 計畫名稱：[填入，如「傳染病防治計畫」]
+- 所屬單位：[填入]
+- 本年度預算額度：[填入]
+- 上年度預算額度與執行率：[填入]
+- 主要業務項目與經費需求：[填入3-5項]
+- 新增或調整項目：[填入]
+
+【輸出格式】
+1. 計畫緣起與目標
+2. 計畫內容與實施策略
+3. 經費需求總表
+4. 各分項計畫經費明細
+   - 業務費（差旅、印刷、委辦等）
+   - 設備費
+   - 人事費（約聘僱、臨時人員）
+5. 與上年度預算比較增減說明
+6. 預期效益（量化指標）
+7. 替代方案分析（如預算遭刪減之因應）
+
+【注意事項】
+- 符合中央政府總預算編製作業手冊規定
+- 經費編列需合理，有具體計算基礎
+- 效益指標需可衡量、可追蹤
+- 考量立法院審議重點，預先準備說明
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-8">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">志工招募與管理辦法</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">志工</span>
+                                    <span class="recipe-tag">招募</span>
+                                    <span class="recipe-tag">管理</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-9">你是疾管署的志工業務承辦人，熟悉志願服務法與相關管理規範。
+
+請根據以下資訊，草擬一份志工招募與管理辦法：
+- 志工運用單位：[填入，如「疾管署各區管制中心」]
+- 服務項目：[填入，如「防疫衛教宣導、疫苗接種站支援、電話諮詢」]
+- 預計招募人數：[填入]
+- 服務時段：[填入，如「週一至週五 9:00-17:00」]
+- 特殊資格需求：[填入，如「具護理或公衛背景者優先」]
+
+【輸出格式】
+1. 總則（依據、目的、適用範圍）
+2. 招募方式與條件
+   - 基本資格
+   - 招募管道
+   - 甄選流程
+3. 訓練規劃
+   - 基礎訓練（志願服務法規定12小時）
+   - 特殊訓練（防疫專業知能）
+   - 在職訓練
+4. 服務管理
+   - 服務時數登錄
+   - 差假管理
+   - 保險事宜
+5. 獎勵與福利
+6. 退場機制
+7. 附則
+
+【注意事項】
+- 符合志願服務法及其施行細則
+- 納入志工安全與健康保障措施
+- 涉及防疫工作需特別注意感染管控訓練
+- 明確規範志工與正式人員之權責區分
+
+請開始草擬：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-9">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">內部教育訓練教材大綱</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">教育訓練</span>
+                                    <span class="recipe-tag">教材</span>
+                                    <span class="recipe-tag">大綱</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-10">你是疾管署的教育訓練規劃師，擅長設計公務人員在職訓練課程。
+
+請根據以下資訊，規劃一份內部教育訓練教材大綱：
+- 課程名稱：[填入，如「AI工具應用於防疫業務實務」]
+- 授課對象：[填入，如「全署行政同仁」]
+- 課程時數：[填入，如「3小時」]
+- 授課方式：[填入，如「實體講座含實作」]
+- 學員預期程度：[填入，如「初學者/具基礎概念」]
+- 課程目標：[填入2-3項具體目標]
+
+【輸出格式】
+1. 課程基本資訊（名稱、時數、對象、講師需求）
+2. 課程目標與預期學習成果
+3. 課程大綱（分章節）
+   - 各章節主題與時間配置
+   - 教學方法（講述/案例討論/分組實作/演練）
+   - 重點內容摘要
+4. 實作練習設計（含情境題目）
+5. 評量方式（測驗/實作成果/學習單）
+6. 教材與教具需求清單
+7. 課前準備事項（學員與講師）
+8. 參考資料與延伸學習資源
+
+【注意事項】
+- 內容貼近疾管署實際業務情境
+- 兼顧理論與實務操作
+- 考量不同程度學員的學習需求
+- 課程設計需符合公務人員終身學習時數認證要求
+
+請開始規劃：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-10">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">資訊系統需求規格書</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">資訊系統</span>
+                                    <span class="recipe-tag">需求</span>
+                                    <span class="recipe-tag">規格</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-11">你是疾管署的資訊系統需求分析師，熟悉政府資訊系統開發規範與資安要求。
+
+請根據以下資訊，撰寫一份資訊系統需求規格書：
+- 系統名稱：[填入，如「傳染病通報整合管理平台」]
+- 需求單位：[填入]
+- 使用對象：[填入，如「疾管署同仁、各縣市衛生局承辦人」]
+- 預計使用人數：[填入]
+- 主要業務流程：[填入目前人工作業流程摘要]
+- 期望改善的痛點：[填入2-3項]
+- 預計上線時程：[填入]
+
+【輸出格式】
+1. 專案概述
+   - 背景與目的
+   - 範圍與限制
+   - 名詞定義
+2. 功能性需求
+   - 使用者角色與權限
+   - 各功能模組說明（含流程圖描述）
+   - 報表與統計需求
+3. 非功能性需求
+   - 效能需求（回應時間、併發使用者數）
+   - 資安需求（依資安等級分類）
+   - 可用性需求（SLA目標）
+   - 相容性需求（瀏覽器、行動裝置）
+4. 介面需求（與其他系統介接）
+5. 資料需求（資料庫結構概述、資料保留年限）
+6. 驗收標準
+
+【注意事項】
+- 符合政府資訊系統開發管理規範
+- 資安需求依資通安全管理法辦理
+- 個資處理需符合個人資料保護法
+- 系統需支援政府機關共通性作業（如：GSN、自然人憑證）
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-11">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">會議主持引導稿</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">會議</span>
+                                    <span class="recipe-tag">主持</span>
+                                    <span class="recipe-tag">引導</span>
+                                </div>
+                                <div class="recipe-content" id="admin-recipe-12">你是疾管署的資深行政管理師，擅長會議規劃與主持引導。
+
+請根據以下資訊，撰寫一份會議主持引導稿：
+- 會議名稱：[填入，如「114年度傳染病防治業務聯繫會議」]
+- 會議目的：[填入，如「檢討上半年防治成果並規劃下半年策略」]
+- 預計時間：[填入，如「2小時」]
+- 與會人員：[填入，如「署內各組室主管、各區管中心代表」]
+- 主要議題：[填入3-5項議題]
+- 需要決議事項：[填入]
+- 特殊注意事項：[填入，如「有長官致詞」「需視訊連線」]
+
+【輸出格式】
+1. 會前準備檢核表
+   - 場地/設備/資料確認事項
+2. 開場引言（含歡迎詞與會議說明）
+3. 各議題主持引導語
+   - 議題背景簡介
+   - 討論引導問題
+   - 預估時間控制點
+4. 討論收斂與決議確認用語
+5. 臨場應對（超時處理、意見分歧、冷場）
+6. 結語與散會
+7. 會後追蹤事項提醒
+
+【注意事項】
+- 語氣正式但不僵硬，兼顧效率與參與感
+- 每個議題預留討論時間
+- 準備轉場用語，確保會議流暢
+- 重要決議需當場確認權責單位與期限
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="admin-recipe-12">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Recipes -->
+                <div class="tab-content" id="research-recipes">
+                    <div class="recipe-grid">
+                        <!-- Recipe 1: 系統性文獻回顧架構規劃 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">系統性文獻回顧架構規劃</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">系統性回顧</span>
+                                    <span class="recipe-tag">文獻</span>
+                                    <span class="recipe-tag">架構</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-1">你是公共衛生領域的研究方法學專家，擅長系統性文獻回顧與統合分析。
+
+請協助我規劃一份系統性文獻回顧的完整架構：
+- 研究主題：[填入研究主題，如「台灣登革熱防治介入措施成效」]
+- 研究問題（PICO）：
+  P（族群）：[填入]
+  I（介入措施）：[填入]
+  C（比較對象）：[填入]
+  O（結果指標）：[填入]
+
+【輸出格式】
+1. 研究問題定義與範圍界定
+2. 文獻搜尋策略（含關鍵字組合、布林邏輯、資料庫清單）
+3. 文獻篩選流程（納入與排除標準）
+4. PRISMA 流程圖架構
+5. 品質評估工具建議（如 Cochrane RoB、Newcastle-Ottawa Scale）
+6. 資料萃取表格欄位設計
+7. 統合分析可行性評估
+
+【注意事項】
+- 嚴格遵循 PRISMA 2020 指引
+- 搜尋資料庫需包含 PubMed、Embase 及華藝線上圖書館（Airiti Library）
+- 納入中文與英文文獻
+- 考量台灣本土流行病學特性</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 2: 研究計畫書摘要撰寫 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">研究計畫書摘要撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">研究計畫</span>
+                                    <span class="recipe-tag">摘要</span>
+                                    <span class="recipe-tag">申請</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-2">你是疾管署資深研究員，擅長撰寫研究計畫書摘要與科技部（國科會）計畫申請。
+
+請根據以下研究資訊，撰寫一份研究計畫摘要：
+- 計畫名稱：[填入]
+- 研究背景與動機：[填入，如「台灣結核病發生率近年趨勢及防治缺口」]
+- 研究目的：[填入]
+- 研究方法概述：[填入，如「回溯性世代研究」]
+- 預期執行期間：[填入]
+
+【輸出格式】
+1. 中文摘要（500字以內）
+   - 背景與研究問題
+   - 研究目的
+   - 研究設計與方法
+   - 預期成果與貢獻
+2. 英文摘要（300字以內，對應中文內容）
+3. 關鍵詞（中英文各5個）
+
+【注意事項】
+- 符合衛生福利部科技研究計畫格式
+- 強調研究對台灣公衛政策的實務貢獻
+- 語氣專業嚴謹，邏輯清晰</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 3: 流行病學數據解讀 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">流行病學數據解讀</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">流行病學</span>
+                                    <span class="recipe-tag">數據</span>
+                                    <span class="recipe-tag">解讀</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-3">你是疾管署流行病學資深分析師，專精傳染病監測數據分析。
+
+請協助我解讀以下流行病學數據：
+- 疾病名稱：[填入]
+- 監測資料期間：[填入，如「2023年1月至2024年12月」]
+- 數據內容：[貼上數據摘要，如發生率、盛行率、致死率等]
+- 比較基準：[填入，如「前五年同期平均」]
+
+【請分析】
+1. 數據趨勢描述（時間趨勢、季節性變化）
+2. 三大流行病學指標解讀（人、時、地分布）
+3. 與歷史資料比較之異同
+4. 可能的影響因素推論（需區分相關性與因果性）
+5. 數據品質與限制說明
+6. 建議後續追蹤重點
+
+【注意事項】
+- 使用台灣法定傳染病分類與通報定義
+- 率值計算需說明分母來源（如戶籍人口或年中人口）
+- 避免過度推論，明確標示不確定性
+- 引用疾管署傳染病統計資料查詢系統格式</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 4: 統計分析結果描述 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">統計分析結果描述</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">統計</span>
+                                    <span class="recipe-tag">分析</span>
+                                    <span class="recipe-tag">結果</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-4">你是生物統計學專家，擅長將統計分析結果轉化為清晰的學術文字描述。
+
+請根據以下統計輸出，撰寫學術論文「結果」段落：
+- 研究設計：[填入，如「橫斷面研究」「病例對照研究」「世代研究」]
+- 統計方法：[填入，如「多變項邏輯斯迴歸」「Cox比例風險模型」「卡方檢定」]
+- 樣本數：[填入]
+- 統計軟體輸出結果：[貼上統計報表或關鍵數據]
+
+【輸出格式】
+1. 描述性統計摘要（樣本特徵描述）
+2. 主要分析結果文字描述
+3. 建議之結果呈現表格架構
+4. 統計顯著性說明（p值、信賴區間）
+5. 效果量解讀（OR、RR、HR等）
+
+【注意事項】
+- 遵循 APA 或國際流行病學期刊報告格式
+- p值報告至小數點後三位
+- 信賴區間使用95% CI
+- 區分統計顯著性與臨床/公衛意義
+- 避免使用「證明」一詞，改用「顯示」「發現」</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 5: 研究倫理審查申請書重點 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">研究倫理審查申請書重點</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">IRB</span>
+                                    <span class="recipe-tag">倫理</span>
+                                    <span class="recipe-tag">審查</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-5">你是研究倫理審查委員會（IRB）的審查顧問，熟悉台灣人體研究法與研究倫理規範。
+
+請協助我撰寫IRB申請書的重點段落：
+- 研究計畫名稱：[填入]
+- 研究類型：[填入，如「人體研究」「人體試驗」「使用既有資料之研究」]
+- 研究對象：[填入，如「成年登革熱確診個案」]
+- 資料蒐集方式：[填入，如「問卷調查」「病歷回顧」「生物檢體採集」]
+- 是否涉及弱勢族群：[填入]
+
+【請協助撰寫】
+1. 研究目的與預期效益說明
+2. 受試者招募方式與納入排除標準
+3. 風險評估與降低風險措施
+4. 知情同意流程說明
+5. 個資保護與去識別化措施
+6. 資料保存與銷毀計畫
+7. 利益衝突聲明
+
+【注意事項】
+- 依據台灣人體研究法（2011年）及相關子法
+- 符合疾管署機構內IRB送審格式
+- 特別注意傳染病研究的個資保護（傳染病防治法第10條）
+- 若涉及原住民族，需符合原住民族基本法相關規定</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 6: 問卷設計與題目生成 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">問卷設計與題目生成</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">問卷</span>
+                                    <span class="recipe-tag">設計</span>
+                                    <span class="recipe-tag">題目</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-6">你是公共衛生研究方法專家，擅長問卷設計與量表開發。
+
+請根據以下研究需求，協助設計問卷題目：
+- 研究主題：[填入，如「民眾對COVID-19疫苗接種猶豫之因素調查」]
+- 調查對象：[填入，如「20歲以上台灣民眾」]
+- 研究變項：
+  依變項：[填入]
+  自變項：[填入]
+  控制變項：[填入]
+- 預計施測方式：[填入，如「線上問卷」「電話訪問」「面訪」]
+
+【請產出】
+1. 問卷架構（分為幾大構面）
+2. 各構面題目（含選項設計）
+3. 人口學變項題目
+4. 量尺建議（如Likert五點量表）
+5. 題目反向題設計
+6. 問卷施測說明文字與填答指引
+
+【注意事項】
+- 題目用語須適合台灣民眾理解
+- 避免誘導性問題與雙管題
+- 敏感性題目放置問卷後半段
+- 全卷填答時間控制在[填入]分鐘以內
+- 若改編既有量表須註明出處</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 7: 學術海報內容規劃 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">學術海報內容規劃</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">海報</span>
+                                    <span class="recipe-tag">學術</span>
+                                    <span class="recipe-tag">規劃</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-7">你是具有豐富學術海報展示經驗的公衛研究者。
+
+請根據以下研究成果，規劃一份學術海報的文字內容：
+- 研究題目：[填入]
+- 發表場合：[填入，如「台灣公共衛生學會年會」「TEPHINET全球研討會」]
+- 海報語言：[填入：中文/英文/中英並列]
+- 研究摘要或結果重點：[貼上研究摘要]
+
+【請規劃】
+1. 海報標題（精簡吸引人）
+2. 背景（3-4個重點，簡短條列）
+3. 研究目的（1-2句話）
+4. 研究方法（流程圖式呈現建議）
+5. 主要結果（建議以圖表呈現的項目）
+6. 結論與建議（3-5個要點）
+7. 參考文獻（3-5篇關鍵文獻格式）
+8. 版面配置建議（各區塊佔比）
+
+【注意事項】
+- 文字精簡，每個區塊不超過100字
+- 強調視覺化呈現（建議使用圖表處）
+- 結論需有政策或實務意涵
+- 若為英文場合，請提供英文版本</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-7">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 8: 疫情預測模型假設說明 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">疫情預測模型假設說明</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">預測模型</span>
+                                    <span class="recipe-tag">假設</span>
+                                    <span class="recipe-tag">說明</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-8">你是傳染病數學建模專家，擅長將複雜的疫情預測模型轉化為決策者能理解的說明文件。
+
+請根據以下模型資訊，撰寫一份模型假設與限制說明：
+- 模型類型：[填入，如「SIR模型」「SEIR模型」「Agent-based model」「時間序列ARIMA」]
+- 目標疾病：[填入]
+- 預測目的：[填入，如「未來4週確診數預估」「醫療量能需求推估」]
+- 關鍵參數：[填入，如「R0=2.5」「潛伏期中位數=5天」]
+
+【請撰寫】
+1. 模型基本原理說明（非技術人員可理解）
+2. 核心假設條件逐條列明
+3. 參數設定依據與資料來源
+4. 情境分析設計（樂觀/基準/悲觀情境）
+5. 模型限制與不確定性說明
+6. 預測結果解讀注意事項
+7. 與實際疫情比對之校正建議
+
+【注意事項】
+- 報告對象為疾管署決策階層，語言清晰避免過多數學公式
+- 強調模型為「輔助決策工具」而非「預言」
+- 說明敏感性分析結果
+- 參考台灣歷史疫情數據進行校正</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-8">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 9: 研究成果政策建議書 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">研究成果政策建議書</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">研究成果</span>
+                                    <span class="recipe-tag">政策</span>
+                                    <span class="recipe-tag">建議</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-9">你是疾管署研究成果轉譯專家，專精將學術研究轉化為可行的公衛政策建議。
+
+請根據以下研究成果，撰寫一份政策建議書：
+- 研究計畫名稱：[填入]
+- 主要研究發現：[填入3-5項關鍵發現]
+- 研究方法與證據等級：[填入]
+- 建議適用對象：[填入，如「中央主管機關」「地方衛生局」「醫療院所」]
+
+【政策建議書格式】
+1. 摘要（300字以內，含背景、發現、建議）
+2. 研究背景與問題陳述
+3. 關鍵研究發現摘要（表格化呈現）
+4. 政策建議（分短期/中期/長期）
+   - 每項建議包含：具體行動、負責單位、所需資源、預期效益
+5. 實施可行性評估
+6. 經費概估與優先順序
+7. 監測與評估指標
+
+【注意事項】
+- 以實證為基礎，明確連結研究證據與政策建議
+- 考量台灣現行法規框架與行政體系
+- 建議需具體可操作，避免過於抽象
+- 預估政策推動可能遇到的障礙與因應策略</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-9">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 10: 文獻比較矩陣表整理 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">文獻比較矩陣表整理</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">文獻比較</span>
+                                    <span class="recipe-tag">矩陣</span>
+                                    <span class="recipe-tag">整理</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-10">你是公共衛生文獻分析專家，擅長系統化整理與比較研究文獻。
+
+請根據以下文獻資訊，整理一份文獻比較矩陣表：
+- 研究主題：[填入，如「亞太地區COVID-19非藥物介入措施成效比較」]
+- 文獻數量：[填入] 篇
+- 文獻清單或摘要：[貼上文獻資訊]
+
+【矩陣表欄位設計】
+1. 作者與年份
+2. 研究國家/地區
+3. 研究設計（RCT、世代研究、橫斷面等）
+4. 研究對象與樣本數
+5. 主要介入/暴露變項
+6. 結果變項與測量工具
+7. 主要發現
+8. 研究品質評等
+9. 與本研究之關聯性
+
+【額外產出】
+- 文獻整體趨勢摘要（300字）
+- 研究缺口分析（目前文獻不足之處）
+- 各研究方法學優缺點比較
+
+【注意事項】
+- 表格需可直接貼入Word或Excel使用
+- 以台灣可應用性為優先排序
+- 區分國際文獻與台灣本土研究
+- 標註文獻證據等級（如Oxford CEBM）</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-10">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 11: GIS 疫情地圖說明撰寫 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">GIS 疫情地圖說明撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">GIS</span>
+                                    <span class="recipe-tag">地圖</span>
+                                    <span class="recipe-tag">說明</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-11">你是疾管署GIS疫情分析專家，擅長空間流行病學與疫情地圖製作。
+
+請根據以下資訊，撰寫GIS疫情地圖的文字說明與解讀：
+- 疾病名稱：[填入]
+- 地圖類型：[填入，如「點密度圖」「面量圖」「核密度圖」「時空群聚分析」]
+- 空間範圍：[填入，如「全國」「南部六縣市」「台南市各行政區」]
+- 時間範圍：[填入]
+- 使用資料來源：[填入，如「傳染病通報系統」]
+
+【請撰寫】
+1. 地圖標題（含疾病、地理範圍、時間）
+2. 地圖製作方法說明（座標系統、分類方式）
+3. 圖例說明（各顏色/符號代表意義）
+4. 空間分布特徵描述
+5. 群聚現象分析（如 Moran's I 或 SaTScan 結果）
+6. 時空變化趨勢描述（若為多時間點）
+7. 可能影響因素推論（環境、人口、社經因素）
+8. 防治資源分配建議
+
+【注意事項】
+- 座標系統使用 TWD97（EPSG:3826）或 WGS84
+- 行政區界圖資來源標註（如內政部國土測繪中心）
+- 病例數少於3例之區域需注意隱私保護
+- 地圖需附比例尺與指北針說明</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-11">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 12: 研究計畫期末報告撰寫 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">研究計畫期末報告撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">期末報告</span>
+                                    <span class="recipe-tag">研究</span>
+                                    <span class="recipe-tag">撰寫</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-12">你是疾管署研究計畫管理專家，熟悉衛福部科技計畫期末報告格式。
+
+請根據以下研究成果，協助撰寫期末報告各章節大綱與重點內容：
+- 計畫名稱：[填入]
+- 計畫編號：[填入]
+- 執行期間：[填入]
+- 計畫主持人：[填入]
+- 主要研究成果摘要：[填入]
+- 計畫達成指標：[填入，如「發表SCI論文2篇」「完成全國調查」]
+
+【期末報告章節架構】
+1. 中英文摘要
+2. 前言（研究背景、目的、文獻回顧）
+3. 材料與方法
+4. 結果
+5. 討論
+6. 結論與建議（含政策建議）
+7. 計畫成果自評（對照計畫書目標逐項說明）
+8. 參考文獻
+9. 附錄（問卷、同意書、IRB核可函等）
+
+【請針對每章節提供】
+- 段落大綱（3-5個要點）
+- 建議字數分配
+- 該章節常見審查問題提醒
+
+【注意事項】
+- 遵循衛福部科技研究發展計畫管理要點
+- 如實呈現執行進度，未達標項目需說明原因
+- 經費執行率需搭配說明</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-12">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 13: 數據視覺化圖表解說 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">數據視覺化圖表解說</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">視覺化</span>
+                                    <span class="recipe-tag">圖表</span>
+                                    <span class="recipe-tag">解說</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-13">你是疾管署數據視覺化與科學傳播專家，擅長為圖表撰寫清晰的解說文字。
+
+請根據以下圖表資訊，撰寫圖表解說文字：
+- 圖表類型：[填入，如「折線圖」「長條圖」「流行曲線」「盒鬚圖」「森林圖」「熱力圖」]
+- 圖表主題：[填入，如「2020-2024年台灣登革熱每週通報趨勢」]
+- X軸/Y軸變項：[填入]
+- 呈現的關鍵數據：[填入或貼上數據摘要]
+- 報告用途：[填入，如「疫情週報」「期刊論文」「長官簡報」]
+
+【請撰寫】
+1. 圖表標題（Figure/Table標號與說明）
+2. 圖表下方註解文字（資料來源、縮寫說明）
+3. 結果段落描述（150-200字，適合嵌入論文或報告）
+4. 重點發現摘要（3-5個bullet points）
+5. 圖表設計改善建議（配色、標示、可讀性）
+
+【注意事項】
+- 依據報告用途調整說明文字的專業程度
+- 學術論文圖表需符合期刊投稿規範
+- 使用色盲友善配色建議
+- 數據標示需與正文描述一致
+- 流行曲線建議使用發病日而非通報日</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-13">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 14: 同儕審查意見回覆信 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">同儕審查意見回覆信</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">審查</span>
+                                    <span class="recipe-tag">回覆</span>
+                                    <span class="recipe-tag">同儕</span>
+                                </div>
+                                <div class="recipe-content" id="research-recipe-14">你是資深學術期刊投稿顧問，擅長撰寫同儕審查意見回覆信（Response to Reviewers）。
+
+請根據以下審查意見，協助撰寫逐點回覆：
+- 投稿期刊：[填入，如「Journal of the Formosan Medical Association」]
+- 論文題目：[填入]
+- 審查結果：[填入，如「Major Revision」「Minor Revision」]
+- 審查意見：[貼上完整審查意見]
+
+【回覆格式】
+1. 致編輯信函（Cover Letter）
+   - 感謝審查、摘要修改重點、強調改善處
+2. 逐點回覆（Point-by-point Response）
+   每點包含：
+   - Reviewer Comment:（原文引用）
+   - Response:（回覆說明）
+   - Changes Made:（具體修改內容與對應頁碼/行數）
+
+【回覆原則】
+- 語氣禮貌專業，即使不同意也以學術論證回應
+- 每項意見都需正面回應，不可遺漏
+- 無法修改的部分需提供充分理由
+- 新增分析或數據需清楚說明方法
+- 標示修改稿中對應的變更位置
+
+【注意事項】
+- 回覆信使用英文撰寫（配合國際期刊）
+- 中文期刊則使用中文回覆
+- 修改內容需前後一致，避免自相矛盾
+- 若涉及台灣疫情數據，確認引用最新資料</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="research-recipe-14">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab & Quarantine Recipes -->
+                <div class="tab-content" id="lab-recipes">
+                    <div class="recipe-grid">
+                        <!-- Recipe 1: 實驗室檢驗報告摘要 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">實驗室檢驗報告摘要</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">檢驗</span>
+                                    <span class="recipe-tag">報告</span>
+                                    <span class="recipe-tag">摘要</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-1">你是疾管署實驗室資深檢驗人員，擅長整理與彙報各類病原體檢驗結果。
+
+請根據以下檢驗資訊，撰寫一份結構化的檢驗報告摘要：
+
+【檢驗項目】[填入：如「登革病毒 NS1 抗原快篩及 RT-PCR」]
+【送驗單位】[填入：如「○○縣市衛生局」]
+【檢體類型】[填入：如「血清」「咽喉拭子」]
+【檢體數量】[填入：如「共 25 件」]
+【檢驗期間】[填入起迄日期]
+【檢驗結果數據】[填入：陽性數、陰性數、型別分布等]
+
+【輸出格式】
+1. 摘要總結（100 字以內，含陽性率與關鍵發現）
+2. 檢驗方法說明（使用之試劑、儀器、方法學）
+3. 結果明細表（分型別/分區域統計）
+4. 品質管制紀錄（內部品管是否通過）
+5. 結果判讀與建議（流行病學意義研判）
+
+【注意事項】
+- 使用疾管署實驗室標準用語
+- 數據需與原始紀錄一致，不得推測
+- 檢體編號須以代碼呈現，不得出現個資
+- 標註檢驗方法之靈敏度與特異度（若適用）
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 2: 生物安全操作 SOP 草擬 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">生物安全操作 SOP 草擬</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">生安</span>
+                                    <span class="recipe-tag">SOP</span>
+                                    <span class="recipe-tag">操作</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-2">你是疾管署生物安全官，熟悉 BSL-2 至 BSL-3 實驗室操作規範與國內生物安全法規。
+
+請根據以下資訊，草擬一份標準操作程序（SOP）：
+
+【操作項目】[填入：如「第二級病原體之檢體前處理」「高壓滅菌操作」]
+【適用實驗室等級】[填入：BSL-2 / BSL-3]
+【操作人員資格】[填入：如「須完成生安訓練且持有證書」]
+【涉及病原體】[填入：如「結核分枝桿菌」]
+
+【SOP 格式】
+1. 目的與適用範圍
+2. 參考文件與法規依據（感染性生物材料管理辦法等）
+3. 所需設備與個人防護裝備（PPE）清單
+4. 操作步驟（逐步編號，含安全注意事項）
+5. 廢棄物處理程序
+6. 緊急應變措施（暴露、溢灑處理）
+7. 紀錄表單（操作日誌、設備校驗紀錄）
+
+【注意事項】
+- 符合衛福部「感染性生物材料管理辦法」規定
+- 參照 WHO Laboratory Biosafety Manual 第四版
+- 每個步驟須標明潛在風險與對應防護措施
+- 使用繁體中文專業術語
+
+請開始草擬：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 3: 邊境檢疫措施說明稿 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">邊境檢疫措施說明稿</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">邊境</span>
+                                    <span class="recipe-tag">檢疫</span>
+                                    <span class="recipe-tag">措施</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-3">你是疾管署國際檢疫組專員，負責邊境檢疫政策之說明與對外溝通。
+
+請根據以下資訊，撰寫一份邊境檢疫措施說明稿：
+
+【疫情背景】[填入：如「某國爆發不明肺炎疫情」]
+【實施措施】[填入：如「加強特定航班登機檢疫」]
+【適用對象】[填入：如「自○○國入境之旅客」]
+【實施日期】[填入起始日期]
+【配合單位】[填入：如「航空公司、移民署、機場公司」]
+
+【說明稿格式】
+1. 措施實施背景（國際疫情現況、WHO 風險評估）
+2. 具體措施內容（逐項條列）
+3. 旅客應配合事項（入境前、入境時、入境後）
+4. 違反規定之罰則說明
+5. 相關問答 Q&A（5 題常見問題）
+6. 聯繫窗口與諮詢管道（1922 專線）
+
+【注意事項】
+- 用語需兼顧專業性與一般民眾理解
+- 措施須有明確法律依據（傳染病防治法條文）
+- 避免造成對特定國家或族群之歧視性用語
+- 中英文並列（供外籍旅客參考）
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 4: 檢體採集指引撰寫 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">檢體採集指引撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">檢體</span>
+                                    <span class="recipe-tag">採集</span>
+                                    <span class="recipe-tag">指引</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-4">你是疾管署檢驗及疫苗研製中心的檢體管理專家。
+
+請針對以下疾病，撰寫一份檢體採集與送驗指引：
+
+【目標疾病】[填入：如「COVID-19」「日本腦炎」「百日咳」]
+【適用對象】[填入：如「合約實驗室」「地方衛生局檢驗人員」]
+【檢驗目的】[填入：如「確認診斷」「疫情監測」]
+
+【指引內容需包含】
+1. 建議採檢時機（發病後第幾天）
+2. 檢體種類與採集量（如：血清 3-5 ml、咽喉拭子等）
+3. 採集容器與保存條件（溫度、時限）
+4. 採集步驟（含無菌操作要點）
+5. 標籤標示規範（必填欄位）
+6. 包裝與運送規定（三層包裝、冷鏈要求）
+7. 送驗表單填寫說明
+8. 退件常見原因與預防
+
+【注意事項】
+- 參照疾管署最新「傳染病檢體採檢手冊」
+- 符合 IATA 感染性物質運輸規範
+- 強調個人防護與生物安全
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 5: 抗藥性監測結果報告 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">抗藥性監測結果報告</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">抗藥性</span>
+                                    <span class="recipe-tag">AMR</span>
+                                    <span class="recipe-tag">監測</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-5">你是疾管署抗生素抗藥性管理（AMR）監測計畫的資深微生物學家。
+
+請根據以下監測數據，撰寫一份抗藥性監測結果報告：
+
+【監測期間】[填入：如「2024 年第 1-4 季」]
+【監測菌種】[填入：如「金黃色葡萄球菌（MRSA）」「碳青黴烯類抗藥性腸桿菌科（CRE）」]
+【資料來源】[填入：如「TARS 台灣院內感染監視通報系統」]
+【收案醫院數】[填入]
+【菌株總數】[填入]
+
+【報告格式】
+1. 監測背景與目的
+2. 方法學說明（收案標準、藥敏試驗方法、判讀標準如 CLSI）
+3. 整體抗藥性趨勢分析（含與前期比較）
+4. 各抗生素抗藥率統計表
+5. 區域分布差異（北/中/南/東）
+6. 重要抗藥機轉檢測結果（如 NDM、KPC 基因型）
+7. 國際比較（與 WHO GLASS 數據對照）
+8. 建議事項（感染管制與抗生素管理策略）
+
+【注意事項】
+- 數據呈現需含 95% 信賴區間
+- 趨勢分析至少涵蓋三年以上
+- 使用國際標準菌名與抗生素名稱
+- 結論須具政策建議價值
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 6: 港埠檢疫作業指引 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">港埠檢疫作業指引</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">港埠</span>
+                                    <span class="recipe-tag">檢疫</span>
+                                    <span class="recipe-tag">作業</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-6">你是疾管署港埠檢疫業務資深關員，熟悉國際港埠衛生檢疫作業。
+
+請根據以下情境，撰寫港埠檢疫作業指引：
+
+【港埠類型】[填入：國際機場 / 國際商港]
+【檢疫情境】[填入：如「船舶入港檢疫」「貨櫃查驗」「船員健康檢查」]
+【適用法規】[填入：如「國際衛生條例 IHR 2005」]
+【特殊狀況】[填入：如「船上有疑似傳染病患者」]
+
+【指引內容】
+1. 作業目的與法律依據
+2. 作業前準備（人員、裝備、文件）
+3. 標準作業流程（含決策流程圖文字描述）
+4. 船舶／航空器衛生文件查核要點
+5. 異常狀況處置程序（發現疑似病例、病媒蚊蟲等）
+6. 衛生措施執行（消毒、除蟲、除鼠）
+7. 紀錄與通報程序
+8. 個人防護裝備穿脫流程
+
+【注意事項】
+- 符合 IHR 2005 附件之要求
+- 兼顧檢疫安全與港埠營運效率
+- 標註各步驟所需時間估算
+- 使用疾管署港埠檢疫標準表單編號
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 7: 實驗室品管異常處理紀錄 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">實驗室品管異常處理紀錄</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">品管</span>
+                                    <span class="recipe-tag">異常</span>
+                                    <span class="recipe-tag">實驗室</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-7">你是疾管署實驗室品質管理人員，負責品管異常事件之調查與矯正。
+
+請根據以下品管異常事件，撰寫完整的異常處理紀錄：
+
+【異常事件描述】[填入：如「每日內部品管 QC 值超出 ±2SD 範圍」]
+【發生日期與時間】[填入]
+【影響檢驗項目】[填入：如「流感病毒 RT-PCR 檢驗」]
+【發現人員】[填入職稱]
+【使用儀器】[填入儀器名稱與編號]
+【相關試劑批號】[填入]
+
+【紀錄格式】
+1. 事件概述（何時、何地、何事）
+2. 立即處置措施（暫停檢驗、通知主管等）
+3. 根本原因分析（使用魚骨圖或 5 Why 分析法）
+4. 影響範圍評估（受影響之檢體數、是否需重新檢驗）
+5. 矯正措施（短期與長期）
+6. 預防措施（如何避免再發生）
+7. 追蹤確認（矯正措施有效性驗證）
+8. 相關文件附件清單
+
+【注意事項】
+- 符合 ISO 15189 醫學實驗室認證要求
+- 紀錄須可追溯且完整
+- 包含責任人員與完成期限
+- 語氣客觀，聚焦事實與改善
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-7">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 8: 檢驗方法比較評估表 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">檢驗方法比較評估表</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">檢驗方法</span>
+                                    <span class="recipe-tag">比較</span>
+                                    <span class="recipe-tag">評估</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-8">你是疾管署檢驗及疫苗研製中心的方法開發專家，擅長檢驗技術之驗證與評估。
+
+請針對以下兩種檢驗方法，撰寫一份比較評估報告：
+
+【目標病原體】[填入：如「SARS-CoV-2」]
+【方法 A】[填入：如「即時定量 RT-PCR（現行方法）」]
+【方法 B】[填入：如「LAMP 等溫核酸擴增法（評估中方法）」]
+【評估目的】[填入：如「評估方法 B 是否適用於現場快速篩檢」]
+
+【評估項目】
+1. 分析靈敏度（Analytical Sensitivity / LOD）
+2. 分析特異度（Analytical Specificity / 交叉反應）
+3. 臨床靈敏度與特異度（與黃金標準比較）
+4. 精密度（批內、批間再現性）
+5. 操作時間與人力需求
+6. 設備與耗材成本比較
+7. 操作難易度與訓練需求
+8. 適用場域（實驗室 / 現場 / POCT）
+9. 法規面（是否取得 IVD 許可證）
+
+【輸出格式】
+- 以比較表格呈現各項指標
+- 附綜合評估結論與建議
+- 標註資料來源（文獻或實測數據）
+
+【注意事項】
+- 評估須依據 CLSI EP 系列指引
+- 數據須具統計檢定結果
+- 結論需明確建議是否採用
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-8">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 9: 機場發燒篩檢應變劇本 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">機場發燒篩檢應變劇本</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">機場</span>
+                                    <span class="recipe-tag">篩檢</span>
+                                    <span class="recipe-tag">應變</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-9">你是疾管署機場檢疫站主任，負責規劃機場發燒篩檢應變作業。
+
+請根據以下情境，撰寫一份機場發燒篩檢應變劇本：
+
+【應變等級】[填入：如「國際關注公共衛生緊急事件（PHEIC）」]
+【疫情來源國】[填入]
+【航班資訊】[填入：如「每日 5 班直飛航班，約 1,500 名旅客」]
+【篩檢方式】[填入：如「紅外線熱像儀初篩＋耳溫槍複篩」]
+【機場名稱】[填入：如「桃園國際機場 第二航廈」]
+
+【劇本內容】
+1. 應變啟動條件與通知流程
+2. 篩檢動線規劃（含旅客分流說明）
+3. 各崗位人員配置與職責（檢疫官、護理師、行政人員）
+4. 發燒旅客處置流程（體溫標準、採檢、後送）
+5. 非發燒但有症狀旅客處理
+6. 健康聲明卡／入境檢疫系統操作要點
+7. 與航空公司、移民署、機場公司之協調事項
+8. 個人防護裝備規格與穿脫時機
+9. 班次交接與紀錄回報格式
+10. 應變降級或升級之判斷標準
+
+【注意事項】
+- 須考量旅客人權與隱私保護
+- 動線規劃需兼顧效率（避免通關嚴重延誤）
+- 多語言溝通準備（中、英、日、韓、越、印尼語）
+- 標註各階段所需物資數量估算
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-9">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 10: 居家檢疫通知書範本 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">居家檢疫通知書範本</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">居家檢疫</span>
+                                    <span class="recipe-tag">通知</span>
+                                    <span class="recipe-tag">範本</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-10">你是疾管署檢疫行政作業專員，負責起草各類檢疫通知文件。
+
+請根據以下情境，撰寫一份居家檢疫通知書範本：
+
+【適用對象】[填入：如「自○○國入境且有疑似症狀之旅客」]
+【檢疫天數】[填入：如「7 天」]
+【法律依據】[填入：如「傳染病防治法第 58 條」]
+【檢疫期間起迄】[填入]
+【特殊注意事項】[填入：如「須配合採檢」「須使用電子圍籬」]
+
+【通知書內容】
+1. 通知事由（為何需要居家檢疫）
+2. 檢疫期間與規定
+3. 檢疫期間應遵守事項（不得外出、每日健康回報等）
+4. 生活支援資訊（送餐服務、垃圾處理、就醫方式）
+5. 檢疫期間如出現症狀之處理方式
+6. 違反規定之罰則（傳染病防治法相關罰則）
+7. 檢疫解除條件與流程
+8. 申訴管道與諮詢窗口
+9. 當事人簽名確認欄
+
+【注意事項】
+- 語氣堅定但不失關懷
+- 法律條文引用須正確
+- 需有中英文對照版本
+- 格式應適合正式公文書用印
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-10">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 11: 實驗室認證準備文件彙整 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">實驗室認證準備文件彙整</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">認證</span>
+                                    <span class="recipe-tag">文件</span>
+                                    <span class="recipe-tag">準備</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-11">你是疾管署實驗室品質管理系統專家，曾多次協助實驗室通過 ISO 15189 及 TAF 認證。
+
+請根據以下資訊，協助彙整實驗室認證準備文件清單與自我查核表：
+
+【認證標準】[填入：如「ISO 15189:2022」「TAF 醫學實驗室認證」]
+【實驗室類別】[填入：如「病毒學實驗室」「細菌學實驗室」]
+【認證範圍】[填入：如「流感病毒分離鑑定、RT-PCR 檢驗」]
+【預計評鑑日期】[填入]
+
+【文件清單需涵蓋】
+1. 品質手冊（含品質政策、組織架構）
+2. 程序書清單（依 ISO 15189 各條文對應）
+3. 人員資格與訓練紀錄
+4. 設備校驗與維護紀錄
+5. 檢驗方法確效 / 驗證報告
+6. 品管計畫與品管紀錄
+7. 能力試驗參加紀錄與結果
+8. 不符合事項管理紀錄
+9. 內部稽核報告
+10. 管理審查會議紀錄
+
+【輸出格式】
+- 文件清單表格（文件名稱、文件編號、負責人、完成狀態）
+- 各文件之內容摘要與重點提示
+- 常見缺失提醒（歷次認證常被指出之問題）
+- 評鑑前倒數時程規劃表
+
+【注意事項】
+- 依最新版 ISO 15189:2022 條文架構
+- 標註必備文件與建議文件
+- 提醒需特別注意的新版變更重點
+
+請開始彙整：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-11">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 12: 病原體基因定序結果說明 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">病原體基因定序結果說明</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">基因定序</span>
+                                    <span class="recipe-tag">病原體</span>
+                                    <span class="recipe-tag">說明</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-12">你是疾管署基因體實驗室的生物資訊分析專家，擅長將基因定序結果轉化為公衛決策所需的資訊。
+
+請根據以下定序資料，撰寫一份結果說明報告：
+
+【病原體】[填入：如「SARS-CoV-2」「流感病毒 A/H3N2」]
+【定序平台】[填入：如「Illumina MiSeq」「Oxford Nanopore」]
+【分析方法】[填入：如「全基因體定序（WGS）」「Sanger 定序」]
+【序列數量】[填入：如「本批共 30 株」]
+【比對資料庫】[填入：如「GISAID」「NCBI GenBank」]
+【分析期間】[填入]
+
+【報告格式】
+1. 分析摘要（100 字以內，含關鍵發現）
+2. 方法說明（建庫、定序、生物資訊分析流程）
+3. 品質指標（覆蓋率、讀取深度、Q30 值等）
+4. 譜系分型結果（Lineage / Clade 分布）
+5. 突變位點分析（與參考株比較之重要突變）
+6. 親緣關係樹分析（系統發育樹結果說明）
+7. 公衛意義研判（傳播鏈推測、疫苗株吻合度、抗藥性突變等）
+8. 建議後續行動
+
+【注意事項】
+- 非專業讀者也能理解的說明方式
+- 標註具臨床或公衛重要性的突變
+- 序列資料已上傳至 GISAID 之 Accession Number
+- 數據詮釋須謹慎，標明研判限制
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-12">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 13: 環境採樣計畫書撰寫 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">環境採樣計畫書撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">環境採樣</span>
+                                    <span class="recipe-tag">計畫</span>
+                                    <span class="recipe-tag">撰寫</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-13">你是疾管署環境監測與病媒管制專家，熟悉環境中病原體與病媒之採樣調查。
+
+請根據以下需求，撰寫一份環境採樣計畫書：
+
+【採樣目的】[填入：如「醫療機構環境退伍軍人菌監測」「登革熱孳生源密度調查」]
+【採樣場域】[填入：如「○○醫院冷卻水塔與供水系統」「○○區高風險里別」]
+【目標病原/病媒】[填入：如「退伍軍人菌」「埃及斑蚊」]
+【執行期間】[填入]
+【預算概估】[填入]
+
+【計畫書格式】
+1. 計畫背景與目的
+2. 採樣策略（採樣點位選定原則、數量估算）
+3. 採樣方法與頻率（依據之標準方法，如 ISO 11731）
+4. 所需器材與耗材清單（含數量與規格）
+5. 人員配置與分工
+6. 採樣標準作業流程（含品管 / 品保措施）
+7. 檢驗項目與分析方法
+8. 數據分析與統計方法
+9. 結果判讀標準（行動水準 / 警戒水準）
+10. 時程甘特圖（文字描述）
+11. 預算編列明細
+
+【注意事項】
+- 採樣方法須引用國際或國內標準方法
+- 品保品管措施需含現場空白、重複樣本
+- 考量季節性因素對結果之影響
+- 納入採樣人員安全防護措施
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-13">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 14: 檢疫犬勤務報表整理 -->
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">檢疫犬勤務報表整理</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">檢疫犬</span>
+                                    <span class="recipe-tag">報表</span>
+                                    <span class="recipe-tag">勤務</span>
+                                </div>
+                                <div class="recipe-content" id="lab-recipe-14">你是疾管署檢疫犬計畫的行政管理人員，負責統整檢疫犬組勤務執行成果。
+
+請根據以下勤務紀錄，整理一份月度勤務報表：
+
+【報表月份】[填入：如「2024 年 10 月」]
+【服勤港埠】[填入：如「桃園國際機場、臺中港、高雄港」]
+【檢疫犬組數】[填入：如「共 6 組（領犬員＋檢疫犬）」]
+【原始勤務紀錄】[貼上或填入當月勤務日誌摘要]
+
+【報表格式】
+1. 月度勤務總覽
+   - 總執勤天數與時數
+   - 各港埠執勤班次統計
+2. 偵測成果統計
+   - 攔截件數（依違規類型分類：肉類、水果、活體動物等）
+   - 偵測正確率（警示反應 vs. 確認違規）
+   - 與上月及去年同期比較
+3. 各犬隻表現紀錄
+   - 個別偵測成功率
+   - 健康狀況與訓練時數
+4. 重大攔截案例摘要（2-3 件）
+5. 犬隻福利與管理
+   - 獸醫檢查紀錄
+   - 訓練與複訓執行情形
+6. 下月勤務規劃重點
+7. 建議事項
+
+【注意事項】
+- 數據需與每日勤務日誌核對一致
+- 攔截成果需區分主動偵測與被動發現
+- 犬隻代號與領犬員姓名依規定呈現
+- 報表格式符合疾管署檢疫犬組季報規範
+
+請開始整理：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="lab-recipe-14">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="policy-recipes">
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">傳染病防治法規白話解釋</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">法規</span>
+                                    <span class="recipe-tag">白話</span>
+                                    <span class="recipe-tag">解釋</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-1">你是疾管署的法規專家，擅長將法律條文轉譯為白話文。請將以下法規條文改寫為一般民眾能理解的說明。
+
+【法規名稱】[填入：如「傳染病防治法」]
+【條文編號】[填入：如「第37條」]
+【原條文內容】[貼上條文]
+
+【請提供】
+1. 原條文（保留完整內容）
+2. 白話翻譯（200字以內，使用日常用語）
+3. 舉例說明（用生活化的案例）
+4. 民眾需知重點（條列3-5點）
+5. 相關罰則白話說明（如適用）
+
+【注意事項】
+- 法律效力以原條文為準，白話版僅供參考
+- 使用台灣法律用語
+- 不得改變原條文法律意涵
+
+請開始改寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫指引草案撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">指引</span>
+                                    <span class="recipe-tag">草案</span>
+                                    <span class="recipe-tag">防疫</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-2">你是疾管署防疫政策專家。請協助撰寫防疫指引草案。
+
+【指引名稱】[填入：如「○○疾病社區防治指引」]
+【適用對象】[填入：醫療院所/地方衛生局/一般民眾]
+【疾病背景】[填入：疾病特性、傳播途徑、嚴重度]
+
+【指引架構】
+1. 前言（制定目的、適用範圍、法源依據）
+2. 疾病概述（病原體、傳播方式、潛伏期、臨床表現）
+3. 監測與通報（病例定義、通報流程、時限）
+4. 防治措施（個人防護、環境管理、接觸者處理）
+5. 醫療照護（診斷、治療、感染管制）
+6. 衛教宣導重點
+7. 附錄（通報表單、聯繫窗口、參考文獻）
+
+【格式】使用層級編號（1. 1.1 1.1.1），適合公告版本
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">政策影響評估摘要</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">政策</span>
+                                    <span class="recipe-tag">影響評估</span>
+                                    <span class="recipe-tag">摘要</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-3">你是疾管署政策分析專家。請撰寫一份防疫政策影響評估摘要。
+
+【政策名稱】[填入：如「取消室內口罩令」]
+【實施範圍】[填入：全國/特定場所]
+【預計實施日期】[填入]
+
+【評估需包含】
+1. 政策背景與目的
+2. 預期效益（公衛、社會、經濟面向）
+3. 潛在風險與衝擊評估
+4. 利害關係人分析（受影響族群）
+5. 替代方案比較（至少2個方案）
+6. 配套措施建議
+7. 監測指標與退場機制
+8. 建議實施時程
+
+【格式】摘要式，每項200字以內，適合決策會議使用
+
+請開始評估：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">傳染病分類調整建議書</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">分類</span>
+                                    <span class="recipe-tag">調整</span>
+                                    <span class="recipe-tag">建議</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-4">你是疾管署傳染病分類審議專家。請撰寫傳染病分類調整建議書。
+
+【疾病名稱】[填入]
+【現行分類】[填入：第一類～第五類/新增]
+【建議調整為】[填入]
+
+【建議書需包含】
+1. 調整理由
+   - 國際疫情變化
+   - 國內流行現況
+   - 疾病嚴重度與傳播力變化
+   - WHO 分類建議
+2. 流行病學證據摘要
+3. 調整後對通報、隔離、治療措施之影響
+4. 對醫療體系之影響評估
+5. 過渡期配套措施
+6. 專家諮詢意見彙整
+
+【注意事項】
+- 依據傳染病防治法第3條分類原則
+- 引用最新流行病學數據
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫物資管理辦法草擬</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">物資</span>
+                                    <span class="recipe-tag">管理辦法</span>
+                                    <span class="recipe-tag">草擬</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-5">你是疾管署物資管理法規專家。請草擬防疫物資管理辦法。
+
+【物資類別】[填入：如「個人防護裝備」「快篩試劑」「抗病毒藥物」]
+【管理範圍】[填入：中央儲備/地方調度/醫療院所]
+
+【辦法架構】
+1. 總則（目的、用詞定義、主管機關）
+2. 物資儲備（品項、數量基準、儲存條件）
+3. 採購與驗收（採購程序、品質規格、驗收標準）
+4. 庫存管理（盤點頻率、效期管理、先進先出）
+5. 調度與配送（申請程序、優先順序、配送機制）
+6. 緊急徵用（啟動條件、徵用程序、補償機制）
+7. 報廢與銷毀
+8. 稽核與考核
+9. 附則（施行日期）
+
+【格式】法規條文格式，含條號
+
+請開始草擬：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">法規修訂條文對照表</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">法規</span>
+                                    <span class="recipe-tag">修訂</span>
+                                    <span class="recipe-tag">對照表</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-6">你是疾管署法制作業專家。請製作法規修訂條文對照表。
+
+【法規名稱】[填入]
+【修訂原因】[填入簡要說明]
+【擬修訂條文】[填入條號]
+
+【對照表格式】
+三欄式表格：
+| 修正條文 | 現行條文 | 說明 |
+
+【每條需包含】
+1. 修正條文全文（標示修正處，如加底線）
+2. 現行條文全文
+3. 修正說明
+   - 修正理由
+   - 修正重點
+   - 參考依據（其他法規/國際規範）
+
+【注意事項】
+- 條文用語需符合法制體例
+- 修正幅度較大者另附總說明
+- 涉及其他法規配套修正需一併說明
+
+請開始製作：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">裁罰基準說明函稿</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">裁罰</span>
+                                    <span class="recipe-tag">基準</span>
+                                    <span class="recipe-tag">函稿</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-7">你是疾管署法務專員。請撰寫裁罰基準說明函稿。
+
+【違規態樣】[填入：如「未依規定通報傳染病」「違反居家檢疫規定」]
+【法源依據】[填入：如「傳染病防治法第69條」]
+【受函對象】[填入：地方衛生局/醫療院所]
+
+【函稿需包含】
+1. 主旨（簡述裁罰基準適用說明）
+2. 說明
+   - 法規依據
+   - 違規態樣分類
+   - 裁罰金額級距（初犯/累犯/情節嚴重）
+   - 減輕或加重事由
+   - 裁量考量因素
+3. 辦理事項（請各單位配合辦理事項）
+4. 附件（裁罰基準表、裁處書範本）
+
+【格式】正式公文函稿格式（含發文字號欄位）
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-7">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫計畫年度目標擬定</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">年度計畫</span>
+                                    <span class="recipe-tag">目標</span>
+                                    <span class="recipe-tag">KPI</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-8">你是疾管署策略規劃專家。請協助擬定防疫計畫年度目標與關鍵績效指標。
+
+【計畫名稱】[填入：如「結核病十年減半計畫」]
+【計畫年度】[填入]
+【上年度執行成果摘要】[填入]
+
+【請提供】
+1. 年度總目標（SMART原則）
+2. 分項目標（3-5項）
+3. 各分項目標之 KPI
+   - 指標名稱
+   - 計算公式
+   - 目標值
+   - 資料來源
+   - 監測頻率
+4. 季度里程碑
+5. 風險因素與因應策略
+6. 所需資源與預算概估
+
+【格式】表格化呈現，適合管考追蹤
+
+請開始擬定：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-8">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">隔離治療費用補助說明</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">隔離</span>
+                                    <span class="recipe-tag">費用</span>
+                                    <span class="recipe-tag">補助</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-9">你是疾管署防疫補償業務專家。請撰寫隔離治療費用補助說明文件。
+
+【適用疾病】[填入]
+【補助類型】[填入：隔離補償/治療費用補助/防疫照顧假補助]
+【法源依據】[填入：如「傳染病防治法第53條」]
+
+【說明文件需包含】
+1. 補助對象與資格條件
+2. 補助項目與金額標準
+3. 申請流程（步驟說明）
+4. 應備文件清單
+5. 審查作業流程與時程
+6. 撥款方式
+7. 不予補助之情形
+8. 申覆管道
+9. 常見問題 Q&A（5-8題）
+
+【格式】流程圖式說明 + Q&A 問答，適合民眾閱讀
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-9">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">預防接種受害救濟案例分析</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">疫苗救濟</span>
+                                    <span class="recipe-tag">案例</span>
+                                    <span class="recipe-tag">分析</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-10">你是疾管署預防接種受害救濟審議專家。請協助整理案例分析資料。
+
+【疫苗種類】[填入]
+【不良反應類型】[填入：如「過敏性休克」「GBS」]
+【案例數量】[填入]
+
+【分析需包含】
+1. 案例基本資料彙整（去識別化，年齡層/性別分布）
+2. 接種至不良反應發生時間分布
+3. 臨床表現與嚴重度分級
+4. 因果關聯性評估（依審議辦法）
+   - 相關
+   - 無法確定
+   - 無關
+5. 審議結果統計
+6. 救濟金額統計
+7. 與國際文獻之比較
+8. 政策建議
+
+【注意事項】
+- 嚴格遵守個資保護
+- 因果關聯性需有醫學文獻支持
+
+請開始分析：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-10">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">防疫 SOP 標準作業程序撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">SOP</span>
+                                    <span class="recipe-tag">標準程序</span>
+                                    <span class="recipe-tag">撰寫</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-11">你是疾管署作業流程管理專家。請撰寫防疫標準作業程序（SOP）。
+
+【SOP 名稱】[填入：如「法定傳染病通報作業程序」]
+【適用單位】[填入]
+【適用情境】[填入]
+
+【SOP 需包含】
+1. 文件管理資訊（編號、版次、制定日期）
+2. 目的
+3. 適用範圍
+4. 權責分工（RACI 矩陣）
+5. 名詞定義
+6. 作業流程（流程圖 + 文字說明）
+7. 各步驟詳細操作說明
+   - 步驟名稱
+   - 執行者
+   - 作業內容
+   - 使用表單/系統
+   - 完成標準
+8. 相關文件與表單
+9. 修訂紀錄
+
+【格式】符合 ISO 文件管理規範
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-11">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">跨部會防疫合作備忘錄草稿</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">跨部會</span>
+                                    <span class="recipe-tag">備忘錄</span>
+                                    <span class="recipe-tag">合作</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-12">你是疾管署跨機關協調專家。請草擬跨部會防疫合作備忘錄。
+
+【合作機關】[填入：如「疾管署與教育部」]
+【合作主題】[填入：如「校園傳染病防治」]
+【合作期程】[填入]
+
+【備忘錄需包含】
+1. 緣起與目的
+2. 合作範圍與內容
+3. 各機關權責分工
+4. 資訊共享機制
+5. 聯繫窗口與會議機制（定期/臨時）
+6. 經費分攤原則
+7. 保密條款
+8. 爭議處理方式
+9. 有效期間與修訂方式
+10. 簽署欄
+
+【格式】正式備忘錄格式
+
+請開始草擬：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-12">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">立法院質詢答覆參考稿</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">立法院</span>
+                                    <span class="recipe-tag">質詢</span>
+                                    <span class="recipe-tag">答覆</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-13">你是疾管署國會聯絡專家。請撰寫立法院質詢答覆參考稿。
+
+【質詢委員】[填入]
+【質詢主題】[填入：如「流感疫苗供貨不足問題」]
+【質詢要點】[填入：委員關切的具體問題]
+
+【答覆稿需包含】
+1. 開場（感謝委員關心）
+2. 現況說明（以數據為基礎）
+3. 已採取措施
+4. 後續規劃與改善方案
+5. 預備追問之答覆要點（預擬3-5題可能追問）
+
+【注意事項】
+- 語氣誠懇、態度積極
+- 數據須正確可查證
+- 避免使用過度專業術語
+- 敏感議題需標註「建議口頭補充」
+- 總字數控制在800字以內
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-13">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">民眾陳情案件回覆範本</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">陳情</span>
+                                    <span class="recipe-tag">回覆</span>
+                                    <span class="recipe-tag">民眾</span>
+                                </div>
+                                <div class="recipe-content" id="policy-recipe-14">你是疾管署民眾服務專員。請撰寫民眾陳情案件回覆函。
+
+【陳情管道】[填入：署長信箱/1922/書面陳情]
+【陳情主題】[填入：如「社區登革熱噴藥時間不當」]
+【陳情內容摘要】[填入]
+
+【回覆函需包含】
+1. 稱謂與感謝語
+2. 陳情內容確認（讓民眾知道我們有認真閱讀）
+3. 相關規定或政策說明
+4. 已採取或將採取的處理措施
+5. 後續追蹤方式
+6. 聯繫窗口
+
+【語氣要求】
+- 同理心為先，先表達理解
+- 專業但不高傲
+- 具體而非敷衍
+- 避免制式官腔
+
+【字數】300-500字
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="policy-recipe-14">複製 Prompt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="intl-recipes">
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">IHR 國際衛生條例通報草稿</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">IHR</span>
+                                    <span class="recipe-tag">通報</span>
+                                    <span class="recipe-tag">國際</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-1">你是疾管署國際事務專家，熟悉 IHR (2005) 通報機制。請協助撰寫國際衛生條例通報草稿。
+
+【事件名稱】[填入]
+【事件發生日期】[填入]
+【通報類型】[填入：初次通報/後續更新/結案通報]
+
+【通報內容需包含（依 IHR Annex 2 格式）】
+1. Event Summary（事件摘要，英文）
+2. Case Definition（病例定義）
+3. Epidemiological Information
+   - Total cases / Deaths / CFR
+   - Geographic distribution
+   - Demographic breakdown
+4. Laboratory Information（檢驗方法與結果）
+5. Public Health Response（已採取措施）
+6. Risk Assessment（風險評估）
+7. Request for Assistance（如需要）
+
+【注意事項】
+- 中英對照呈現
+- 使用 WHO 標準術語
+- 數據截至通報日
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-1">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">WHO 疫情報告英文摘要</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">WHO</span>
+                                    <span class="recipe-tag">英文</span>
+                                    <span class="recipe-tag">摘要</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-2">你是疾管署國際疫情報告撰寫專家。請將以下中文疫情資料撰寫成 WHO 格式英文摘要。
+
+【疾病名稱】[填入]
+【報告期間】[填入]
+【中文疫情資料】[貼上]
+
+【英文摘要需包含】
+1. Situation Overview（200 words）
+2. Epidemiological Update
+   - New cases and deaths in reporting period
+   - Cumulative figures
+   - Key affected areas
+3. Response Activities
+4. Challenges and Priorities
+5. Key Messages for the Public
+
+【格式要求】
+- 使用 WHO Disease Outbreak News 格式
+- 英文用語符合國際公衛慣例
+- 提供中英對照之關鍵術語表
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-2">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">國際研討會英文摘要投稿</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">研討會</span>
+                                    <span class="recipe-tag">摘要</span>
+                                    <span class="recipe-tag">投稿</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-3">你是學術論文英文寫作專家，熟悉公共衛生領域國際研討會投稿要求。請協助撰寫英文摘要。
+
+【研討會名稱】[填入：如「TEPHINET Global Conference」]
+【研究主題】[填入]
+【字數限制】[填入：如「300 words」]
+
+【摘要結構（IMRaD）】
+1. Background（研究背景與目的）
+2. Methods（研究方法、資料來源、分析方式）
+3. Results（主要發現，含關鍵數據）
+4. Conclusions（結論與公衛意涵）
+
+【中文研究資料】
+[貼上研究摘要或關鍵數據]
+
+【注意事項】
+- 符合研討會投稿格式要求
+- 使用主動語態
+- 避免縮寫首次出現未定義
+- 數據呈現清晰簡潔
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-3">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">外賓參訪簡報英文講稿</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">外賓</span>
+                                    <span class="recipe-tag">簡報</span>
+                                    <span class="recipe-tag">英文</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-4">你是疾管署國際交流簡報專家。請撰寫外賓參訪簡報英文講稿。
+
+【參訪團資訊】[填入：國家、機構、人數、層級]
+【簡報主題】[填入：如「Taiwan's COVID-19 Response」]
+【簡報時間】[填入：如「20分鐘」]
+
+【講稿需包含】
+1. Welcome and Introduction（2分鐘）
+2. Overview of Taiwan CDC（組織簡介）
+3. 主題內容（依投影片順序）
+4. Key Achievements（重要成果）
+5. Challenges and Future Directions
+6. Q&A 預擬答覆（5題）
+
+【格式要求】
+- 每張投影片的講稿文字
+- 標註轉場提示
+- 標註互動時機
+- 附中英對照術語清單
+
+【語氣】專業、友善、展現台灣防疫成果
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-4">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">雙語防疫指引對照翻譯</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">雙語</span>
+                                    <span class="recipe-tag">翻譯</span>
+                                    <span class="recipe-tag">指引</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-5">你是疾管署雙語翻譯專家，專精公共衛生領域中英翻譯。請將以下中文防疫指引翻譯為中英對照版。
+
+【文件名稱】[填入]
+【翻譯方向】[填入：中翻英/英翻中]
+【目標讀者】[填入：外籍人士/國際組織/學術社群]
+
+【翻譯要求】
+1. 逐段中英對照呈現
+2. 專業術語附註原文
+3. 台灣特有制度名稱保留中文並加註英文說明
+4. 法規名稱使用官方英譯版本
+5. 機關名稱使用官方英文名稱
+
+【品質檢核】
+- 術語一致性（同一詞彙全文統一譯法）
+- 數字與單位格式正確
+- 文化差異處加註說明
+
+【中文原文】
+[貼上待翻譯內容]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-5">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">國際合作計畫書英文版</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">合作</span>
+                                    <span class="recipe-tag">計畫書</span>
+                                    <span class="recipe-tag">英文</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-6">你是疾管署國際合作計畫撰寫專家。請撰寫國際合作計畫書英文版。
+
+【合作夥伴】[填入：國家/機構]
+【計畫主題】[填入：如「Dengue Surveillance Capacity Building」]
+【計畫期程】[填入]
+
+【計畫書架構】
+1. Executive Summary
+2. Background and Rationale
+3. Objectives（General and Specific）
+4. Activities and Timeline
+5. Expected Outcomes and Indicators
+6. Budget Summary
+7. Sustainability Plan
+8. Monitoring and Evaluation Framework
+9. Partner Roles and Responsibilities
+10. Annexes
+
+【注意事項】
+- 使用國際援助計畫書標準格式
+- 突顯台灣之比較優勢與經驗
+- 符合合作夥伴之需求評估結果
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-6">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">全球疫情情資蒐整摘要</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">全球</span>
+                                    <span class="recipe-tag">情資</span>
+                                    <span class="recipe-tag">蒐整</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-7">你是疾管署國際疫情情資分析師。請蒐整以下全球疫情資訊，產出情資摘要報告。
+
+【關注疾病】[填入]
+【監測期間】[填入：如「本週」]
+【資料來源】[填入：WHO/ProMED/各國衛生部/ECDC 等]
+
+【情資摘要需包含】
+1. 全球疫情概覽（地圖式文字描述）
+2. 重點國家/地區疫情更新（表格）
+   - 國家、新增病例、累計病例、死亡數、趨勢
+3. 新增警示事件
+4. WHO 最新建議或聲明
+5. 對台灣之風險評估
+6. 建議關注事項與因應建議
+
+【格式】
+- 摘要500字以內
+- 表格呈現數據
+- 標註資料更新時間
+- 適合每日/每週署內疫情會議使用
+
+請開始蒐整：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-7">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">國際疫苗採購規格書翻譯</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">疫苗</span>
+                                    <span class="recipe-tag">採購</span>
+                                    <span class="recipe-tag">翻譯</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-8">你是疾管署國際採購與疫苗專家。請協助翻譯與整理國際疫苗採購規格書。
+
+【疫苗名稱】[填入]
+【原文語言】[填入：英文/法文/其他]
+【採購目的】[填入：常規接種/緊急採購/儲備]
+
+【翻譯與整理需包含】
+1. 產品基本資訊（中英對照）
+2. 技術規格
+   - 疫苗種類與成分
+   - 劑量與包裝規格
+   - 儲存條件與有效期限
+   - WHO 預認證狀態
+3. 供應條件
+   - 最小訂購量
+   - 交貨時程
+   - 冷鏈運輸要求
+4. 品質保證要求
+5. 價格結構（如適用）
+6. 關鍵術語中英對照表
+
+【注意事項】
+- 技術規格翻譯須精確
+- 保留原文專有名詞
+
+【原文資料】
+[貼上規格書內容]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-8">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">邦交國援助計畫撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">邦交國</span>
+                                    <span class="recipe-tag">援助</span>
+                                    <span class="recipe-tag">計畫</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-9">你是疾管署國際援助計畫專家。請撰寫對邦交國之公衛援助計畫書。
+
+【受援國】[填入]
+【援助主題】[填入：如「瘧疾防治能力建構」]
+【計畫期程】[填入]
+【預算規模】[填入]
+
+【計畫書需包含】
+1. 受援國公衛現況與需求評估
+2. 計畫目標與預期成果
+3. 執行策略
+   - 技術協助（專家派遣、訓練）
+   - 物資援助（設備、藥品、試劑）
+   - 制度建構（SOP、指引）
+4. 執行時程（甘特圖式）
+5. 人力配置
+6. 預算明細
+7. 風險管理
+8. 成效評估指標
+9. 退場與永續策略
+
+【格式】符合外交部國際合作計畫格式
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-9">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">國際期刊論文中文摘要</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">期刊</span>
+                                    <span class="recipe-tag">摘要</span>
+                                    <span class="recipe-tag">中文</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-10">你是公共衛生領域的學術翻譯專家。請將以下英文期刊論文摘要翻譯並整理為中文重點摘要。
+
+【論文標題】[填入]
+【期刊名稱】[填入]
+【發表年份】[填入]
+
+【中文摘要需包含】
+1. 論文標題中譯
+2. 研究背景（為什麼做這個研究）
+3. 研究方法（怎麼做的）
+4. 主要發現（關鍵數據中文呈現）
+5. 結論與臨床/公衛意涵
+6. 對台灣防疫之啟示（自行補充分析）
+7. 關鍵術語中英對照
+
+【格式】500字以內，適合內部參考使用
+
+【英文摘要原文】
+[貼上英文摘要]</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-10">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">國際會議會後報告撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">國際會議</span>
+                                    <span class="recipe-tag">會後</span>
+                                    <span class="recipe-tag">報告</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-11">你是疾管署國際會議參與紀錄撰寫專家。請撰寫國際會議會後報告。
+
+【會議名稱】[填入：如「WHA 世界衛生大會」]
+【會議日期與地點】[填入]
+【參加人員】[填入]
+
+【會後報告需包含】
+1. 會議基本資訊
+2. 重要議程與決議摘要
+3. 與我國相關之議題分析
+4. 各國發言重點彙整（表格）
+5. 雙邊/多邊會談紀要
+6. 參展/海報展示成果
+7. 人脈拓展與後續合作機會
+8. 心得與建議
+9. 後續追蹤事項（含負責人與期限）
+
+【格式】正式出國報告格式，含英文版摘要
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-11">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">英文公務 Email 撰寫</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">英文</span>
+                                    <span class="recipe-tag">Email</span>
+                                    <span class="recipe-tag">公務</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-12">你是疾管署英文公務書信撰寫專家。請協助撰寫英文公務 Email。
+
+【收件人】[填入：姓名、職稱、機構]
+【Email 目的】[填入：如「邀請出席研討會」「請求資料分享」「感謝合作」]
+【中文內容要點】[填入]
+
+【Email 需包含】
+1. Subject Line（簡潔明確）
+2. Salutation（正式稱謂）
+3. Opening（說明來信目的）
+4. Body（詳細內容，分段清楚）
+5. Call to Action（希望對方採取的行動）
+6. Closing（結尾語）
+7. Signature Block（含中英文姓名、職稱、機關）
+
+【語氣】[填入：正式 formal/半正式 semi-formal]
+
+【注意事項】
+- 使用正式英文書信用語
+- 避免過長句子
+- 提供2個版本（正式/較親切）供選擇
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-12">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">外國旅遊疫情警示公告</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">旅遊疫情</span>
+                                    <span class="recipe-tag">警示</span>
+                                    <span class="recipe-tag">公告</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-13">你是疾管署國際旅遊醫學專家。請撰寫旅遊疫情警示公告。
+
+【警示國家/地區】[填入]
+【疫情概況】[填入：疾病、病例數、趨勢]
+【建議警示等級】[填入：第一級注意/第二級警示/第三級警告]
+
+【公告需包含】
+1. 警示等級與適用地區
+2. 疫情現況摘要
+3. 疾病資訊（傳播途徑、症狀、潛伏期）
+4. 旅遊建議
+   - 出發前（疫苗接種、預防用藥、旅平險）
+   - 旅途中（個人防護措施）
+   - 返國後（自我健康監測、就醫注意事項）
+5. 入境檢疫措施（如有）
+6. 相關連結與諮詢管道
+
+【格式】適合官網公告及社群媒體分享
+
+請開始撰寫：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-13">複製 Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <div class="recipe-header">
+                                <span class="recipe-title">國際防疫經驗比較分析</span>
+                            </div>
+                            <div class="recipe-body">
+                                <div class="recipe-tags">
+                                    <span class="recipe-tag">國際</span>
+                                    <span class="recipe-tag">比較</span>
+                                    <span class="recipe-tag">經驗</span>
+                                </div>
+                                <div class="recipe-content" id="intl-recipe-14">你是疾管署國際防疫政策比較分析專家。請進行各國防疫經驗比較分析。
+
+【分析主題】[填入：如「COVID-19 邊境管制措施」「結核病防治策略」]
+【比較國家】[填入：如「台灣、日本、韓國、新加坡、澳洲」]
+【分析時期】[填入]
+
+【比較分析需包含】
+1. 各國背景概述（人口、醫療體系、疫情概況）
+2. 政策措施比較（表格呈現）
+   - 法源依據
+   - 具體措施內容
+   - 實施時程
+   - 執行方式
+3. 成效指標比較（發病率、死亡率等）
+4. 成功因素分析
+5. 可供台灣借鏡之處
+6. 政策建議
+
+【格式】含比較表格，附分析說明文字
+【字數】2000字以內
+
+請開始分析：</div>
+                            </div>
+                            <div class="recipe-footer">
+                                <button class="btn btn-copy btn-sm" data-copy-target="intl-recipe-14">複製 Prompt</button>
                             </div>
                         </div>
                     </div>
