@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initChecklists();
     initCopyButtons();
     initModuleNavigation();
+    initSidebarAutoHide();
     updateProgressDisplay();
     initLearningMap();
 });
@@ -742,6 +743,10 @@ function getCurrentUnitIndex() {
 }
 
 function showUnit(index) {
+    // Show sidebar when switching units (may be hidden by scroll)
+    const sidebar = document.querySelector('.module-sidebar');
+    if (sidebar) sidebar.classList.remove('sidebar-hidden');
+
     const units = document.querySelectorAll('.unit-container');
     const navLinks = document.querySelectorAll('.module-nav-link');
 
@@ -787,6 +792,42 @@ function updateNavigationButtons(currentIndex, totalUnits) {
         nextBtn.style.display = isLastUnit ? 'none' : 'inline-flex';
         completeBtn.style.display = isLastUnit ? 'inline-flex' : 'none';
     }
+}
+
+// ==================== Sidebar Auto-Hide on Mobile ====================
+function initSidebarAutoHide() {
+    const sidebar = document.querySelector('.module-sidebar');
+    if (!sidebar) return;
+
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const SCROLL_THRESHOLD = 10;
+
+    window.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+
+        requestAnimationFrame(() => {
+            const currentScrollY = window.scrollY;
+            const delta = currentScrollY - lastScrollY;
+            const isMobile = window.matchMedia('(max-width: 860px)').matches;
+
+            if (isMobile && Math.abs(delta) > SCROLL_THRESHOLD) {
+                if (delta > 0 && currentScrollY > 150) {
+                    sidebar.classList.add('sidebar-hidden');
+                } else if (delta < 0) {
+                    sidebar.classList.remove('sidebar-hidden');
+                }
+            }
+
+            if (!isMobile) {
+                sidebar.classList.remove('sidebar-hidden');
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
+        });
+    });
 }
 
 function showCompletionModal(moduleId) {

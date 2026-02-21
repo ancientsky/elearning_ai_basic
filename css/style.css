@@ -1387,6 +1387,13 @@ footer {
         max-width: 100%;
         background: var(--bg-color);
         padding: 10px 0;
+        transition: transform 0.3s ease, opacity 0.2s ease;
+    }
+
+    .module-sidebar.sidebar-hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
     }
 
     .module-nav {
