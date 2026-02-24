@@ -88,7 +88,25 @@ function getModuleProgress(moduleId) {
     const moduleProgress = APP_STATE.progress[moduleId];
     if (!moduleProgress) return 0;
 
-    const totalUnits = document.querySelectorAll(`[data-module="${moduleId}"] .unit-container`).length || 5;
+    let totalUnits = 5; // Default
+
+    // In index.html, we can't count .unit-container elements
+    const path = window.location.pathname;
+    if (path.endsWith('index.html') || path === '/' || !path.includes('/modules/')) {
+        // Hardcoded unit counts for each module
+        const unitCounts = {
+            'module0': 3,
+            'module1': 4,
+            'module2': 7,
+            'module3': 5,
+            'module4': 5,
+            'module5': 4
+        };
+        totalUnits = unitCounts[moduleId] || 5;
+    } else {
+        totalUnits = document.querySelectorAll(`[data-module="${moduleId}"] .unit-container`).length || 5;
+    }
+
     const completedUnits = Object.keys(moduleProgress.units).filter(k => moduleProgress.units[k]).length;
 
     return Math.round((completedUnits / totalUnits) * 100);
@@ -329,7 +347,7 @@ function checkQuizAnswer(quizContainer) {
         const selectedAnswers = Array.from(selected).map(s => s.dataset.answer);
 
         isCorrect = correctAnswers.length === selectedAnswers.length &&
-                    correctAnswers.every(a => selectedAnswers.includes(a));
+            correctAnswers.every(a => selectedAnswers.includes(a));
     } else {
         // Single select
         const correctAnswer = quizContainer.dataset.correct;
@@ -723,13 +741,59 @@ function initModuleNavigation() {
     // Complete module button
     const completeBtn = document.querySelector('.complete-module');
     if (completeBtn) {
-        completeBtn.addEventListener('click', () => {
+        completeBtn.addEventListener('click', (e) => {
+            // 防止 a tag 直接跳轉導致還沒存完就不見
+            if (completeBtn.tagName.toLowerCase() === 'a') {
+                e.preventDefault();
+            }
+
             const moduleId = APP_STATE.currentModule;
+            const current = getCurrentUnitIndex();
+
+            // 將最後一個單元也標記為已完成
+            markUnitComplete(moduleId, `unit${current}`);
+
             APP_STATE.progress[moduleId].completed = true;
             saveProgress();
 
-            // Show completion message
-            showCompletionModal(moduleId);
+            // Show completion message or navigate
+            if (typeof showCompletionModal === 'function') {
+                showCompletionModal(moduleId);
+            }
+
+            // 如果是 a tag，在存檔完成後手動跳轉
+            if (completeBtn.tagName.toLowerCase() === 'a') {
+                const href = completeBtn.getAttribute('href');
+                if (href && href !== '#') {
+                    // 給一點點時間讓 localStorage 確實寫入
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 100);
+                }
+            }
+        });
+    }
+
+    // 特別處理模組 5 的「前往領取結業證書」大綠色按鈕
+    const certBtn = document.querySelector('a[href="../certificate.html"]');
+    if (certBtn) {
+        certBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const moduleId = APP_STATE.currentModule;
+            const current = getCurrentUnitIndex();
+
+            // 將最後一個單元標記為已完成，確保進度 100%
+            if (moduleId) {
+                markUnitComplete(moduleId, `unit${current}`);
+                APP_STATE.progress[moduleId].completed = true;
+                saveProgress();
+            }
+
+            // 給一點點時間讓 localStorage 確實寫入
+            setTimeout(() => {
+                window.location.href = certBtn.getAttribute('href');
+            }, 100);
         });
     }
 }
@@ -1010,7 +1074,7 @@ function generateCertificateId(name, dateStr, score) {
         h2 = ((h2 << 5) + h2 + c) | 0;
     }
     var hex = (Math.abs(h1) >>> 0).toString(16).toUpperCase().padStart(8, '0').slice(-4) +
-              (Math.abs(h2) >>> 0).toString(16).toUpperCase().padStart(8, '0').slice(-4);
+        (Math.abs(h2) >>> 0).toString(16).toUpperCase().padStart(8, '0').slice(-4);
     var datePart = dateStr.replace(/\//g, '').replace(/-/g, '');
     return 'TW-CDC-OASIS-' + datePart + '-' + hex;
 }
